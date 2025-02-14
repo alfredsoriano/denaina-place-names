@@ -12,16 +12,16 @@ The goal of this project focuses on providing an accessible and user-friendly ex
 Make sure Node.js and Node Package Manager (npm) is installed. If installing Node.js, npm should be installed alongside it.  
 You can check the Node.js version installed with `node -v` and the npm version with `npm -v`.  
 
-**1. Open a terminal, and clone the GitHub repository**  
+###### 1. Open a terminal, and clone the GitHub repository.  
 This can be done by using the command `git clone https://github.com/alfredsoriano/denaina-place-names.git`  
 
-**2. Next, type the following lines of code individually**  
+###### 2. Next, type the following lines of code individually.  
 ```
 npm install
 cd denaina-place-names
 npm run dev
 ```
-This will install vite into the current directory "denaina-place-names", and will available to be run on your localhost server as a webpage.  
+This will install Vite into the current directory "denaina-place-names", and will available to be run on your localhost server as a webpage.  
 
-**3. Type o, then press enter to open and view the web application.**  
+###### 3. Type o, then press enter to open and view the web application.  
 Make sure to save any overwritten files, and refresh the website to view changes.  
