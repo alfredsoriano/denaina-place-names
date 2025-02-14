@@ -17,8 +17,8 @@ This can be done by using the command `git clone https://github.com/alfredsorian
 
 **2. Next, type the following lines of code individually.**  
 ```
-npm install
 cd denaina-place-names
+npm install
 npm run dev
 ```
 This will install Vite into the current directory "denaina-place-names", and will available to be run on your localhost server as a webpage.  
