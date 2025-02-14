@@ -20,7 +20,7 @@ You can check the Node.js version installed with `node -v` and the npm version w
 **1. Open a terminal, and clone the GitHub repository.**  
 This can be done by using the command `git clone https://github.com/alfredsoriano/denaina-place-names.git`  
 
-**2. Next, type the following lines of code individually.**  
+**2. Next, type the following lines of code into the terminal.**  
 ```
 cd denaina-place-names
 npm install
