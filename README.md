@@ -4,6 +4,7 @@
 **Clients: Dr. Maria Williams and Dr. Jessica Ross**  
 **Technical Mentor: Dr. Pradeeban Kathiravelu**
 
+### Project Details
 This interactive map and web application is aimed to provide users with historical and cultural information about Dena’ina places within Anchorage and the greater southcentral area, for the heritage and culture revitalization in Alaska. This project will focus specifically on the Upper Cook Inlet Dena’ina region, with the target dialect of the Upper Cook Inlet Dena’ina Dene.
 
 The clients for this project are local cultural heritage initiative Professors from the University of Alaska Anchorage (UAA) named Dr. Maria Williams and Dr. Jessica Ross. Working alongside our clients will be technical mentor Dr. Pradeeban Kathiravelu.
