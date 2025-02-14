@@ -27,6 +27,8 @@ npm install
 npm run dev
 ```
 This will install Vite into the current directory "denaina-place-names", and will available to be run on your localhost server as a webpage.  
+Note that you only need to run `npm install` once upon cloning the repository. If you are accessing the repository again for future use, you can just use the `npm run dev` command to start viewing the webpage.
 
 **3. Type o, then press enter to open and view the web application.**  
+This will automatically open a new window on a web browser using the localhost web address.
 Make sure to save any overwritten files, and refresh the website to view changes.  
