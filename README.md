@@ -1,6 +1,8 @@
 ## CSCE A470 Capstone Project
-### Denaina Place Names App  
-#### Contributors: Alfred Soriano, Chris Yang, Jiwon Bae  
+### Denaina Place Names Web App  
+**Contributors: Alfred Soriano, Chris Yang, and Jiwon Bae**  
+**Clients: Dr. Maria Williams and Dr. Jessica Ross**
+**Technical Mentor: Dr. Pradeeban Kathiravelu**
 
 This interactive map and web application is aimed to provide users with historical and cultural information about Dena’ina places within Anchorage and the greater southcentral area, for the heritage and culture revitalization in Alaska. This project will focus specifically on the Upper Cook Inlet Dena’ina region, with the target dialect of the Upper Cook Inlet Dena’ina Dene.
 
