@@ -3,11 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/UAA_GreenGold.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
     <title>Dena'ina Place Names</title>
+    
+    <!-- Thise are the Leaflet.js library need to do CSS and Javascript on the map-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+    
+    <style>
+      #map {
+        height: 100vh; 
+        width: 100%;  
+      }
+    </style>
+
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([61.2167, -149.9000], 10);  // Initialize the map and set the center to Anchorage, Alaska
+
+      // This is a tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Coord Markers
+      var locations = [
+        { coords: [61.1897, -149.9981], name: "Point Woronzof" },
+        { coords: [61.1524, -149.8831], name: "Kincaid Park" }
+      ];
+
+      locations.forEach(location => {
+        L.marker(location.coords).addTo(map)
+          .bindPopup(location.name); // when pens are clicked, name of the icon are shown
+      });
+    </script>
+
   </body>
 </html>
+
