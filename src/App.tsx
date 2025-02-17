@@ -1,7 +1,6 @@
-// src/App.tsx
 import 'leaflet/dist/leaflet.css';
 import React from 'react';
-import MapComponent from './MapComponent';
+import MapComponent from './components/MapComponent';
 
 const App: React.FC = () => {
   return (
