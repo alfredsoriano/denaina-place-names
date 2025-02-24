@@ -8,3 +8,9 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
+
+export interface DenainaLocation {
+  id: string;
+  title: string;
+  coordinates: [number, number];
+}
