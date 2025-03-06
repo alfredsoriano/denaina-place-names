@@ -2,22 +2,30 @@
     {
       "id": "1",
       "title": "Point Woronzof",
-      "coordinates": [61.1889, -150.0230]
+      "coordinates": [61.1889, -150.0230],
+      "description": "Temp point",
+      "imageUrl": "imagine.linkun"
     },
     {
       "id": "2",
       "title": "Campbell Creek",
-      "coordinates": [61.2047, -149.8970]
+      "coordinates": [61.2047, -149.8970],
+      "description": "Temp point",
+      "imageUrl": "imagine.linkun"
     },
     {
       "id": "3",
       "title": "Eklutna",
-      "coordinates": [61.4581, -149.3622]
+      "coordinates": [61.4581, -149.3622],
+      "description": "Temp point",
+      "imageUrl": "imagine.linkun"
     },
     {
       "id": "4",
       "title": "Mount Susitna",
-      "coordinates": [61.4742, -150.7353]
+      "coordinates": [61.4742, -150.7353],
+      "description": "Temp point",
+      "imageUrl": "imagine.linkun"
     }
 ]
   
