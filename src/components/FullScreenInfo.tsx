@@ -15,18 +15,20 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
       width: '90vw',
       height: '100vh',
       // backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      backgroundColor: 'white',
-      color: 'black',
+      backgroundColor: '#FFF1DB',
+      color: '#543310',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       zIndex: 1000
     }}>
+
       <h1>{location.title}</h1>
       <h2>{location.denainaName ?? 'No Dena\'ina Name available.'} - {location.denainaMeaning ?? 'No Dena\'ina Meaning available.'}</h2>
       <p>{location.description ?? 'No description available.'}</p>
       {location.imageUrl && <img src={location.imageUrl} alt={location.title} style={{ width: '80%', maxHeight: '300px', objectFit: 'cover', borderRadius: '10px' }} />}
+      
       <button onClick={onClose}
       style={{
         position: 'fixed',
@@ -41,8 +43,9 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
         border: 'none',
         cursor: 'pointer',
       }}>
-        X
+        &#x2715;
       </button>
+
     </div>
   );
 };
