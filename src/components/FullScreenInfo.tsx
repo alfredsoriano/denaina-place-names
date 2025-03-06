@@ -27,12 +27,17 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
       <h2>{location.denainaName ?? 'No Dena\'ina Name available.'} - {location.denainaMeaning ?? 'No Dena\'ina Meaning available.'}</h2>
       <p>{location.description ?? 'No description available.'}</p>
       {location.imageUrl && <img src={location.imageUrl} alt={location.title} style={{ width: '80%', maxHeight: '300px', objectFit: 'cover', borderRadius: '10px' }} />}
-      <button onClick={onClose} style={{
-        marginTop: '20px',
-        padding: '10px 20px',
-        fontSize: '16px',
-        backgroundColor: 'black',
-        color: 'white',
+      <button onClick={onClose}
+      style={{
+        position: 'fixed',
+        top: '10px',
+        right: '10pt',
+        marginTop: '1px',
+        padding: '5px 10px',
+        fontSize: '20px',
+        borderRadius: '90%', // Make it circular
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        color: 'White',
         border: 'none',
         cursor: 'pointer',
       }}>
