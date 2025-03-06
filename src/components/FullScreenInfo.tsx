@@ -34,9 +34,9 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
         backgroundColor: 'black',
         color: 'white',
         border: 'none',
-        cursor: 'pointer'
+        cursor: 'pointer',
       }}>
-        Close
+        X
       </button>
     </div>
   );
