@@ -24,6 +24,7 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
       zIndex: 1000
     }}>
       <h1>{location.title}</h1>
+      <h2>{location.denainaName ?? 'No Dena\'ina Name available.'} - {location.denainaMeaning ?? 'No Dena\'ina Meaning available.'}</h2>
       <p>{location.description ?? 'No description available.'}</p>
       {location.imageUrl && <img src={location.imageUrl} alt={location.title} style={{ width: '80%', maxHeight: '300px', objectFit: 'cover', borderRadius: '10px' }} />}
       <button onClick={onClose} style={{
