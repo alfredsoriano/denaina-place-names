@@ -23,19 +23,38 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
       justifyContent: 'center',
       zIndex: 1000
     }}>
-      <h1>{location.title}</h1>
-      <p>{location.description ?? 'No description available.'}</p>
-      {location.imageUrl && <img src={location.imageUrl} alt={location.title} style={{ width: '80%', maxHeight: '300px', objectFit: 'cover', borderRadius: '10px' }} />}
-      <button onClick={onClose} style={{
-        marginTop: '20px',
-        padding: '10px 20px',
-        fontSize: '16px',
-        backgroundColor: 'black',
-        color: 'white',
+    <div style={{
+      position: 'absolute',
+      top: '25px',
+      left: '25px',
+      padding: '20px 20px',
+      fontSize: '20px',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      fontWeight: 'bold',
+      color: 'White',
+    }}>
+      {location.title}
+    </div>
+
+    <p>{location.description ?? 'No description available.'}</p>
+    {location.imageUrl && <img src={location.imageUrl} alt={location.title} style={{ width: '80%', maxHeight: '300px', objectFit: 'cover', borderRadius: '10px' }} />}
+      
+    <button
+      onClick={onClose}
+      style={{
+        position: 'fixed',
+        top: '10px',
+        right: '10pt',
+        marginTop: '1px',
+        padding: '5px 10px',
+        fontSize: '20px',
+        borderRadius: '90%', // Make it circular
+        backgroundColor: '#E18AAA',
+        color: 'black',
         border: 'none',
-        cursor: 'pointer'
+        cursor: 'pointer',
       }}>
-        Close
+        X
       </button>
     </div>
   );
