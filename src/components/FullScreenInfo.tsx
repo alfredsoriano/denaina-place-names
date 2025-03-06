@@ -36,7 +36,7 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
         padding: '5px 10px',
         fontSize: '20px',
         borderRadius: '90%', // Make it circular
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: '#E18AAA',
         color: 'White',
         border: 'none',
         cursor: 'pointer',
