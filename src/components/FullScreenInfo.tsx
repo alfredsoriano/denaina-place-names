@@ -23,14 +23,15 @@ const FullScreenInfo = ({ location, isOpen, onClose }: {
       justifyContent: 'center',
       zIndex: 1000
     }}>
-      <h1>{location.id}</h1>
-      <p>{location.title ?? 'No description available.'}</p>
+      <h1>{location.title}</h1>
+      <p>{location.description ?? 'No description available.'}</p>
+      {location.imageUrl && <img src={location.imageUrl} alt={location.title} style={{ width: '80%', maxHeight: '300px', objectFit: 'cover', borderRadius: '10px' }} />}
       <button onClick={onClose} style={{
         marginTop: '20px',
         padding: '10px 20px',
         fontSize: '16px',
-        backgroundColor: 'white',
-        color: 'black',
+        backgroundColor: 'black',
+        color: 'white',
         border: 'none',
         cursor: 'pointer'
       }}>
