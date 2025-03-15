@@ -7,7 +7,8 @@
       "coordinates": [61.1889, -150.0230],
       "description": "Park along the Tony Knowles Coastal Trail",
       "imageUrl": "imagine.linkun",
-      "videoUrl": "https://drive.google.com/uc?export=download&id=1uY6j0w_tciwvJGEfJNPdCjiktYjToH3v"
+      "videoUrl": "https://drive.google.com/uc?export=download&id=1uY6j0w_tciwvJGEfJNPdCjiktYjToH3v",
+      "audioUrl":""
     },
     {
       "id": "2",
@@ -17,7 +18,8 @@
       "coordinates": [61.2047, -149.8970],
       "description": "A stream that flows throughout Anchorage, flowing into UAA Campus and Westchester Lagoon. Starts from the Chugach mountains, and ends into the Knik Arm of Cook Inlet.",
       "imageUrl": "imagine.linkun",
-      "videoUrl": "https://www.youtube.com/watch?v=o_1aF54DO60"
+      "videoUrl": "https://www.youtube.com/watch?v=o_1aF54DO60",
+      "audioUrl":"https://www.youtube.com/watch?v=O_ClHRboVDE"
     },
     {
       "id": "3",
