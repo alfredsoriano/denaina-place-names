@@ -1,15 +1,38 @@
-import { DenainaLocation } from "..";
+import { useState } from "react";
 
 const FullScreenInfo = ({
   location,
   isOpen,
   onClose,
 }: {
-  location: DenainaLocation | null;
+  location: any;
   isOpen: boolean;
   onClose: () => void;
 }) => {
   if (location === null || isOpen === false) return null;
+
+  const [showVideo, setShowVideo] = useState(false); 
+  const [playAudio, setPlayAudio] = useState(false); 
+
+  const handleImageClick = () => {
+    setShowVideo(true);
+  };
+
+  const toggleAudio = () => {
+    setPlayAudio((prev) => !prev);
+  };
+
+ 
+  const getYouTubeThumbnail = (videoUrl: string) => {
+    const videoId = videoUrl.split("v=")[1];
+    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  };
+
+
+  const getYouTubeEmbedUrl = (videoUrl: string) => {
+    const videoId = videoUrl.split("v=")[1];
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0`;
+  };
 
   return (
     <div
@@ -32,22 +55,60 @@ const FullScreenInfo = ({
       <h2>
         {location.denainaName ?? "No Dena'ina Name available."} -{" "}
         {location.denainaMeaning ?? "No Dena'ina Meaning available."}
+        {location.videoUrl && (
+          <button
+            onClick={toggleAudio}
+            style={{
+              marginLeft: "10px",
+              padding: "5px 10px",
+              fontSize: "16px",
+              backgroundColor: "#E18AAA",
+              color: "White",
+              borderRadius: "5px",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            {playAudio ? "Pause Audio" : "Play Audio"}
+          </button>
+        )}
       </h2>
       <p>{location.description ?? "No description available."}</p>
 
-      {location.videoUrl ? (
+      {playAudio && location.audioUrl && (
+        <iframe
+          width="0"
+          height="0"
+          src={getYouTubeEmbedUrl(location.audioUrl)}
+          title={`${location.title} Audio`}
+          frameBorder="0"
+          allow="autoplay"
+          style={{ display: "none" }} 
+        />
+      )}
+
+      {showVideo ? (
         <iframe
           width="80%"
           height="300"
-          src={`https://www.youtube.com/embed/${
-            location.videoUrl.split("v=")[1]
-          }`}
+          src={getYouTubeEmbedUrl(location.videoUrl)}
+          title={location.title}
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+        />
+      ) : location.videoUrl ? (
+        <img
+          src={getYouTubeThumbnail(location.videoUrl)}
+          alt={location.title}
           style={{
+            width: "80%",
+            maxHeight: "300px",
+            objectFit: "cover",
             borderRadius: "10px",
+            cursor: "pointer",
           }}
+          onClick={handleImageClick}
         />
       ) : location.imageUrl ? (
         <img
@@ -58,7 +119,9 @@ const FullScreenInfo = ({
             maxHeight: "300px",
             objectFit: "cover",
             borderRadius: "10px",
+            cursor: "pointer",
           }}
+          onClick={handleImageClick}
         />
       ) : (
         <p>No media available.</p>
