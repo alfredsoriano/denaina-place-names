@@ -8,7 +8,7 @@
       "description": "Park along the Tony Knowles Coastal Trail",
       "imageUrl": "imagine.linkun",
       "videoUrl": "https://drive.google.com/uc?export=download&id=1uY6j0w_tciwvJGEfJNPdCjiktYjToH3v",
-      "audioUrl":""
+      "audioUrl":"https://www.youtube.com/watch?v=9FjpcXoqfJg&t=6s"
     },
     {
       "id": "2",
@@ -29,7 +29,8 @@
       "coordinates": [61.4581, -149.3622],
       "description": "Alaska Native Village, next to Eklutna Lake",
       "imageUrl": "Mt Susitna.mp4",
-      "videoUrl": "video/Mt Susitna.mp4"
+      "videoUrl": "video/Mt Susitna.mp4",
+      "audioUrl":"https://www.youtube.com/watch?v=9FjpcXoqfJg&t=6s"
     },
     {
       "id": "4",
@@ -39,7 +40,8 @@
       "coordinates": [61.4742, -150.7353],
       "description": "Mountain in Cook Inlet",
       "imageUrl": "images/Mt Susitna1.jpg",
-      "videoUrl": "video/Mt Susitna.mp4"
+      "videoUrl": "https://www.youtube.com/watch?v=i1DZFaiwfyE",
+      "audioUrl":"https://www.youtube.com/watch?v=9FjpcXoqfJg&t=6s"
     }
 ]
   
