@@ -6,9 +6,7 @@
       "denainaMeaning":"Place Protected from the Wind",
       "coordinates": [61.1889, -150.0230],
       "description": "Park along the Tony Knowles Coastal Trail",
-      "imageUrl": "imagine.linkun",
-      "videoUrl": "https://drive.google.com/uc?export=download&id=1uY6j0w_tciwvJGEfJNPdCjiktYjToH3v",
-      "audioUrl":"https://www.youtube.com/watch?v=9FjpcXoqfJg&t=6s"
+      "imageUrl": "images/point W.jpg"
     },
     {
       "id": "2",
@@ -17,9 +15,7 @@
       "denainaMeaning":"Grass Creek",
       "coordinates": [61.1872, -149.8228],
       "description": "A stream that flows throughout Anchorage, flowing into UAA Campus and Westchester Lagoon. Starts from the Chugach mountains, and ends into the Knik Arm of Cook Inlet.",
-      "imageUrl": "imagine.linkun",
-      "videoUrl": "https://www.youtube.com/watch?v=o_1aF54DO60",
-      "audioUrl":"https://www.youtube.com/watch?v=O_ClHRboVDE"
+      "imageUrl": "imagine.linkun"
     },
     {
       "id": "3",
@@ -28,9 +24,7 @@
       "denainaMeaning":"Plural Objects by a River",
       "coordinates": [61.4581, -149.3622],
       "description": "Alaska Native Village, next to Eklutna Lake",
-      "imageUrl": "Mt Susitna.mp4",
-      "videoUrl": "video/Mt Susitna.mp4",
-      "audioUrl":"https://www.youtube.com/watch?v=9FjpcXoqfJg&t=6s"
+      "imageUrl": "Mt Susitna.mp4"
     },
     {
       "id": "4",
@@ -40,10 +34,8 @@
       "coordinates": [61.4742, -150.7353],
       "description": "Mountain in Cook Inlet",
       "imageUrl": "images/Mt Susitna1.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=i1DZFaiwfyE",
-      "audioUrl":"https://www.youtube.com/watch?v=9FjpcXoqfJg&t=6s"
+      "videoUrl": "https://www.youtube.com/watch?v=IMRP2r5_14I",
+      "audioUrl": "https://www.youtube.com/watch?v=IMRP2r5_14I"
     }
 ]
-  
-
 
