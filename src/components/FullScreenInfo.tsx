@@ -11,23 +11,18 @@ const FullScreenInfo = ({
 }) => {
   if (location === null || isOpen === false) return null;
 
-  const [showVideo, setShowVideo] = useState(false); 
-  const [playAudio, setPlayAudio] = useState(false); 
+  const [showVideo, setShowVideo] = useState(false);
+  const [playAudio, setPlayAudio] = useState(false);
 
   const handleImageClick = () => {
-    setShowVideo(true);
+    if (location.videoUrl) {
+      setShowVideo(true);
+    }
   };
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
   };
-
- 
-  const getYouTubeThumbnail = (videoUrl: string) => {
-    const videoId = videoUrl.split("v=")[1];
-    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-  };
-
 
   const getYouTubeEmbedUrl = (videoUrl: string) => {
     const videoId = videoUrl.split("v=")[1];
@@ -83,7 +78,7 @@ const FullScreenInfo = ({
           title={`${location.title} Audio`}
           frameBorder="0"
           allow="autoplay"
-          style={{ display: "none" }} 
+          style={{ display: "none" }}
         />
       )}
 
@@ -97,19 +92,6 @@ const FullScreenInfo = ({
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-      ) : location.videoUrl ? (
-        <img
-          src={getYouTubeThumbnail(location.videoUrl)}
-          alt={location.title}
-          style={{
-            width: "80%",
-            maxHeight: "300px",
-            objectFit: "cover",
-            borderRadius: "10px",
-            cursor: "pointer",
-          }}
-          onClick={handleImageClick}
-        />
       ) : location.imageUrl ? (
         <img
           src={location.imageUrl}
@@ -119,7 +101,7 @@ const FullScreenInfo = ({
             maxHeight: "300px",
             objectFit: "cover",
             borderRadius: "10px",
-            cursor: "pointer",
+            cursor: location.videoUrl ? "pointer" : "default", 
           }}
           onClick={handleImageClick}
         />
@@ -150,4 +132,3 @@ const FullScreenInfo = ({
 };
 
 export default FullScreenInfo;
-
