@@ -1,11 +1,16 @@
-import 'leaflet/dist/leaflet.css';
-import React from 'react';
-import MapComponent from './components/MapComponent';
+import "leaflet/dist/leaflet.css";
+import React from "react";
+import MapComponent from "./components/MapComponent";
+import NavigationBar from "./components/NavigationBar";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Dena'ina Place Names</h1>
+    <div
+      style={{
+        height: "100vh",
+      }}
+    >
+      <NavigationBar />
       <MapComponent />
     </div>
   );

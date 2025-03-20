@@ -32,17 +32,18 @@ const FullScreenInfo = ({
   return (
     <div
       style={{
-        position: "fixed",
+        position: "absolute",
         top: 0,
         right: 0,
-        width: "90vw",
-        height: "100vh",
+        height: "100%",
+        width: "100vw",
         backgroundColor: "#2C3930",
         color: "#DCD7C9",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        overflowY: 'auto',
         zIndex: 1000,
       }}
     >
