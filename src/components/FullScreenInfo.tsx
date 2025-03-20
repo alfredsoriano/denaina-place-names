@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from 'react-bootstrap';
 
 const FullScreenInfo = ({
   location,
@@ -110,24 +111,19 @@ const FullScreenInfo = ({
         <p>No media available.</p>
       )}
 
-      <button
+      <Button
+        variant="success"
         onClick={onClose}
         style={{
           position: "absolute",
           top: "10px",
           right: "10pt",
-          marginTop: "1px",
-          padding: "5px 10px",
-          fontSize: "20px",
-          borderRadius: "90%",
-          backgroundColor: "#66785F",
-          color: "White",
-          border: "none",
-          cursor: "pointer",
+          backgroundColor: 'grey',
+          borderColor: 'grey'
         }}
       >
         &#x2715;
-      </button>
+      </Button>
     </div>
   );
 };

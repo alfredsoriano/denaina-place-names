@@ -26,7 +26,7 @@ function MapComponent() {
   return (
     <div 
       style={{
-        height: "calc(100vh - 60px)",
+        height: "calc(100vh - 50px)",
         position: 'relative'
       }}
     >
