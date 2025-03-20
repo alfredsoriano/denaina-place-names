@@ -113,7 +113,7 @@ const FullScreenInfo = ({
       <button
         onClick={onClose}
         style={{
-          position: "fixed",
+          position: "absolute",
           top: "10px",
           right: "10pt",
           marginTop: "1px",
