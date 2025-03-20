@@ -16,6 +16,7 @@ export interface DenainaLocation {
   denainaMeaning: string;
   coordinates: [number, number];
   description: string; 
+  culture: string;
   imageUrl: string;
   videoUrl: string;
   audioUrl: string;

@@ -70,7 +70,8 @@ const FullScreenInfo = ({
           </button>
         )}
       </h2>
-      <p>{location.description ?? "No description available."}</p>
+
+      <p style={{margin: "5%"}}>{location.description ?? "No description found."} <br></br><br></br> {location.culture ?? "No cultural description found."}</p>
 
       {playAudio && location.audioUrl && (
         <iframe
