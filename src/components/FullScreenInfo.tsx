@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from 'react-bootstrap';
+import { Button } from "react-bootstrap";
 
 const FullScreenInfo = ({
   location,
@@ -36,15 +36,16 @@ const FullScreenInfo = ({
         position: "absolute",
         top: 0,
         right: 0,
-        height: "100%",
+        height: "100vh", 
         width: "100vw",
         backgroundColor: "#2C3930",
         color: "#DCD7C9",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        overflowY: 'auto',
+        justifyContent: "flex-start", 
+        overflowY: "auto", 
+        padding: "20px", 
         zIndex: 1000,
       }}
     >
@@ -71,7 +72,10 @@ const FullScreenInfo = ({
         )}
       </h2>
 
-      <p style={{marginLeft: "5%", marginRight: "5%", marginTop: "1%"}}>{location.description ?? "No description found."} <br></br><br></br> {location.culture ?? "No cultural description found."}</p>
+      <p style={{ marginLeft: "5%", marginRight: "5%", marginTop: "1%" }}>
+        {location.description ?? "No description found."} <br></br>
+        <br></br> {location.culture ?? "No cultural description found."}
+      </p>
 
       {playAudio && location.audioUrl && (
         <iframe
@@ -104,7 +108,7 @@ const FullScreenInfo = ({
             maxHeight: "300px",
             objectFit: "cover",
             borderRadius: "10px",
-            cursor: location.videoUrl ? "pointer" : "default", 
+            cursor: location.videoUrl ? "pointer" : "default",
           }}
           onClick={handleImageClick}
         />
@@ -119,8 +123,8 @@ const FullScreenInfo = ({
           position: "absolute",
           top: "10px",
           right: "10pt",
-          backgroundColor: 'grey',
-          borderColor: 'grey'
+          backgroundColor: "grey",
+          borderColor: "grey",
         }}
       >
         &#x2715;
