@@ -53,7 +53,9 @@ const FullScreenInfo = ({
       <h2>
         {location.denainaName ?? "No Dena'ina Name available."} -{" "}
         {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-        {location.videoUrl && (
+      </h2>
+
+      {location.videoUrl && (
           <button
             onClick={toggleAudio}
             style={{
@@ -70,17 +72,26 @@ const FullScreenInfo = ({
             {playAudio ? "Pause Audio" : "Play Audio"}
           </button>
         )}
-      </h2>
 
-      <p style={{ marginLeft: "5%", marginRight: "5%", marginTop: "1%" }}>
-        {location.description ?? "No description found."} <br></br>
-        <br></br> {location.culture ?? "No cultural description found."}
-      </p>
+      <div style = {{
+        height: "40vh", 
+        overflow: "auto", 
+        marginBottom: "20px"}
+      }>
+        <p style={{
+          marginLeft: "5%", 
+          marginRight: "5%", 
+          marginTop: "1%" 
+        }}>
+          {location.description ?? "No description found."} <br></br>
+          <br></br> {location.culture ?? "No cultural description found."}
+        </p>
+      </div>
 
       {playAudio && location.audioUrl && (
         <iframe
           width="0"
-          height="0"
+          height=""
           src={getYouTubeEmbedUrl(location.audioUrl)}
           title={`${location.title} Audio`}
           frameBorder="0"
