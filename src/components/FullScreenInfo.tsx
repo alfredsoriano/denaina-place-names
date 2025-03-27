@@ -31,6 +31,7 @@ const FullScreenInfo = ({
   };
 
   return (
+    // div styling for the pop-up window
     <div
       style={{
         position: "absolute",
@@ -49,12 +50,18 @@ const FullScreenInfo = ({
         zIndex: 1000,
       }}
     >
+      
+      {/* Headers
+      <h1> is reserved for the English Location Title Name
+      <h2> is reserved for the Dena'ina Name and Dena'ina Meaning
+       */}
       <h1>{location.title}</h1>
       <h2>
         {location.denainaName ?? "No Dena'ina Name available."} -{" "}
         {location.denainaMeaning ?? "No Dena'ina Meaning available."}
       </h2>
 
+      {/* "Play Audio" button */}
       {location.videoUrl && (
           <button
             onClick={toggleAudio}
@@ -73,11 +80,13 @@ const FullScreenInfo = ({
           </button>
         )}
 
+      {/* div style for scrollable container */}
       <div style = {{
         height: "40vh", 
         overflow: "auto", 
         marginBottom: "20px"}
       }>
+      {/* div style paragraph text inside scrollable container */}
         <p style={{
           marginLeft: "5%", 
           marginRight: "5%", 
@@ -88,6 +97,7 @@ const FullScreenInfo = ({
         </p>
       </div>
 
+      {/* video iframe */}
       {playAudio && location.audioUrl && (
         <iframe
           width="0"
