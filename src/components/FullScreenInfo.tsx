@@ -13,18 +13,18 @@ const FullScreenInfo = ({
 }) => {
   if (location === null || isOpen === false) return null;
 
-  const [showVideo, setShowVideo] = useState(false);
+  //const [showVideo, setShowVideo] = useState(false);
   const [playAudio, setPlayAudio] = useState(false);
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
   };
 
-  const handleImageClick = () => {
-    if (location.videoUrl) {
-      setShowVideo(true);
-    }
-  };
+  //const handleImageClick = () => {
+    //if (location.videoUrl) {
+     // setShowVideo(true);
+    //}
+ // };
 
   //function to get YouTube embedded video URL
   const getYouTubeEmbedUrl = (videoUrl: string) => {
