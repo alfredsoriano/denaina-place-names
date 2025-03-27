@@ -45,7 +45,7 @@ const FullScreenInfo = ({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start", 
-        overflowY: "auto", 
+        overflowY: "hidden", 
         padding: "20px", 
         zIndex: 1000,
       }}
@@ -82,7 +82,8 @@ const FullScreenInfo = ({
 
       {/* div style for scrollable container */}
       <div style = {{
-        height: "40vh", 
+        height: "40vh",
+        minHeight: "30vh",
         overflow: "auto", 
         marginTop: "20px",
         marginBottom: "20px"}
@@ -98,7 +99,6 @@ const FullScreenInfo = ({
         </p>
       </div>
 
-      {/* video iframe */}
       {playAudio && location.audioUrl && (
         <iframe
           width="0"
@@ -111,10 +111,11 @@ const FullScreenInfo = ({
         />
       )}
 
+      {/* video and image style */}
       {showVideo ? (
         <iframe
           width="80%"
-          height="300"
+          height="300px"
           src={getYouTubeEmbedUrl(location.videoUrl)}
           title={location.title}
           frameBorder="0"
@@ -126,8 +127,8 @@ const FullScreenInfo = ({
           src={location.imageUrl}
           alt={location.title}
           style={{
-            width: "80%",
-            maxHeight: "300px",
+            width: "80vw",
+            maxHeight: "36vh",
             objectFit: "cover",
             borderRadius: "10px",
             cursor: location.videoUrl ? "pointer" : "default",
