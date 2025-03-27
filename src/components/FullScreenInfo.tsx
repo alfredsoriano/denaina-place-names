@@ -84,6 +84,7 @@ const FullScreenInfo = ({
       <div style = {{
         height: "40vh", 
         overflow: "auto", 
+        marginTop: "20px",
         marginBottom: "20px"}
       }>
       {/* div style paragraph text inside scrollable container */}
