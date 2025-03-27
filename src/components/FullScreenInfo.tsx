@@ -13,10 +13,17 @@ const FullScreenInfo = ({
 }) => {
   if (location === null || isOpen === false) return null;
 
+  const [showVideo, setShowVideo] = useState(false);
   const [playAudio, setPlayAudio] = useState(false);
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
+  };
+
+  const handleImageClick = () => {
+    if (location.videoUrl) {
+      setShowVideo(true);
+    }
   };
 
   const getYouTubeEmbedUrl = (videoUrl: string) => {
@@ -24,26 +31,26 @@ const FullScreenInfo = ({
     return `https://www.youtube.com/embed/${videoId}?autoplay=0&controls=0`;
   };
 
-  //function to load media type: returns either image orvideo
+  //function to load media type: returns either image or video
   const loadMedia = (item: string) => {
       let temp: string[] = item.split('.');
       if (temp[1] == "jpg" || temp[1] == "png")
         return <img
-        className="d=block w-100 h-100"
-        src={item}
-        />
+            className="d=block w-100 h-100"
+            src={item}
+          />
       else
         return <iframe
-          style={{
-            display: "cover",
-            width: "100%",
-            height: "36cqh"
-          }}
-          src={getYouTubeEmbedUrl(location.videoUrl)}
-          title={location.title}
-          frameBorder="0"
-          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
+            style={{
+              display: "cover",
+              width: "100%",
+              height: "36cqh"
+            }}
+            src={getYouTubeEmbedUrl(location.videoUrl)}
+            title={location.title}
+            frameBorder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
         />
   }
 
@@ -78,6 +85,7 @@ const FullScreenInfo = ({
         {location.denainaMeaning ?? "No Dena'ina Meaning available."}
       </h2>
 
+      {/* FIXME ------------------------------------------------------------------- */}
       {/* "Play Audio" button */}
       {location.videoUrl && (
           <button
@@ -97,6 +105,19 @@ const FullScreenInfo = ({
           </button>
         )}
 
+      {playAudio && location.audioUrl && (
+        <iframe
+          width="0"
+          height=""
+          src={getYouTubeEmbedUrl(location.audioUrl)}
+          title={`${location.title} Audio`}
+          frameBorder="0"
+          allow="autoplay"
+          style={{ display: "none" }}
+        />
+      )}
+      {/* FIXME ------------------------------------------------------------------- */}
+
       {/* div style for scrollable container */}
       <div style = {{
         height: "40vh",
@@ -115,18 +136,6 @@ const FullScreenInfo = ({
           <br></br> {location.culture ?? "No cultural description found."}
         </p>
       </div>
-
-      {playAudio && location.audioUrl && (
-        <iframe
-          width="0"
-          height=""
-          src={getYouTubeEmbedUrl(location.audioUrl)}
-          title={`${location.title} Audio`}
-          frameBorder="0"
-          allow="autoplay"
-          style={{ display: "none" }}
-        />
-      )}
 
       {/* react-bootstrap carousel */}
       <Carousel style={{
