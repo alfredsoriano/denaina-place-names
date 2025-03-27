@@ -37,7 +37,11 @@ const FullScreenInfo = ({
       let temp: string[] = item.split('.');
       if (temp[1] == "jpg" || temp[1] == "png")
         return <img
-            className="d=block w-100 h-100"
+            style = {{
+              width: "100%",
+              height: "36cqh",
+              objectFit: "cover"
+            }}
             src={item}
           />
       else
@@ -142,8 +146,6 @@ const FullScreenInfo = ({
       <Carousel style={{
         width: "80vw",
         maxHeight: "36vh",
-        minHeight: "20vh",
-        objectFit: "cover",
         borderRadius: "10px",
         overflow: "hidden"}}
         interval = {null} // react-bootstrap: disable auto scrolling
@@ -171,7 +173,7 @@ const FullScreenInfo = ({
       >
         &#x2715;
       </Button>
-      
+
     </div>
   );
 };
