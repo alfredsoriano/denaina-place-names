@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
 const FullScreenInfo = ({
   location,
@@ -12,14 +13,7 @@ const FullScreenInfo = ({
 }) => {
   if (location === null || isOpen === false) return null;
 
-  const [showVideo, setShowVideo] = useState(false);
   const [playAudio, setPlayAudio] = useState(false);
-
-  const handleImageClick = () => {
-    if (location.videoUrl) {
-      setShowVideo(true);
-    }
-  };
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
@@ -27,8 +21,31 @@ const FullScreenInfo = ({
 
   const getYouTubeEmbedUrl = (videoUrl: string) => {
     const videoId = videoUrl.split("v=")[1];
-    return `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0`;
+    return `https://www.youtube.com/embed/${videoId}?autoplay=0&controls=0`;
   };
+
+  //function to load media type: returns either image orvideo
+  const loadMedia = (item: string) => {
+      let temp: string[] = item.split('.');
+      if (temp[1] == "jpg" || temp[1] == "png")
+        return <img
+        className="d=block w-100 h-100"
+        src={item}
+        />
+      else
+        return <iframe
+          style={{
+            display: "cover",
+            width: "100%",
+            height: "36cqh"
+          }}
+          src={getYouTubeEmbedUrl(location.videoUrl)}
+          title={location.title}
+          frameBorder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+  }
 
   return (
     // div styling for the pop-up window
@@ -111,33 +128,24 @@ const FullScreenInfo = ({
         />
       )}
 
-      {/* video and image style */}
-      {showVideo ? (
-        <iframe
-          width="80%"
-          height="300px"
-          src={getYouTubeEmbedUrl(location.videoUrl)}
-          title={location.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      ) : location.imageUrl ? (
-        <img
-          src={location.imageUrl}
-          alt={location.title}
-          style={{
-            width: "80vw",
-            maxHeight: "36vh",
-            objectFit: "cover",
-            borderRadius: "10px",
-            cursor: location.videoUrl ? "pointer" : "default",
-          }}
-          onClick={handleImageClick}
-        />
-      ) : (
-        <p>No media available.</p>
-      )}
+      {/* react-bootstrap carousel */}
+      <Carousel style={{
+        width: "80vw",
+        maxHeight: "36vh",
+        minHeight: "20vh",
+        objectFit: "cover",
+        borderRadius: "10px",
+        overflow: "hidden"}}
+        interval = {null} // react-bootstrap: disable auto scrolling
+        >
+        
+        {/* map images and videos and display in carousel */}
+        {location.media.map((item: any, i: any) => (
+          <Carousel.Item key={i}>
+            { loadMedia(item) }
+          </Carousel.Item>
+        ))}
+      </Carousel>
 
       <Button
         variant="success"

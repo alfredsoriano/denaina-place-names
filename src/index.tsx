@@ -17,7 +17,7 @@ export interface DenainaLocation {
   coordinates: [number, number];
   description: string; 
   culture: string;
-  imageUrl: string;
+  media: string;
   videoUrl: string;
   audioUrl: string;
 }

@@ -13,7 +13,7 @@
       "culture":["The Dena'ina name Nuch'ishtunt, meaning \"Place Protected from the Wind\" is due to the steep cliff-like, ",
       "bluffs along the area. Historically, Point Woronzof was one of Anchorage's earliest fish camp. The Ezi Family fish camp had ",
       "occupied the area until 1941."],
-      "imageUrl": "images/point W.jpg"
+      "media": ["images/point W.jpg"]
     },
     {
       "id": "2",
@@ -29,7 +29,7 @@
       "culture":["Before Anchorage, the Knik Arm Dena'ina set up salmon fishing camps along the Chester Creek water streams. ",
       "The stream provided many oppotunities to hunt for wildlife, or forage berries. There were also many Dena'ina cabins and houses along the stream, ",
       "up until the 1940s. While these fishing camps no longer exist, the remaining Dena'ina families set up new fishing camps on Fire Island to the west, in Cook Inlet."],
-      "imageUrl": "images/Chester C.png"
+      "media": ["images/Chester C.png"]
     },
     {
       "id": "3",
@@ -47,7 +47,7 @@
       "In the past, this village was home to the Dena'ina people of K'enaht'ana, who are native to Knik Arm. The K'enaht'ana lived in nichił, ",
       "which housed multiple families, and provided storage for fish and meat. In the 1840s, Russian Orthodox missionaries arrived, which contributed to ",
       "the brightly colored spirit houses in the Eklutna Historical Park Cemetery."],
-      "imageUrl": "images/Eklutna1.jpg"
+      "media": ["images/Eklutna1.jpg"]
     },
     {
       "id": "4",
@@ -69,7 +69,7 @@
       "the giant women prayed to their Gods for Susitna to enter a deep slumber. They answered, but as the price of the prayer, the land changed. ",
       "The air grew cold and snow started to cover Susitna. Many years had passed with Susitna asleep. The giants disappeared, with smaller people coming in to watch other Susitna. ",
       "They say that every summer, Susitna's body is still covered by the blanket of grass and wildflowers, and that every winter, the Gods gently place a soft blanket of snow on her body."],
-      "imageUrl": "images/Mt Susitna1.jpg",
+      "media": ["images/Mt Susitna1.jpg", "images/Chester C.png", "https://www.youtube.com/watch?v=IMRP2r5_14I"],
       "videoUrl": "https://www.youtube.com/watch?v=IMRP2r5_14I",
       "audioUrl": "https://www.youtube.com/watch?v=IMRP2r5_14I"
     }
