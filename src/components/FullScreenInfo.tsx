@@ -26,6 +26,7 @@ const FullScreenInfo = ({
     }
   };
 
+  //function to get YouTube embedded video URL
   const getYouTubeEmbedUrl = (videoUrl: string) => {
     const videoId = videoUrl.split("v=")[1];
     return `https://www.youtube.com/embed/${videoId}?autoplay=0&controls=0`;
@@ -156,6 +157,7 @@ const FullScreenInfo = ({
         ))}
       </Carousel>
 
+      {/* react-bootstrap button */}
       <Button
         variant="success"
         onClick={onClose}
@@ -169,6 +171,7 @@ const FullScreenInfo = ({
       >
         &#x2715;
       </Button>
+      
     </div>
   );
 };
