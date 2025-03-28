@@ -88,11 +88,7 @@ const FullScreenInfo = ({
       <h2>
         {location.denainaName ?? "No Dena'ina Name available."} -{" "}
         {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-      </h2>
-
-      {/* FIXME ------------------------------------------------------------------- */}
-      {/* "Play Audio" button */}
-      {location.videoUrl && (
+        {location.videoUrl && (
           <button
             onClick={toggleAudio}
             style={{
@@ -109,19 +105,19 @@ const FullScreenInfo = ({
             {playAudio ? "Pause Audio" : "Play Audio"}
           </button>
         )}
+        {playAudio && location.audioUrl && (
+          <iframe
+            width="0%"
+            height="0"
+            src={getYouTubeEmbedUrl(location.audioUrl, playAudio ? 1 : 0)}
+            title={`${location.title} Audio`}
+            frameBorder="0"
+            allow="autoplay"
+            style={{ marginTop: "20px", display: "block" }} 
+          />
+        )}
+      </h2>
 
-      {playAudio && location.audioUrl && (
-        <iframe
-          width="0"
-          height=""
-          src={getYouTubeEmbedUrl(location.audioUrl)}
-          title={`${location.title} Audio`}
-          frameBorder="0"
-          allow="autoplay"
-          style={{ display: "none" }}
-        />
-      )}
-      {/* FIXME ------------------------------------------------------------------- */}
 
       {/* div style for scrollable container */}
       <div style = {{
