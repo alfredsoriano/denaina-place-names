@@ -26,15 +26,16 @@ function MapComponent() {
   return (
     <div 
       style={{
-        height: "calc(100vh - 50px)",
-        position: 'relative'
+        height: "100vh",
+        width: "100vw",
+        position: 'relative',
       }}
     >
       <MapContainer
         center={[61.2176, -149.8997]}
         zoom={9}
         minZoom={7}
-        style={{  height: "100%",width: "100vw" }}
+        style={{  height: "100vh", width: "100vw" }}
         maxBounds={[
           [58.78879, -153.63653],
           [62.7745, -146.17683],
