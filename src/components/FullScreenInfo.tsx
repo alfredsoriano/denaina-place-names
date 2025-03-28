@@ -84,35 +84,35 @@ const FullScreenInfo = ({
       <h2>
         {location.denainaName ?? "No Dena'ina Name available."} -{" "}
         {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-        {location.videoUrl && (
-          <button
-            onClick={toggleAudio}
-            style={{
-              marginLeft: "10px",
-              padding: "5px 10px",
-              fontSize: "16px",
-              backgroundColor: "#66785F",
-              color: "White",
-              borderRadius: "5px",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            {playAudio ? "Pause Audio" : "Play Audio"}
-          </button>
-        )}
-        {playAudio && location.audioUrl && (
-          <iframe
-            width="0%"
-            height="0"
-            src={getYouTubeEmbedUrl(location.audioUrl, playAudio ? 1 : 0)}
-            title={`${location.title} Audio`}
-            frameBorder="0"
-            allow="autoplay"
-            style={{ marginTop: "20px", display: "block" }} 
-          />
-        )}
       </h2>
+      {location.videoUrl && (
+        <button
+          onClick={toggleAudio}
+          style={{
+            marginLeft: "10px",
+            padding: "5px 10px",
+            fontSize: "16px",
+            backgroundColor: "#66785F",
+            color: "White",
+            borderRadius: "5px",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          {playAudio ? "Pause Audio" : "Play Audio"}
+        </button>
+      )}
+      {playAudio && location.audioUrl && (
+        <iframe
+          width="o%"
+          height="0"
+          src={getYouTubeEmbedUrl(location.audioUrl, 1)} // autoplay=1 to start playing
+          title={`${location.title} Audio`}
+          frameBorder="0"
+          allow="autoplay"
+          style={{ marginTop: "20px" }}
+        />
+      )}
 
       {/* div style for scrollable container */}
       <div
@@ -171,3 +171,4 @@ const FullScreenInfo = ({
 };
 
 export default FullScreenInfo;
+
