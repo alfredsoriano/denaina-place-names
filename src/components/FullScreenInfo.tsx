@@ -103,16 +103,16 @@ const FullScreenInfo = ({
         </button>
       )}
       {playAudio && location.audioUrl && (
-        <iframe
-          width="o%"
-          height="0"
-          src={getYouTubeEmbedUrl(location.audioUrl, 1)} // autoplay=1 to start playing
-          title={`${location.title} Audio`}
-          frameBorder="0"
-          allow="autoplay"
-          style={{ marginTop: "20px" }}
-        />
-      )}
+          <iframe
+            width="0%"
+            height="0"
+            src={getYouTubeEmbedUrl(location.audioUrl, playAudio ? 1 : 0)}
+            title={`${location.title} Audio`}
+            frameBorder="0"
+            allow="autoplay"
+            style={{ marginTop: "20px", display: "block" }}
+          />
+        )}
 
       {/* div style for scrollable container */}
       <div
