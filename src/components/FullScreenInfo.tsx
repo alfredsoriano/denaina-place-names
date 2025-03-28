@@ -13,51 +13,48 @@ const FullScreenInfo = ({
 }) => {
   if (location === null || isOpen === false) return null;
 
-  //const [showVideo, setShowVideo] = useState(false);
   const [playAudio, setPlayAudio] = useState(false);
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
   };
 
-  //const handleImageClick = () => {
-    //if (location.videoUrl) {
-     // setShowVideo(true);
-    //}
- // };
-
   //function to get YouTube embedded video URL
-  const getYouTubeEmbedUrl = (videoUrl: string) => {
+  const getYouTubeEmbedUrl = (videoUrl: string, autoplay = 0) => {
     const videoId = videoUrl.split("v=")[1];
-    return `https://www.youtube.com/embed/${videoId}?autoplay=0&controls=0`;
+    return `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay}&controls=1`;
   };
 
   //function to load media type: returns either image or video
   const loadMedia = (item: string) => {
-      let temp: string[] = item.split('.');
-      if (temp[1] == "jpg" || temp[1] == "png")
-        return <img
-            style = {{
-              width: "100%",
-              height: "36cqh",
-              objectFit: "cover"
-            }}
-            src={item}
-          />
-      else
-        return <iframe
-            style={{
-              display: "cover",
-              width: "100%",
-              height: "36cqh"
-            }}
-            src={getYouTubeEmbedUrl(location.videoUrl)}
-            title={location.title}
-            frameBorder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+    let temp: string[] = item.split(".");
+    if (temp[1] === "jpg" || temp[1] === "png")
+      return (
+        <img
+          style={{
+            width: "100%",
+            height: "36vh",
+            objectFit: "cover",
+          }}
+          src={item}
         />
-  }
+      );
+    else
+      return (
+        <iframe
+          style={{
+            display: "block",
+            width: "100%",
+            height: "36vh",
+          }}
+          src={getYouTubeEmbedUrl(location.videoUrl)}
+          title={location.title}
+          frameBorder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      );
+  };
 
   return (
     // div styling for the pop-up window
@@ -66,20 +63,19 @@ const FullScreenInfo = ({
         position: "absolute",
         top: 0,
         right: 0,
-        height: "100vh", 
+        height: "100vh",
         width: "100vw",
         backgroundColor: "#2C3930",
         color: "#DCD7C9",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "flex-start", 
-        overflowY: "hidden", 
-        padding: "20px", 
+        justifyContent: "flex-start",
+        overflowY: "hidden",
+        padding: "20px",
         zIndex: 1000,
       }}
     >
-      
       {/* Headers
       <h1> is reserved for the English Location Title Name
       <h2> is reserved for the Dena'ina Name and Dena'ina Meaning
@@ -118,40 +114,41 @@ const FullScreenInfo = ({
         )}
       </h2>
 
-
       {/* div style for scrollable container */}
-      <div style = {{
-        height: "40vh",
-        minHeight: "30vh",
-        overflow: "auto", 
-        marginTop: "20px",
-        marginBottom: "20px"}
-      }>
-      {/* div style paragraph text inside scrollable container */}
-        <p style={{
-          marginLeft: "5%", 
-          marginRight: "5%", 
-          marginTop: "1%" 
+      <div
+        style={{
+          height: "40vh",
+          minHeight: "30vh",
+          overflow: "auto",
+          marginTop: "20px",
+          marginBottom: "20px",
         }}>
+        {/* div style paragraph text inside scrollable container */}
+        <p
+          style={{
+            marginLeft: "5%",
+            marginRight: "5%",
+            marginTop: "1%",
+          }}
+        >
           {location.description ?? "No description found."} <br></br>
           <br></br> {location.culture ?? "No cultural description found."}
         </p>
       </div>
 
       {/* react-bootstrap carousel */}
-      <Carousel style={{
-        width: "80vw",
-        maxHeight: "36vh",
-        borderRadius: "10px",
-        overflow: "hidden"}}
-        interval = {null} // react-bootstrap: disable auto scrolling
-        >
-        
+      <Carousel
+        style={{
+          width: "80vw",
+          maxHeight: "36vh",
+          borderRadius: "10px",
+          overflow: "hidden",
+        }}
+        interval={null} // react-bootstrap: disable auto scrolling
+      >
         {/* map images and videos and display in carousel */}
         {location.media.map((item: any, i: any) => (
-          <Carousel.Item key={i}>
-            { loadMedia(item) }
-          </Carousel.Item>
+          <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
         ))}
       </Carousel>
 
@@ -169,7 +166,6 @@ const FullScreenInfo = ({
       >
         &#x2715;
       </Button>
-
     </div>
   );
 };
