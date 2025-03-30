@@ -84,8 +84,7 @@ const FullScreenInfo = ({
       <h2>
         {location.denainaName ?? "No Dena'ina Name available."} -{" "}
         {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-      </h2>
-      {location.videoUrl && (
+        {location.videoUrl && (
         <button
           onClick={toggleAudio}
           style={{
@@ -113,7 +112,8 @@ const FullScreenInfo = ({
             style={{ marginTop: "20px", display: "block" }}
           />
         )}
-
+      </h2>
+      
       {/* div style for scrollable container */}
       <div
         style={{
