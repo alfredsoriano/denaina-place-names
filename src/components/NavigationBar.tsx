@@ -1,5 +1,8 @@
+import { useState, useEffect} from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button"
+import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 
 function NavigationBar() {
   return (
@@ -10,8 +13,13 @@ function NavigationBar() {
         <Nav.Link href="#about" style={{ color: "white" }}>About/About us</Nav.Link>
         <Nav.Link href="#FAQ" style={{ color: "white" }}>FAQ</Nav.Link>
       </Nav>
+    
     </Navbar>
   );
 }
 
+
 export default NavigationBar;
+
+<BsFillMoonStarsFill />
+<BsFillSunFill />
