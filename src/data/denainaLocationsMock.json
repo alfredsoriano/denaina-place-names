@@ -13,7 +13,8 @@
       "culture":["The Dena'ina name Nuch'ishtunt, meaning \"Place Protected from the Wind\" is due to the steep cliff-like, ",
       "bluffs along the area. Historically, Point Woronzof was one of Anchorage's earliest fish camp. The Ezi Family fish camp had ",
       "occupied the area until 1941."],
-      "media": ["img/images/Woronzof1.jpg", "img/images/Woronzof2.jpg", "img/images/Woronzof3.jpg"]
+      "media": ["img/images/Woronzof1.jpg", "img/images/Woronzof2.jpg", "img/images/Woronzof3.jpg"],
+      "backgroundImage": "img/backgrounds/Moose_Background.png"
     },
     {
       "id": "2",
@@ -47,7 +48,8 @@
       "In the past, this village was home to the Dena'ina people of K'enaht'ana, who are native to Knik Arm. The K'enaht'ana lived in nichił, ",
       "which housed multiple families, and provided storage for fish and meat. In the 1840s, Russian Orthodox missionaries arrived, which contributed to ",
       "the brightly colored spirit houses in the Eklutna Historical Park Cemetery."],
-      "media": ["img/images/Eklutna1.jpg", "img/images/Eklutna2.jpg", "img/images/Eklutna3.jpg"]
+      "media": ["img/images/Eklutna1.jpg", "img/images/Eklutna2.jpg", "img/images/Eklutna3.jpg"],
+      "backgroundImage": "img/backgrounds/Moose_Background.png"
     },
     {
       "id": "4",
@@ -74,4 +76,3 @@
       "audioUrl": "https://www.youtube.com/watch?v=IMRP2r5_14I"
     }
 ]
-
