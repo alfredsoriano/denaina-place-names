@@ -4,9 +4,11 @@ import "leaflet/dist/leaflet.css";
 import { DenainaLocation } from "../types";
 import denainaLocationsMockData from "../data/denainaLocationsMock.json";
 import FullScreenInfo from "./FullScreenInfo";
+/*
 import icon from "leaflet/dist/images/marker-icon-2x.png";
 import L from "leaflet";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
+*/
 
 function MapComponent() {
   {/*const defaultPin = L.icon({
