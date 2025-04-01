@@ -1,17 +1,15 @@
 import { useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-//import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet.css";
 import { DenainaLocation } from "../types";
 import denainaLocationsMockData from "../data/denainaLocationsMock.json";
 import FullScreenInfo from "./FullScreenInfo";
-/*
 import icon from "leaflet/dist/images/marker-icon-2x.png";
 import L from "leaflet";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
-*/
 
 function MapComponent() {
-  {/*const defaultPin = L.icon({
+  const defaultPin = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
     iconSize: [25, 41],
@@ -21,7 +19,6 @@ function MapComponent() {
   });
 
   L.Marker.prototype.options.icon = defaultPin;
-*/}
 
   const [denainaLocationsMock] = useState<DenainaLocation[]>(
     denainaLocationsMockData as DenainaLocation[]
