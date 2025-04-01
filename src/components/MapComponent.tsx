@@ -9,7 +9,7 @@ import L from "leaflet";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
 function MapComponent() {
-  const defaultPin = L.icon({
+  {/*const defaultPin = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
     iconSize: [25, 41],
@@ -19,6 +19,7 @@ function MapComponent() {
   });
 
   L.Marker.prototype.options.icon = defaultPin;
+*/}
 
   const [denainaLocationsMock] = useState<DenainaLocation[]>(
     denainaLocationsMockData as DenainaLocation[]

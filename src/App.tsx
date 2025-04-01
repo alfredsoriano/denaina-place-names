@@ -1,4 +1,3 @@
-import "leaflet/dist/leaflet.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import MapComponent from "./components/MapComponent";
