@@ -80,40 +80,59 @@ const FullScreenInfo = ({
       <h1> is reserved for the English Location Title Name
       <h2> is reserved for the Dena'ina Name and Dena'ina Meaning
        */}
-      <h1>{location.title}</h1>
-      <h2>
-        {location.denainaName ?? "No Dena'ina Name available."} -{" "}
-        {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-        {location.videoUrl && (
-        <button
-          onClick={toggleAudio}
-          style={{
-            marginLeft: "10px",
-            padding: "5px 10px",
-            fontSize: "16px",
-            backgroundColor: "#66785F",
-            color: "White",
-            borderRadius: "5px",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          {playAudio ? "Pause Audio" : "Play Audio"}
-        </button>
-      )}
-      {playAudio && location.audioUrl && (
-          <iframe
-            width="0%"
-            height="0"
-            src={getYouTubeEmbedUrl(location.audioUrl, playAudio ? 1 : 0)}
-            title={`${location.title} Audio`}
-            frameBorder="0"
-            allow="autoplay"
-            style={{ marginTop: "20px", display: "block" }}
-          />
-        )}
-      </h2>
-      
+
+      {/* Styling for the background for the title */}
+      <div
+        style={{
+          width: "100%",
+          minHeight: "250px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "20px",
+          backgroundImage: `url(${location.backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          borderBottom: "5px solid rgba(0, 0, 0, 0.8)",
+          //borderRight: "5px solid rgba(0, 0, 0, 0.8)",
+        }}
+      >
+        <h1>{location.title}</h1>
+        <h2>
+          {location.denainaName ?? "No Dena'ina Name available."} -{" "}
+          {location.denainaMeaning ?? "No Dena'ina Meaning available."}
+          {location.videoUrl && (
+            <button
+              onClick={toggleAudio}
+              style={{
+                marginLeft: "10px",
+                padding: "5px 10px",
+                fontSize: "16px",
+                backgroundColor: "#66785F",
+                color: "White",
+                borderRadius: "5px",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              {playAudio ? "Stop" : "Play"}
+            </button>
+          )}
+          {playAudio && location.audioUrl && (
+            <iframe
+              width="0%"
+              height="0"
+              src={getYouTubeEmbedUrl(location.audioUrl, playAudio ? 1 : 0)}
+              title={`${location.title} Audio`}
+              frameBorder="0"
+              allow="autoplay"
+              style={{ marginTop: "20px", display: "block" }}
+            />
+          )}
+        </h2>
+      </div>
+
       {/* div style for scrollable container */}
       <div
         style={{
@@ -122,7 +141,8 @@ const FullScreenInfo = ({
           overflow: "auto",
           marginTop: "20px",
           marginBottom: "20px",
-        }}>
+        }}
+      >
         {/* div style paragraph text inside scrollable container */}
         <p
           style={{
@@ -171,4 +191,3 @@ const FullScreenInfo = ({
 };
 
 export default FullScreenInfo;
-
