@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { Button } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
 
@@ -11,9 +11,9 @@ const FullScreenInfo = ({
   isOpen: boolean;
   onClose: () => void;
 }) => {
-  if (location === null || isOpen === false) return null;
-
   const [playAudio, setPlayAudio] = useState(false);
+
+  if (location === null || isOpen === false) return null;
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
