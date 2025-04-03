@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 
 const ThemeContext = createContext({
     darkTheme: true,
@@ -14,6 +14,10 @@ const ThemeProvider = ({ children }: {children: ReactNode}) => {
   function toggleTheme() {
     setDarkTheme((prevTheme) => !prevTheme);
   };
+
+  useEffect(() => {
+    localStorage.setItem('darkTheme', darkTheme ? 'true' : 'false')
+  }, [darkTheme])
 
   return (
     <ThemeContext.Provider value={{ darkTheme, toggleTheme }}>
