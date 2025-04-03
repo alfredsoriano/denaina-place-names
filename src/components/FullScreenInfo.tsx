@@ -1,13 +1,14 @@
 import {  useState } from "react";
 import { Button } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
+import { DenainaLocation } from "../types";
 
 const FullScreenInfo = ({
   location,
   isOpen,
   onClose,
 }: {
-  location: any;
+  location: DenainaLocation | null;
   isOpen: boolean;
   onClose: () => void;
 }) => {
@@ -39,7 +40,7 @@ const FullScreenInfo = ({
           src={item}
         />
       );
-    else
+    else if (location.videoUrl)
       return (
         <iframe
           style={{

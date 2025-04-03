@@ -1,8 +1,8 @@
 import { createContext, ReactNode, useEffect, useState } from 'react';
 
 const ThemeContext = createContext({
-    darkTheme: true,
-    toggleTheme: () => {}
+  darkTheme: true,
+  toggleTheme: () => {}
 });
 
 const ThemeProvider = ({ children }: {children: ReactNode}) => {
