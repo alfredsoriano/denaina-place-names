@@ -6,6 +6,8 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { Modal } from "react-bootstrap"; 
 import { ThemeContext } from "../context/ThemeContext";
 
+<>
+</>
 
 function NavigationBar() {
   const { darkTheme, toggleTheme } = useContext(ThemeContext);
