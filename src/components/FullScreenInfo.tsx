@@ -1,7 +1,8 @@
-import {  useState } from "react";
+import {  useContext, useState } from "react";
 import { Button } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
+import { ThemeContext } from "../context/ThemeContext";
 
 const FullScreenInfo = ({
   location,
@@ -13,6 +14,7 @@ const FullScreenInfo = ({
   onClose: () => void;
 }) => {
   const [playAudio, setPlayAudio] = useState(false);
+  const { darkTheme } = useContext(ThemeContext);
 
   if (location === null || isOpen === false) return null;
 
@@ -59,6 +61,7 @@ const FullScreenInfo = ({
 
   return (
     // div styling for the pop-up window
+
     <div
       style={{
         position: "absolute",
@@ -66,8 +69,8 @@ const FullScreenInfo = ({
         right: 0,
         height: "100vh",
         width: "100vw",
-        backgroundColor: "#2C3930",
-        color: "#DCD7C9",
+        backgroundColor: darkTheme ? "#2C3930" : "#DCD7C9",
+        color: darkTheme ? "#DCD7C9" : "#2C3930",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
