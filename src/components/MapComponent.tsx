@@ -41,7 +41,7 @@ function MapComponent() {
       style={{
         height: "100vh",
         width: "100vw",
-        position: 'relative',
+        position: 'fixed',
       }}
     >
       <MapContainer
