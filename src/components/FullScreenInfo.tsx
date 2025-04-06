@@ -137,7 +137,6 @@ const FullScreenInfo = ({
         </h2>
       </div>
 
-      {/* Content section split in two: text on left, carousel on right */}
       <div>
         {/* div style paragraph text inside scrollable container */}
         <div
