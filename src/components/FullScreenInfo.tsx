@@ -142,17 +142,20 @@ const FullScreenInfo = ({
         <div
           style={{
             flex: "1 1 400px",
-            width: "96vw",
+            //width: "96vw",
+            width: "auto",
             //maxWidth: "600px",
             backgroundColor: darkTheme ? "#394D3D" : "#fff",
-            padding: "10px",
+            padding: "14px",
             borderRadius: "10px",
             boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-            height: "45vh",
+            height: "5vh",
             minHeight: "30vh",
             overflow: "auto",
             marginTop: "20px",
+            //marginRight: "10px",
             marginBottom: "20px",
+            boxSizing: "border-box",
           }}
         >
           <p
@@ -173,8 +176,10 @@ const FullScreenInfo = ({
               overflow: "hidden",
               boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
               marginBottom: "80px",
-              width: "96vw", 
+              //width: "96vw",
+              width: "100%", 
               maxHeight: "65vh",
+              boxSizing: "border-box",
             }}
             interval={null}
           >
@@ -202,5 +207,7 @@ const FullScreenInfo = ({
     </div>
   );
 };
+
+export default FullScreenInfo;
 
 export default FullScreenInfo;
