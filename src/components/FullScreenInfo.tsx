@@ -35,30 +35,43 @@ const FullScreenInfo = ({
         <img
           style={{
             width: "100%",
-            height: "auto",
+            height: "100%",
             objectFit: "cover",
             borderRadius: "10px",
-
           }}
           src={item}
         />
       );
     else if (location.videoUrl)
       return (
-        <iframe
+        <div
           style={{
-            display: "block",
+            position: "relative",
             width: "100%",
-            height: "auto",
+            aspectRatio: "16 / 9",
             borderRadius: "10px",
-            minHeight: "450px"
+            overflow: "hidden",
+            //maxWidth: "800px",
           }}
-          src={getYouTubeEmbedUrl(location.videoUrl)}
-          title={location.title}
-          frameBorder="0"
-          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        >
+          <iframe
+            src={getYouTubeEmbedUrl(location.videoUrl)}
+            title={location.title}
+            style={{
+              position: "sticky",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              border: "none",
+              //maxWidth: "1500px",
+              //maxHeight: "500px",
+            }}
+            frameBorder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       );
   };
 
@@ -75,7 +88,7 @@ const FullScreenInfo = ({
         color: darkTheme ? "#DCD7C9" : "#2C3930",
         display: "flex",
         flexDirection: "column",
-        padding: "20px",
+        padding: "30px",
         overflowY: "auto",
         zIndex: 1000,
         boxSizing: "border-box",
@@ -169,17 +182,24 @@ const FullScreenInfo = ({
         </div>
 
         {/* react-bootstrap carousel */}
-        <div>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16 / 9",
+            borderRadius: "10px",
+            overflow: "hidden",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+            marginBottom: "80px",
+          }}
+        >
           <Carousel
             style={{
-              borderRadius: "10px",
-              overflow: "hidden",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-              marginBottom: "80px",
-              //width: "96vw",
-              width: "100%", 
-              maxHeight: "65vh",
-              boxSizing: "border-box",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
             }}
             interval={null}
           >
@@ -209,3 +229,4 @@ const FullScreenInfo = ({
 };
 
 export default FullScreenInfo;
+
