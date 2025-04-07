@@ -209,5 +209,3 @@ const FullScreenInfo = ({
 };
 
 export default FullScreenInfo;
-
-export default FullScreenInfo;
