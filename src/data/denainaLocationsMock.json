@@ -76,7 +76,7 @@
   },
   {
     "id": "5",
-    "title": "Kalifornsky Beach",
+    "title": "Kalifornsky Beach (WIP)",
     "denainaName":"Unhghenesditnu",
     "denainaMeaning":"\"Farthest creek over\"",
     "coordinates": [60.459996, -151.282312],
@@ -87,7 +87,7 @@
   },
   {
     "id": "6",
-    "title": "Kenai River ??",
+    "title": "Kenai River (WIP)",
     "denainaName":"Kahtnu",
     "denainaMeaning":"\"Kenai River\"",
     "coordinates": [60.483152, -150.034194],
@@ -98,7 +98,7 @@
   },
   {
     "id": "7",
-    "title": "Ninilchik",
+    "title": "Ninilchik (WIP)",
     "denainaName":"Niqnalchint",
     "denainaMeaning":"\"A place where a lodge is build\"",
     "coordinates": [60.024121, -151.595044],
@@ -236,7 +236,7 @@
   },
   {
     "id": "16",
-    "title": "Denali",
+    "title": "Denali (WIP)",
     "denainaName":"Dghelay Ka'a",
     "denainaMeaning":"\"Big Mountain\"",
     "coordinates": [63.0692, -151.0070],
