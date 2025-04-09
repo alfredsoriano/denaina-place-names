@@ -151,9 +151,14 @@ const FullScreenInfo = ({
             marginRight: "5%",
             marginTop: "1%",
           }}
+          
         >
-          {location.description ?? "No description found."} <br></br>
-          <br></br> {location.culture ?? "No cultural description found."}
+          {location.description ?? "No description found."} 
+          <br></br>
+          <br></br> 
+          <span
+            dangerouslySetInnerHTML={{ __html: location.culture ? location.culture.join(' ') : 'No cultural description found.', }}
+          />
         </p>
       </div>
 
