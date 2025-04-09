@@ -115,39 +115,9 @@ const FullScreenInfo = ({
           borderBottom: "5px solid rgba(0, 0, 0, 0.8)",
         }}
       >
-        <h1>{location.title}</h1>
-        <h2>
-          {location.denainaName ?? "No Dena'ina Name available."} -{" "}
-          {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-          {location.videoUrl && (
-            <button
-              onClick={toggleAudio}
-              style={{
-                marginLeft: "10px",
-                padding: "5px 10px",
-                fontSize: "16px",
-                backgroundColor: "#66785F",
-                color: "White",
-                borderRadius: "5px",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              {playAudio ? "Stop" : "Play"}
-            </button>
-          )}
-          {playAudio && location.audioUrl && (
-            <iframe
-              width="0"
-              height="0"
-              src={getYouTubeEmbedUrl(location.audioUrl, 1)}
-              title={`${location.title} Audio`}
-              frameBorder="0"
-              allow="autoplay"
-              style={{ display: "none" }}
-            />
-          )}
-        </h2>
+        <h1 style={{ marginBottom: "10opx" }}>{location.title}</h1>
+
+        
       </div>
 
       <div>
@@ -176,6 +146,62 @@ const FullScreenInfo = ({
               marginBottom: "1rem",
             }}
           >
+        {/* div style for the dena name and audio */}
+        <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "10px",
+              justifyContent: "center",
+              textAlign: "center",
+              backgroundColor: darkTheme ? "#1E2A20" : "#EFEFEF",
+              padding: "10px 20px",
+              borderRadius: "8px",
+              marginBottom: "20px",
+            }}
+          >
+            <div>
+              <h2 style={{ margin: 0, fontSize: "1.5rem" }}>
+                {location.denainaName ?? "No Dena'ina Name available."}
+              </h2>
+              <p style={{ margin: 0, fontStyle: "italic" }}>
+                {location.denainaMeaning ?? "No Dena'ina Meaning available."}
+              </p>
+            </div>
+
+            {location.audioUrl && (
+              <>
+                <button
+                  onClick={toggleAudio}
+                  style={{
+                    padding: "6px 12px",
+                    fontSize: "14px",
+                    backgroundColor: "#66785F",
+                    color: "white",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  {playAudio ? "Stop Audio" : "Play Audio"}
+                </button>
+
+                {playAudio && (
+                  <iframe
+                    width="0"
+                    height="0"
+                    src={getYouTubeEmbedUrl(location.audioUrl, 1)}
+                    title={`${location.title} Audio`}
+                    frameBorder="0"
+                    allow="autoplay"
+                    style={{ display: "none" }}
+                  />
+                )}
+              </>
+            )}
+          </div>
+
             {location.description ?? "No description found."}
           </p>
           <p>{location.culture ?? "No cultural description found."}</p>
@@ -229,4 +255,3 @@ const FullScreenInfo = ({
 };
 
 export default FullScreenInfo;
-
