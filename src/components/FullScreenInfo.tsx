@@ -22,7 +22,7 @@ const FullScreenInfo = ({
   };
 
   // function to get YouTube embedded video URL
-  const getYouTubeEmbedUrl = (videoUrl: string, autoplay = 1) => {
+  const getYouTubeEmbedUrl = (videoUrl: string, autoplay = 0) => {
     const videoId = videoUrl.split("v=")[1].split("&")[0]; // Ensure you only get the video ID
     return `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay}&controls=1&showinfo=0&rel=0`;
   };
