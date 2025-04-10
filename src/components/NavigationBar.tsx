@@ -29,19 +29,14 @@ function NavigationBar() {
 
   return (
     <>
-      <Navbar expand="md" style={{ fontWeight: "800", padding: "5px 50px" }}>
-        <Navbar.Brand style={{ color: darkTheme ? "white" : "#273B09", cursor: "pointer" }} onClick={() => handleShowModal("Dena'ina Place Names is in development. Stay tuned!")}>
+      <Navbar expand="md" style={{ fontWeight: "900", padding: "5px 50px" }}>
+        <Navbar.Brand style={{ color: darkTheme ? "white" : "#273B09", cursor: "pointer", marginRight: "30px" }} onClick={() => handleShowModal("Dena'ina Place Names is in development. Stay tuned!")}>
           Dena'ina Place Names
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="w-100 d-flex align-items-center" style={{ gap: "30px", fontSize: "20px", fontWeight: "800", overflow: "auto" }}>
-            <Nav.Link onClick={() => handleShowModal("Home is in development. Stay tuned!")} style={{ color: darkTheme ? "white" : "#273B09", cursor: "pointer" }}>
-              Home
-            </Nav.Link>
-            <Nav.Link onClick={() => handleShowModal("Maps feature is in development. Stay tuned!")} style={{ color: darkTheme ? "white" : "#273B09", cursor: "pointer" }}>
-              Maps
-            </Nav.Link>
             <Nav.Link onClick={() => handleShowModal("About section is in development. Stay tuned!")} style={{ color: darkTheme ? "white" : "#273B09", cursor: "pointer" }}>
               About
             </Nav.Link>
