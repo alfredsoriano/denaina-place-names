@@ -1,0 +1,6 @@
+/* reduces carousel clickable area to the buttons */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+    height: 0;
+    top: 50%;
+}

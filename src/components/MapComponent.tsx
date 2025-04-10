@@ -6,6 +6,7 @@ import denainaLocationsMockData from "../data/denainaLocationsMock.json";
 import FullScreenInfo from "./FullScreenInfo";
 import L from "leaflet";
 
+
 function MapComponent() {
   //pin handling
   const defaultPin = L.icon({

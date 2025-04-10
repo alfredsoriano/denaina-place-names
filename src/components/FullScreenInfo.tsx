@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
+import "./FullScreenInfo.css";
 
 const FullScreenInfo = ({
   location,
@@ -13,12 +14,17 @@ const FullScreenInfo = ({
   onClose: () => void;
 }) => {
   const [playAudio, setPlayAudio] = useState(false);
+  const [playAudio2, setPlayAudio2] = useState(false);
   const { darkTheme } = useContext(ThemeContext);
 
   if (location === null || isOpen === false) return null;
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
+  };
+
+  const toggleAudio2 = () => {
+    setPlayAudio2((prev) => !prev);
   };
 
   // function to get YouTube embedded video URL
@@ -130,8 +136,7 @@ const FullScreenInfo = ({
             padding: "14px",
             borderRadius: "10px",
             boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-            height: "90vh",
-            minHeight: "100vh",
+            height: "auto",
             overflow: "auto",
             marginTop: "20px",
             //marginRight: "10px",
@@ -213,7 +218,13 @@ const FullScreenInfo = ({
             <div style={{ marginBottom: "0.3rem" }}>
               <h3 style={{ marginBottom: "0.1rem" }}>Local Description</h3>
             </div>
-            <p>{location.description ?? "No description found."}</p>
+            <p><span
+                dangerouslySetInnerHTML={{
+                  __html: location.description
+                    ? location.description.join(" ")
+                    : "No local description found.",
+                }}
+              /></p>
           </div>
 
           {/* div for the culture/story box*/}
@@ -228,16 +239,15 @@ const FullScreenInfo = ({
               backgroundColor: darkTheme ? "#4B5842" : "#EFEFEF",
               padding: "10px 20px",
               borderRadius: "8px",
-              marginBottom: "100px",
             }}
           >
             <div style={{ marginBottom: "0.3rem" }}>
               <h4 style={{ marginBottom: "0.5rem" }}>
                 Place Name Story
-                {location.audioUrl && (
+                {location.audioUrlculture && (
                   <>
                     <button
-                      onClick={toggleAudio}
+                      onClick={toggleAudio2}
                       style={{
                         padding: "6px 12px",
                         fontSize: "14px",
@@ -248,14 +258,14 @@ const FullScreenInfo = ({
                         cursor: "pointer",
                       }}
                     >
-                      {playAudio ? "Stop Audio" : "Play Audio"}
+                      {playAudio2 ? "Stop Audio" : "Play Audio"}
                     </button>
 
-                    {playAudio && (
+                    {playAudio2 && (
                       <iframe
                         width="0"
                         height="0"
-                        src={getYouTubeEmbedUrl(location.audioUrl, 1)}
+                        src={getYouTubeEmbedUrl(location.audioUrlculture, 1)}
                         title={`${location.title} Audio`}
                         frameBorder="0"
                         allow="autoplay"
@@ -291,6 +301,7 @@ const FullScreenInfo = ({
           }}
         >
           <Carousel
+          className = "custom-carousel"
             style={{
               position: "absolute",
               top: 0,
