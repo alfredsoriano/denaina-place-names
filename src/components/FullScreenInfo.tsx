@@ -218,7 +218,13 @@ const FullScreenInfo = ({
             <div style={{ marginBottom: "0.3rem" }}>
               <h3 style={{ marginBottom: "0.1rem" }}>Local Description</h3>
             </div>
-            <p>{location.description ?? "No description found."}</p>
+            <p><span
+                dangerouslySetInnerHTML={{
+                  __html: location.description
+                    ? location.description.join(" ")
+                    : "No local description found.",
+                }}
+              /></p>
           </div>
 
           {/* div for the culture/story box*/}
