@@ -327,18 +327,20 @@ const FullScreenInfo = ({
           e.currentTarget.style.borderColor = darkTheme ? "#AEBD93" : "#8B786D";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = darkTheme? "#596F62" : "#CCC5B9";
-          e.currentTarget.style.borderColor = darkTheme ? "#596F62" : "#CCC5B9";
+          e.currentTarget.style.backgroundColor = darkTheme? "#596F62" : "#D2BBA0";
+          e.currentTarget.style.borderColor = darkTheme ? "#596F62" : "#D2BBA0";
         }}
         style={{
           position: "fixed",
-          top: "10px",
+          top: "70px",
           right: "10pt",
-          backgroundColor: darkTheme ? "#596F62" : "#CCC5B9",
-          borderColor: darkTheme ? "#596F62" : "#CCC5B9",
+          backgroundColor: darkTheme ? "#596F62" : "#D2BBA0",
+          borderColor: darkTheme ? "#596F62" : "#D2BBA0",
           color: darkTheme ? "white" : "#2C3930",
           fontWeight: "bold",
+          zIndex: 1000
         }}
+        
       >
         &#x2715;
       </Button>
