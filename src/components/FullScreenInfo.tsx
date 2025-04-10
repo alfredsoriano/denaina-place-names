@@ -115,7 +115,7 @@ const FullScreenInfo = ({
           borderBottom: "5px solid rgba(0, 0, 0, 0.8)",
         }}
       >
-        <h1 style={{ marginBottom: "10opx" }}>{location.title}</h1>
+        <h1 style={{ marginBottom: "10px" }}>{location.title}</h1>
       </div>
 
       <div>
@@ -130,8 +130,8 @@ const FullScreenInfo = ({
             padding: "14px",
             borderRadius: "10px",
             boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-            height: "5vh",
-            minHeight: "30vh",
+            height: "90vh",
+            minHeight: "100vh",
             overflow: "auto",
             marginTop: "20px",
             //marginRight: "10px",
@@ -139,78 +139,147 @@ const FullScreenInfo = ({
             boxSizing: "border-box",
           }}
         >
-          <p
+          {/* div style for the dena name and audio */}
+          <div
             style={{
-              marginBottom: "1rem",
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "10px",
+              justifyContent: "center",
+              textAlign: "center",
+              backgroundColor: darkTheme ? "#3C493F" : "#EFEFEF",
+              padding: "10px 20px",
+              borderRadius: "8px",
+              marginBottom: "20px",
             }}
           >
-            {/* div style for the dena name and audio */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexWrap: "wrap",
-                gap: "10px",
-                justifyContent: "center",
-                textAlign: "center",
-                backgroundColor: darkTheme ? "#1E2A20" : "#EFEFEF",
-                padding: "10px 20px",
-                borderRadius: "8px",
-                marginBottom: "20px",
-              }}
-            >
-              <div>
-                <h2 style={{ margin: 0, fontSize: "1.5rem" }}>
-                  {location.denainaName ?? "No Dena'ina Name available."}
-                </h2>
-                <p style={{ margin: 0, fontStyle: "italic" }}>
-                  {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-                </p>
-              </div>
-
-              {location.audioUrl && (
-                <>
-                  <button
-                    onClick={toggleAudio}
-                    style={{
-                      padding: "6px 12px",
-                      fontSize: "14px",
-                      backgroundColor: "#66785F",
-                      color: "white",
-                      borderRadius: "5px",
-                      border: "none",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {playAudio ? "Stop Audio" : "Play Audio"}
-                  </button>
-
-                  {playAudio && (
-                    <iframe
-                      width="0"
-                      height="0"
-                      src={getYouTubeEmbedUrl(location.audioUrl, 1)}
-                      title={`${location.title} Audio`}
-                      frameBorder="0"
-                      allow="autoplay"
-                      style={{ display: "none" }}
-                    />
-                  )}
-                </>
-              )}
+            <div>
+              <h2 style={{ margin: 0, fontSize: "1.5rem" }}>
+                {location.denainaName ?? "No Dena'ina Name available."}
+              </h2>
+              <p style={{ margin: 0, fontStyle: "italic" }}>
+                {location.denainaMeaning ?? "No Dena'ina Meaning available."}
+              </p>
             </div>
 
-            {location.description ?? "No description found."}
-          </p>
-          <p>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: location.culture
-                  ? location.culture.join(" ")
-                  : "No cultural description found.",
-              }}
-            />
-          </p>
+            {location.audioUrl && (
+              <>
+                <button
+                  onClick={toggleAudio}
+                  style={{
+                    padding: "6px 12px",
+                    fontSize: "14px",
+                    backgroundColor: "#66785F",
+                    color: "white",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  {playAudio ? "Stop Audio" : "Play Audio"}
+                </button>
+
+                {playAudio && (
+                  <iframe
+                    width="0"
+                    height="0"
+                    src={getYouTubeEmbedUrl(location.audioUrl, 1)}
+                    title={`${location.title} Audio`}
+                    frameBorder="0"
+                    allow="autoplay"
+                    style={{ display: "none" }}
+                  />
+                )}
+              </>
+            )}
+          </div>
+
+          {/* div for the description box*/}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "10px",
+              justifyContent: "center",
+              textAlign: "left",
+              backgroundColor: darkTheme ? "#3A4F41" : "#EFEFEF",
+              padding: "10px 20px",
+              borderRadius: "8px",
+              marginBottom: "20px",
+            }}
+          >
+            <div style={{ marginBottom: "0.3rem" }}>
+              <h3 style={{ marginBottom: "0.1rem" }}>
+                Local Description
+              </h3>
+            </div>
+            <p>{location.description ?? "No description found."}</p>
+          </div>
+
+          {/* div for the culture/story box*/}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "10px",
+              justifyContent: "center",
+              textAlign: "left",
+              backgroundColor: darkTheme ? "#4B5842" : "#EFEFEF",
+              padding: "10px 20px",
+              borderRadius: "8px",
+              marginBottom: "100px",
+            }}
+          >
+            <div style={{ marginBottom: "0.3rem" }}>
+              <h4 style={{ marginBottom: "0.5rem" }}>
+                Place Name Story
+                {location.audioUrl && (
+                  <>
+                    <button
+                      onClick={toggleAudio}
+                      style={{
+                        padding: "6px 12px",
+                        fontSize: "14px",
+                        backgroundColor: "#66785F",
+                        color: "white",
+                        borderRadius: "5px",
+                        border: "none",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {playAudio ? "Stop Audio" : "Play Audio"}
+                    </button>
+
+                    {playAudio && (
+                      <iframe
+                        width="0"
+                        height="0"
+                        src={getYouTubeEmbedUrl(location.audioUrl, 1)}
+                        title={`${location.title} Audio`}
+                        frameBorder="0"
+                        allow="autoplay"
+                        style={{ display: "none" }}
+                      />
+                    )}
+                  </>
+                )}
+              </h4>
+            </div>
+            <p>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: location.culture
+                    ? location.culture.join(" ")
+                    : "No cultural description found.",
+                }}
+              />
+            </p>
+          </div>
+
+          
         </div>
 
         {/* react-bootstrap carousel */}
@@ -246,23 +315,12 @@ const FullScreenInfo = ({
       <Button
         variant="success"
         onClick={onClose}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = darkTheme? "#AEBD93" : "#9E9885";
-          e.currentTarget.style.borderColor = darkTheme? "#AEBD93" : "#9E9885"
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = darkTheme? "#596F62" : "#C6C5B9";
-          e.currentTarget.style.borderColor = darkTheme? "#596F62" : "#C6C5B9";
-        }}
-        
         style={{
-          position: "fixed",
+          position: "absolute",
           top: "10px",
           right: "10pt",
-          fontWeight: "bold",
-          backgroundColor: darkTheme? "#596F62" : "#C6C5B9",
-          borderColor: darkTheme? "#596F62" : "#C6C5B9",
-          color: darkTheme? "white" : "#273B09",
+          backgroundColor: "grey",
+          borderColor: "grey",
         }}
       >
         &#x2715;
