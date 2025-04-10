@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
+import "./FullScreenInfo.css";
 
 const FullScreenInfo = ({
   location,
@@ -302,6 +303,7 @@ const FullScreenInfo = ({
           }}
         >
           <Carousel
+          className = "custom-carousel"
             style={{
               position: "absolute",
               top: 0,
