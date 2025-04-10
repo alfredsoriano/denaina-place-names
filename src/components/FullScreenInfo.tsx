@@ -247,21 +247,22 @@ const FullScreenInfo = ({
         variant="success"
         onClick={onClose}
         onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = "#AEBD93";
-          e.currentTarget.style.borderColor = "#AEBD93";
+          e.currentTarget.style.backgroundColor = darkTheme? "#AEBD93" : "#9E9885";
+          e.currentTarget.style.borderColor = darkTheme? "#AEBD93" : "#9E9885"
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = "#596F62";
-          e.currentTarget.style.borderColor = "#596F62";
+          e.currentTarget.style.backgroundColor = darkTheme? "#596F62" : "#C6C5B9";
+          e.currentTarget.style.borderColor = darkTheme? "#596F62" : "#C6C5B9";
         }}
         
         style={{
           position: "fixed",
           top: "10px",
           right: "10pt",
-          backgroundColor: "#596F62",
-          borderColor: "#596F62",
-          color: "white",
+          fontWeight: "bold",
+          backgroundColor: darkTheme? "#596F62" : "#C6C5B9",
+          borderColor: darkTheme? "#596F62" : "#C6C5B9",
+          color: darkTheme? "white" : "#273B09",
         }}
       >
         &#x2715;
