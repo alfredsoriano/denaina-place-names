@@ -6,7 +6,6 @@ import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { Modal } from "react-bootstrap"; 
 import { ThemeContext } from "../context/ThemeContext";
 
-
 function NavigationBar() {
   const { darkTheme, toggleTheme } = useContext(ThemeContext);
   const [showModal, setShowModal] = useState(false);
@@ -27,7 +26,8 @@ function NavigationBar() {
 
   return (
     <>
-      <Navbar expand="md" style={{ fontWeight: "900", padding: "5px 50px", width: "100vw" }}>
+      <Navbar expand="md" style={{ fontWeight: "900", padding: "5px 40px", paddingRight: "calc(50px - 40px)", width: "100vw" }}>
+
         <Navbar.Brand style={{ color: darkTheme ? "white" : "#273B09", cursor: "pointer", marginRight: "30px", textAlign: 'center' }} onClick={() => handleShowModal("Dena'ina Place Names is in development. Stay tuned!")}>
           Dena'ina Place Names
         </Navbar.Brand>

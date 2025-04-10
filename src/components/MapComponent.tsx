@@ -40,8 +40,9 @@ function MapComponent() {
     <div 
       style={{
         height: "100vh",
-        width: "100vw",
+        width: "100vw",        
         position: 'fixed',
+
       }}
     >
       <MapContainer
