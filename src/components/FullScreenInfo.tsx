@@ -136,8 +136,7 @@ const FullScreenInfo = ({
             padding: "14px",
             borderRadius: "10px",
             boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-            height: "90vh",
-            minHeight: "100vh",
+            height: "auto",
             overflow: "auto",
             marginTop: "20px",
             //marginRight: "10px",
@@ -240,7 +239,6 @@ const FullScreenInfo = ({
               backgroundColor: darkTheme ? "#4B5842" : "#EFEFEF",
               padding: "10px 20px",
               borderRadius: "8px",
-              marginBottom: "100px",
             }}
           >
             <div style={{ marginBottom: "0.3rem" }}>
