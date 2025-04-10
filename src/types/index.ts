@@ -9,5 +9,6 @@ export interface DenainaLocation {
     media: string[];
     videoUrl?: string;
     audioUrl?: string;
+    audioUrlculture?: string;
     backgroundImage?: string;
   }

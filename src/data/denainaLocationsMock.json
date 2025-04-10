@@ -31,6 +31,7 @@
     "The stream provided many oppotunities to hunt for wildlife, or forage berries. There were also many Dena'ina cabins and houses along the stream, ",
     "up until the 1940s. While these fishing camps no longer exist, the remaining Dena'ina families set up new fishing camps on Fire Island to the west, in Cook Inlet."],
     "media": ["img/images/Chester C.png", "img/images/Chester C2.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=ZvXf26t0D6o",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -48,6 +49,7 @@
     "Previously used as a summer fishing site, Idluhet became a permanent settlement for tribal members as Anchorage was established and expanded.",
     "The plural objects that are the namesake of Eklutna are considered sacred ground as they were once used as burial grounds for Dena'ina long ago."],
     "media": ["img/images/Eklutna1.jpg", "img/images/Eklutna2.jpg", "img/images/Eklutna3.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=4aZ3Ux-QwCs",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -71,7 +73,8 @@
     "<br/>&emsp;&emsp;&emsp;This is the way they say they named them all."],
     "media": ["img/images/Susitna1.jpg", "img/images/Susitna2.jpg", "img/images/Susitna3.jpg", "https://www.youtube.com/watch?v=IMRP2r5_14I"],
     "videoUrl": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
-    "audioUrl": "https://www.youtube.com/watch?v=IMRP2r5_14I",
+    "audioUrl": "https://www.youtube.com/watch?v=l21cx8RncFI",
+    "audioUrlculture": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -94,6 +97,7 @@
     "description": ["We are currently working on this location!"],
     "culture": ["Want to contribute towards the Dena'ina Place Names project? Visit the FAQ to find out more information on how you can help!"],
     "media": [],
+    "audioUrl": "https://www.youtube.com/watch?v=W0osfeEBtdM",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -126,6 +130,7 @@
     "Cook and his crew sailed into <i>Tikhatnu</i>, or Cook Inlet, where he sent some of his men to explore a nearby island.",
     "On that island, his men built a fire which served as a beacon to Captain Cook, which he later named Fire Island."],
     "media": ["img/images/Fire Island1.png", "img/images/Fire Island2.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=5BveEXd9b98",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -143,6 +148,7 @@
     "Salmon and large animals came, such as caribou and moose abound and provided food year around.",
     "The Alaska Railroad arrived in 1917 as they were constructing the railroad from Anchorage to Fairbanks."],
     "media": ["img/images/Talkeetna1.jpg", "img/images/Talkeetna2.jpg", "img/images/Talkeetna3.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=FcrVaHxWk8M",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -174,6 +180,7 @@
     "The tides change from low to hide tide at an extreme and can be dangerous. Bore tides, or nudidghul, occur almost everyday in Tutl'uh.",
     "The Dena'ina understood this and navigaged successfully through Turnagain Arm and Cook Inlet."],
     "media": ["img/images/Cook Inlet1.jpg", "img/images/Cook Inlet2.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=GFNo6EMh-rE",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -204,6 +211,7 @@
     "culture": ["Kincaid Park is named after a battle between the Sugpiaq speaking people of Prince William Sound and the Dena'ina of the upper Knik Arm.",
     "The Sugpiaq attacked Dena'ina village and on their way home they were attacked."],
     "media": ["img/images/Kincaid1.jpg", "img/images/Kincaid2.jpg", "img/images/Kincaid3.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=mlQhgk9Ph2o",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -217,6 +225,7 @@
     "culture": ["The Dena'ina considered Tutl'uh as the head of Tikahtnu or Cook Inlet.",
     "This includes the Hope-Sunrise townsites as well."],
     "media": ["img/images/Turnagain1.jpg", "img/images/Turnagain2.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=V_Q3hAehS_U",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -232,6 +241,7 @@
     "King salmon and needlefish or stickleback fish used to be in abundance.",
     "After Anchorage was established in 1915, they lost access to this area."],
     "media": ["img/images/Ship Creek1.jpg", "img/images/Ship Creek2.jpg", "img/images/Ship Creek3.jpg"],
+    "audioUrl": "https://www.youtube.com/watch?v=wElFyMN3Um4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {

@@ -13,12 +13,17 @@ const FullScreenInfo = ({
   onClose: () => void;
 }) => {
   const [playAudio, setPlayAudio] = useState(false);
+  const [playAudio2, setPlayAudio2] = useState(false);
   const { darkTheme } = useContext(ThemeContext);
 
   if (location === null || isOpen === false) return null;
 
   const toggleAudio = () => {
     setPlayAudio((prev) => !prev);
+  };
+
+  const toggleAudio2 = () => {
+    setPlayAudio2((prev) => !prev);
   };
 
   // function to get YouTube embedded video URL
@@ -234,10 +239,10 @@ const FullScreenInfo = ({
             <div style={{ marginBottom: "0.3rem" }}>
               <h4 style={{ marginBottom: "0.5rem" }}>
                 Place Name Story
-                {location.audioUrl && (
+                {location.audioUrlculture && (
                   <>
                     <button
-                      onClick={toggleAudio}
+                      onClick={toggleAudio2}
                       style={{
                         padding: "6px 12px",
                         fontSize: "14px",
@@ -248,14 +253,14 @@ const FullScreenInfo = ({
                         cursor: "pointer",
                       }}
                     >
-                      {playAudio ? "Stop Audio" : "Play Audio"}
+                      {playAudio2 ? "Stop Audio" : "Play Audio"}
                     </button>
 
-                    {playAudio && (
+                    {playAudio2 && (
                       <iframe
                         width="0"
                         height="0"
-                        src={getYouTubeEmbedUrl(location.audioUrl, 1)}
+                        src={getYouTubeEmbedUrl(location.audioUrlculture, 1)}
                         title={`${location.title} Audio`}
                         frameBorder="0"
                         allow="autoplay"
