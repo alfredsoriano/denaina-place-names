@@ -211,9 +211,7 @@ const FullScreenInfo = ({
             }}
           >
             <div style={{ marginBottom: "0.3rem" }}>
-              <h3 style={{ marginBottom: "0.1rem" }}>
-                Local Description
-              </h3>
+              <h3 style={{ marginBottom: "0.1rem" }}>Local Description</h3>
             </div>
             <p>{location.description ?? "No description found."}</p>
           </div>
@@ -278,8 +276,6 @@ const FullScreenInfo = ({
               />
             </p>
           </div>
-
-          
         </div>
 
         {/* react-bootstrap carousel */}
@@ -315,12 +311,22 @@ const FullScreenInfo = ({
       <Button
         variant="success"
         onClick={onClose}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = darkTheme ? "#AEBD93" : "#8B786D";
+          e.currentTarget.style.borderColor = darkTheme ? "#AEBD93" : "#8B786D";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = darkTheme? "#596F62" : "#CCC5B9";
+          e.currentTarget.style.borderColor = darkTheme ? "#596F62" : "#CCC5B9";
+        }}
         style={{
-          position: "absolute",
+          position: "fixed",
           top: "10px",
           right: "10pt",
-          backgroundColor: "grey",
-          borderColor: "grey",
+          backgroundColor: darkTheme ? "#596F62" : "#CCC5B9",
+          borderColor: darkTheme ? "#596F62" : "#CCC5B9",
+          color: darkTheme ? "white" : "#2C3930",
+          fontWeight: "bold",
         }}
       >
         &#x2715;
