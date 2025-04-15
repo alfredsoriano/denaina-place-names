@@ -118,7 +118,6 @@ const FullScreenInfo = ({
           backgroundImage: `url(${location.backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
-          borderBottom: "5px solid rgba(0, 0, 0, 0.8)",
         }}
       >
         <h1 style={{ marginBottom: "10px" }}>{location.title}</h1>
