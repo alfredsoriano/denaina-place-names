@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
@@ -13,30 +13,15 @@ const FullScreenInfo = ({
   isOpen: boolean;
   onClose: () => void;
 }) => {
-  const [playAudio, setPlayAudio] = useState(false);
-  const [playAudio2, setPlayAudio2] = useState(false);
   const { darkTheme } = useContext(ThemeContext);
 
   if (location === null || isOpen === false) return null;
 
-  const toggleAudio = () => {
-    setPlayAudio((prev) => !prev);
-  };
-
-  const toggleAudio2 = () => {
-    setPlayAudio2((prev) => !prev);
-  };
-
-  // function to get YouTube embedded video URL
-  const getYouTubeEmbedUrl = (videoUrl: string, autoplay = 0) => {
-    const videoId = videoUrl.split("v=")[1].split("&")[0]; // Ensure you only get the video ID
-    return `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay}&controls=1&showinfo=0&rel=0`;
-  };
-
-  // function to load media type: returns either image or video
+  // function to load media type: returns image, video (mp4/mov), or nothing
   const loadMedia = (item: string) => {
-    let temp: string[] = item.split(".");
-    if (temp[1] === "jpg" || temp[1] === "png")
+    const extension = item.split(".").pop()?.toLowerCase();
+
+    if (["jpg", "jpeg", "png"].includes(extension || "")) {
       return (
         <img
           style={{
@@ -46,43 +31,31 @@ const FullScreenInfo = ({
             borderRadius: "10px",
           }}
           src={item}
+          alt="location media"
         />
       );
-    else if (location.videoUrl)
+    // getting the video
+    } else if (["mp4", "MOV", "webm"].includes(extension || "")) {
       return (
-        <div
+        <video
           style={{
-            position: "relative",
             width: "100%",
-            aspectRatio: "16 / 9",
+            height: "100%",
             borderRadius: "10px",
-            overflow: "hidden",
-            //maxWidth: "800px",
+            objectFit: "cover",
           }}
+          controls
         >
-          <iframe
-            src={getYouTubeEmbedUrl(location.videoUrl)}
-            title={location.title}
-            style={{
-              position: "sticky",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              border: "none",
-              //maxWidth: "1500px",
-              //maxHeight: "500px",
-            }}
-            frameBorder="0"
-            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+          <source src={item} type={`video/${extension}`} />
+          ERROR can't play the video on your phone
+        </video>
       );
+    }
+
+    return null;
   };
 
   return (
-    // div styling for the pop-up window
     <div
       style={{
         position: "absolute",
@@ -102,7 +75,9 @@ const FullScreenInfo = ({
     >
       {/* Headers
         <h1> is reserved for the English Location Title Name
-        <h2> is reserved for the Dena'ina Name and Dena'ina Meaning
+        <h2> is reserved for the Dena'ina Name and Dena'ina Meaning (audio)
+        <h3> is reserved for the Description
+        <h2> is reserved for the Dena'ina Place Name story and audio
       */}
 
       {/* Styling for the background for the title */}
@@ -118,6 +93,7 @@ const FullScreenInfo = ({
           backgroundImage: `url(${location.backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
+          borderBottom: "5px solid rgba(0, 0, 0, 0.8)",
         }}
       >
         <h1 style={{ marginBottom: "10px" }}>{location.title}</h1>
@@ -128,9 +104,7 @@ const FullScreenInfo = ({
         <div
           style={{
             flex: "1 1 400px",
-            //width: "96vw",
             width: "auto",
-            //maxWidth: "600px",
             backgroundColor: darkTheme ? "#394D3D" : "#fff",
             padding: "14px",
             borderRadius: "10px",
@@ -138,7 +112,6 @@ const FullScreenInfo = ({
             height: "auto",
             overflow: "auto",
             marginTop: "20px",
-            //marginRight: "10px",
             marginBottom: "20px",
             boxSizing: "border-box",
           }}
@@ -168,34 +141,10 @@ const FullScreenInfo = ({
             </div>
 
             {location.audioUrl && (
-              <>
-                <button
-                  onClick={toggleAudio}
-                  style={{
-                    padding: "6px 12px",
-                    fontSize: "14px",
-                    backgroundColor: "#66785F",
-                    color: "white",
-                    borderRadius: "5px",
-                    border: "none",
-                    cursor: "pointer",
-                  }}
-                >
-                  {playAudio ? "Stop Audio" : "Play Audio"}
-                </button>
-
-                {playAudio && (
-                  <iframe
-                    width="0"
-                    height="0"
-                    src={getYouTubeEmbedUrl(location.audioUrl, 1)}
-                    title={`${location.title} Audio`}
-                    frameBorder="0"
-                    allow="autoplay"
-                    style={{ display: "none" }}
-                  />
-                )}
-              </>
+              <audio controls style={{ marginTop: "10px" }}>
+                <source src={location.audioUrl} type="audio/mp3" />
+                ERROR cant play mp3
+              </audio>
             )}
           </div>
 
@@ -217,13 +166,15 @@ const FullScreenInfo = ({
             <div style={{ marginBottom: "0.3rem" }}>
               <h3 style={{ marginBottom: "0.1rem" }}>Local Description</h3>
             </div>
-            <p><span
+            <p>
+              <span
                 dangerouslySetInnerHTML={{
                   __html: location.description
                     ? location.description.join(" ")
                     : "No local description found.",
                 }}
-              /></p>
+              />
+            </p>
           </div>
 
           {/* div for the culture/story box*/}
@@ -241,39 +192,13 @@ const FullScreenInfo = ({
             }}
           >
             <div style={{ marginBottom: "0.3rem" }}>
-              <h4 style={{ marginBottom: "0.5rem" }}>
-                Place Name Story
-                {location.audioUrlculture && (
-                  <>
-                    <button
-                      onClick={toggleAudio2}
-                      style={{
-                        padding: "6px 12px",
-                        fontSize: "14px",
-                        backgroundColor: "#66785F",
-                        color: "white",
-                        borderRadius: "5px",
-                        border: "none",
-                        cursor: "pointer",
-                      }}
-                    >
-                      {playAudio2 ? "Stop Audio" : "Play Audio"}
-                    </button>
-
-                    {playAudio2 && (
-                      <iframe
-                        width="0"
-                        height="0"
-                        src={getYouTubeEmbedUrl(location.audioUrlculture, 1)}
-                        title={`${location.title} Audio`}
-                        frameBorder="0"
-                        allow="autoplay"
-                        style={{ display: "none" }}
-                      />
-                    )}
-                  </>
-                )}
-              </h4>
+              <h4 style={{ marginBottom: "0.5rem" }}>Place Name Story</h4>
+              {location.audioUrlculture && (
+                <audio controls style={{ marginTop: "10px" }}>
+                  <source src={location.audioUrlculture} type="audio/mp3" />
+                  ERROR cant play mp3 
+                </audio>
+              )}
             </div>
             <p>
               <span
@@ -300,7 +225,7 @@ const FullScreenInfo = ({
           }}
         >
           <Carousel
-          className = "custom-carousel"
+            className="custom-carousel"
             style={{
               position: "absolute",
               top: 0,
@@ -322,12 +247,20 @@ const FullScreenInfo = ({
         variant="success"
         onClick={onClose}
         onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = darkTheme ? "#AEBD93" : "#8B786D";
-          e.currentTarget.style.borderColor = darkTheme ? "#AEBD93" : "#8B786D";
+          e.currentTarget.style.backgroundColor = darkTheme
+            ? "#AEBD93"
+            : "#8B786D";
+          e.currentTarget.style.borderColor = darkTheme
+            ? "#AEBD93"
+            : "#8B786D";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = darkTheme? "#596F62" : "#D2BBA0";
-          e.currentTarget.style.borderColor = darkTheme ? "#596F62" : "#D2BBA0";
+          e.currentTarget.style.backgroundColor = darkTheme
+            ? "#596F62"
+            : "#D2BBA0";
+          e.currentTarget.style.borderColor = darkTheme
+            ? "#596F62"
+            : "#D2BBA0";
         }}
         style={{
           position: "fixed",
@@ -337,9 +270,8 @@ const FullScreenInfo = ({
           borderColor: darkTheme ? "#596F62" : "#D2BBA0",
           color: darkTheme ? "white" : "#2C3930",
           fontWeight: "bold",
-          zIndex: 1000
+          zIndex: 1000,
         }}
-        
       >
         &#x2715;
       </Button>
