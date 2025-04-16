@@ -24,4 +24,5 @@ export interface DenainaLocation {
   audioUrl?: string;
   audioUrlculture?: string;
   backgroundImage?: string;
+  citations: string[];
 }

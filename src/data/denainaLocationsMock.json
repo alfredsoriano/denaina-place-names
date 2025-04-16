@@ -5,15 +5,26 @@
     "denainaName":"Nuch'ishtunt",
     "denainaMeaning":"\"Place protected from the wind",
     "coordinates": [61.2026, -150.0214],
-    "description": ["Point Woronzof is a spot to the left of Anchorage, along the Cook Inlet coastline. ",
+    "description": 
+    ["Point Woronzof is a spot to the left of Anchorage, along the Cook Inlet coastline. ",
     "Point Woronzof itself overlooks the waters of Cook Inlet and provides a scenic view of the sunset and mountains to the west. ",
     "Near this location are Point Woronzof Park and the Tony Knowles Coastal Trail. These are popular spots in the Alaskan summer, ",
     "perfect for jogging, biking, and experiencing Anchorage's natural beauty. In the summer, you can be on the lookout for ",
     "birds, whales, bees, and local Alaskan fauna."],
-    "culture":["The Dena'ina name Nuch'ishtunt, meaning \"Place Protected from the Wind\" is due to the steep cliff-like, ",
+    "culture":
+    ["The Dena'ina name Nuch'ishtunt, meaning \"Place Protected from the Wind\" is due to the steep cliff-like, ",
     "bluffs along the area. Historically, Point Woronzof was one of Anchorage's earliest fish camp. The Ezi Family fish camp had ",
     "occupied the area until 1941."],
-    "media": ["img/images/Woronzof1.jpg", "img/images/Woronzof2.jpg", "img/images/Woronzof3.jpg", "img/videos/Woronzof 5.mp4"],
+    "media": 
+    ["img/images/Woronzof1.jpg",
+    "img/images/Woronzof2.jpg",
+    "img/images/Woronzof3.jpg",
+    "img/videos/Woronzof 5.mp4"],
+    "citations": 
+    ["Point Woronzof coastline on a cloudy day. Photograph taken by Mee Xiong.",
+    "Aerial view of Point Woronzof's cliff-like bluffs. Source: Anchorage Daily News, www.adn.com. Photograph taken by Loren Holmes.",
+    "Point Woronzof and Upper Cook Inlet waters at sunset. Source: alaska.org \"Point Woronzof Park\"",
+    "Video of a boat travelling along Upper Cook Inlet, seen from Point Woronzof. Video taken by Maria Williams."],
     "audioUrl": "img/audios/Point Woronzof Story.mp3",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -23,15 +34,22 @@
     "denainaName":"Chanshtnu",
     "denainaMeaning":"\"Grass creek\"",
     "coordinates": [61.1872, -149.8228],
-    "description": ["Chester Creek is a stream of water that runs from the Chugach Mountains from the east, draining at Cook Inlet to the west. ",
+    "description": 
+    ["Chester Creek is a stream of water that runs from the Chugach Mountains from the east, draining at Cook Inlet to the west. ",
     "The creek flows through Anchorage, including its many parks, lakes, and even through the University of Alaska Anchorage campus. ",
     "Today, the Chester Creek Trail is a popular park trail, which is great for walking, biking, and enjoying the outdoors in the summer. ",
     "In the winter, you can expect the Chester Creek Trail to be a popular ski trail. Along the creek, there are a large variety of wildlife that include ",
     "fish, moose, bears, and birds. The creek's fauna includes many wildflowers, vines, shurbs, and trees that bloom from spring to autumn."],
-    "culture":["Before Anchorage, the Knik Arm Dena'ina set up salmon fishing camps along the Chester Creek water streams. ",
+    "culture":
+    ["Before Anchorage, the Knik Arm Dena'ina set up salmon fishing camps along the Chester Creek water streams. ",
     "The stream provided many oppotunities to hunt for wildlife, or forage berries. There were also many Dena'ina cabins and houses along the stream, ",
     "up until the 1940s. While these fishing camps no longer exist, the remaining Dena'ina families set up new fishing camps on Fire Island to the west, in Cook Inlet."],
-    "media": ["img/images/Chester C.png", "img/images/Chester C2.jpg"],
+    "media": 
+    ["img/images/Chester C.png",
+    "img/images/Chester C2.jpg"],
+    "citations": 
+    ["Chester Creek flowing through the University of Alaska Anchorage campus in the winter. Photograph taken by Maria Williams.",
+    "Chester Creek in the summer. Source: alaska.org \"Chester Creek Trail\""],
     "audioUrl": "https://www.youtube.com/watch?v=ZvXf26t0D6o",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -41,15 +59,24 @@
     "denainaName":"Idlughet",
     "denainaMeaning":"\"Objects by a river\"",
     "coordinates": [61.4581, -149.3622],
-    "description": ["Eklutna refers to the Dena'ina Village of Eklutna, that houses about 70 residents. Near Eklutna is scenic Eklutna Lake and Thunderbird Falls; both are iconic and beautiful bodies of water. ",
+    "description": 
+    ["Eklutna refers to the Dena'ina Village of Eklutna, that houses about 70 residents. Near Eklutna is scenic Eklutna Lake and Thunderbird Falls; both are iconic and beautiful bodies of water. ",
     "There is also the Eklutna Historical Park Cemetery, which includes colorful and bright Spirit Houses, that provide shelter for the deceased. ",
     "Today, the Native Village of Eklutna, is a federally recognized tribal organization and government that strives to uphold history and culture. ",
     "This government office was organized in 1961, and federally recognized in 1982. The Native Village of Eklutna aims to protect the land, ",
     "conserving the land for wildlife and preventing new housing construction."],
-    "culture": ["'By the Objects' has long been a settlement for Dena'ina people. ",
+    "culture": 
+    ["'By the Objects' has long been a settlement for Dena'ina people. ",
     "Previously used as a summer fishing site, Idluhet became a permanent settlement for tribal members as Anchorage was established and expanded. ",
     "The plural objects that are the namesake of Eklutna are considered sacred ground as they were once used as burial grounds for Dena'ina long ago. "],
-    "media": ["img/images/Eklutna1.jpg", "img/images/Eklutna2.jpg", "img/images/Eklutna3.jpg"],
+    "media": 
+    ["img/images/Eklutna1.jpg",
+    "img/images/Eklutna2.jpg",
+    "img/images/Eklutna3.jpg"],
+    "citations": 
+    ["Twin Peak Treats near Eklutna. Photograph taken by Alfred Soriano.",
+    "The Eklutna Village historic park on a cloudy day. Source: tripadvisor.com \"Eklutna Village Historic Park\"",
+    "The colorful spirit houses of Eklutna. Source: alaska.org \"Eklutna Historical Park\""],
     "audioUrl": "https://www.youtube.com/watch?v=4aZ3Ux-QwCs",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -72,7 +99,16 @@
     "and it was blown off the mountain and landed in Cook Inlet, where it turned into an island.",
     "<br/>&emsp;&emsp;&emsp;And more names: <i>Nuhzhi</i>, the Overlord Clan; and <i>Chixyi</i>, the Ochre Clan, who landed where there was yellow pigment on the beach, so the people who lived there were named <i>Chixyi</i>, the Ochre Clan.",
     "<br/>&emsp;&emsp;&emsp;This is the way they say they named them all."],
-    "media": ["img/images/Susitna1.jpg", "img/images/Susitna2.jpg", "img/images/Susitna3.jpg", "https://www.youtube.com/watch?v=IMRP2r5_14I"],
+    "media": 
+    ["img/images/Susitna1.jpg",
+    "img/images/Susitna2.jpg",
+    "img/images/Susitna3.jpg",
+    "https://www.youtube.com/watch?v=IMRP2r5_14I"],
+    "citations": 
+    ["View of Mount Susitna in the winter. Photograph taken by Maria Williams.",
+    "View of Mount Susitna in the winter. Photograph taken by Maria Williams.",
+    "Zoomed out view of Mount Susitna in the winter. Photograph taken by Maria Williams.",
+    "Aerial video view of Mount Susitna in the winter. Video taken by Maria Williams."],
     "videoUrl": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
     "audioUrl": "https://www.youtube.com/watch?v=l21cx8RncFI",
     "audioUrlculture": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
@@ -118,19 +154,26 @@
     "denainaName":"Nutułiy",
     "denainaMeaning":"\"Object that stands in the water\"",
     "coordinates": [61.147686, -150.215759],
-    "description": ["Fire Island is a 5.5 mile long island located 3.5 miles west of Anchorage, situated in Cook Inlet waters. It is the only island in the Municipality of Anchorage. ",
+    "description": 
+    ["Fire Island is a 5.5 mile long island located 3.5 miles west of Anchorage, situated in Cook Inlet waters. It is the only island in the Municipality of Anchorage. ",
     "90% of Fire Island is owned by an Alaska Native company called Cook Inlet Region, Inc (CIRI). ",
     "They have established a commerical wind energy project, with 11 wind turbines that provides clean and renewable energy to the Chugach Electric Association. ",
     "Even so, the island is still covered in a lush forest populated with wildlife with bears, moose, and porcupines on the island. ",
     "Interestingly, at a low tide, the mud flats in Cook Inlet are exposed, making it possible to reach Fire Island on foot. ",
     "Hikers have occasionally attempted this 3.5-mile trek from Kincaid Park to Fire Island, however the incoming tides can make his a dangerous journey. "],
-    "culture": ["Shem Pete, respected Dena'ina elder, claimed that the Dena'ina people had a fishing dock there ",
+    "culture": 
+    ["Shem Pete, respected Dena'ina elder, claimed that the Dena'ina people had a fishing dock there ",
     "and the Alex and Theodore families used to have fish camps until the 1970's. ",
     "Futhermore, from 1909 to 1955, FIre Island was a designated breeding ground for Alaska moose. ",
     "<br/><br/>The modern-day English name of Fire Island comes from Captain James Cook. With his two ships, Resolution and Discover ",
     "Cook and his crew sailed into <i>Tikhatnu</i>, or Cook Inlet, where he sent some of his men to explore a nearby island. ",
     "On that island, his men built a fire which served as a beacon to Captain Cook, which he later named Fire Island."],
-    "media": ["img/images/Fire Island1.png", "img/images/Fire Island2.jpg"],
+    "media": 
+    ["img/images/Fire Island1.png",
+    "img/images/Fire Island2.jpg"],
+    "citations": 
+    ["Aerial photo of the CIRI wind turbines on Fire Island. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz",
+    "Greater aerial view of Fire Island, including the cliffs. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz."],
     "audioUrl": "https://www.youtube.com/watch?v=5BveEXd9b98",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -140,15 +183,24 @@
     "denainaName":"K'dalkitnu",
     "denainaMeaning":"\"He is Keeping Something (food)\"",
     "coordinates": [62.323181, -150.111898],
-    "description": ["Talkeetna is a small town 115 miles north of Anchorage, and is located in the Matanuska-Susitna (Mat-Su) Valley. ",
+    "description": 
+    ["Talkeetna is a small town 115 miles north of Anchorage, and is located in the Matanuska-Susitna (Mat-Su) Valley. ",
     "Within the town, you can walk down Main Street and experience the many historic buildings, shops, museums, and restaurants. ",
     "Some historic buildings include the Fairview Inn established in 1923 and the Talkeetna Roadhouse established in 1917. ",
     "The Talkeetna Historical Society is a museum showcasing "],
-    "culture": ["Shem Pete, a respected Dena'ina elder, said it's like a cache of food there. ",
+    "culture": 
+    ["Shem Pete, a respected Dena'ina elder, said it's like a cache of food there. ",
     "The Dena'ina used the term 'Mountain People' for the families that lived there. ",
     "Salmon and large animals came, such as caribou and moose abound and provided food year around. ",
     "The Alaska Railroad arrived in 1917 as they were constructing the railroad from Anchorage to Fairbanks. "],
-    "media": ["img/images/Talkeetna1.jpg", "img/images/Talkeetna2.jpg", "img/images/Talkeetna3.jpg"],
+    "media": 
+    ["img/images/Talkeetna1.jpg",
+    "img/images/Talkeetna2.jpg",
+    "img/images/Talkeetna3.jpg"],
+    "citations": 
+    ["Photo of Talkeetna Main Street in the summer. View ofSource: The MILEPOST, Photograph taken by Serine Reeves.",
+    "Aerial photo of Talkeetna. Source: Talkeetna Chamber of Commerce, talkeetnachamber.org",
+    "Photo of Talkeetna Main Street in the winter. Source: OttsWorld"],
     "audioUrl": "https://www.youtube.com/watch?v=FcrVaHxWk8M",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -158,13 +210,16 @@
     "denainaName":"Tubughnenq'",
     "denainaMeaning":"\"Beach land\"",
     "coordinates": [61.066041, -151.139550],
-    "description": ["The Native Village of Tyonek is located 40 miles south of Anchorage, on the west side of Cook Inlet. ",
+    "description": 
+    ["The Native Village of Tyonek is located 40 miles south of Anchorage, on the west side of Cook Inlet. ",
     "There are no roads that connect Tyonek to the rest of Alaska. Therefore, Tyonek is accessible only by smaller 'bush planes' or by boat. ",
     "In 1973, the Tyonek Native Corporation was established to support the development, hunting, fishing, and gathering within the Tyonek area and its residents. "],
-    "culture": ["'Beach land' is still occupied today by the Dena'ina. It is a rich area for fishing and hunting year around. ",
+    "culture": 
+    ["'Beach land' is still occupied today by the Dena'ina. It is a rich area for fishing and hunting year around. ",
     "The Dena'ina people from Tyonek are called <i>Tebughna</i>, or 'the Beach People'. ",
     "Tyonek and its people have a long-held tradition of song, dance, and storytelling."],
     "media": ["img/images/Tyonek1.jpg"],
+    "citations": ["Aerial photo of Tyonek. Source: Tyonek.com"],
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -173,14 +228,21 @@
     "denainaName":"\"Tikhatnu\" or \"Nuti\"",
     "denainaMeaning":"\"Ocean river\" or \"Saltwater\"",
     "coordinates": [59.550512, -152.489717],
-    "description": ["Cook inlet is a 180 mile body of water that stretches from the Gulf of Alaska in the south, to Anchorage in the north. ",
+    "description": 
+    ["Cook inlet is a 180 mile body of water that stretches from the Gulf of Alaska in the south, to Anchorage in the north. ",
     "At the northern end, Cook Inlet branches into the Knik Arm and Turnagain Arm. These arms surround most of Anchorage. At the southern end, Cook Inlet merges with the Shelikof Strait. ",
     "Cook Inlet provides passage to the port of Anchorage for ships, and its waters support the wildlife both in and out of the water. ",
     "Fishermen can expect to catch Pacific salmon and hooligan smelt, while observers can keep an eye out for the Cook Inlet beluga whales. "],
-    "culture": ["The Dena'ina navigated throughout the coastline and knew the precise tide patterns in Cook Inlet and Tutl'uh, or Turnagain. ",
+    "culture": 
+    ["The Dena'ina navigated throughout the coastline and knew the precise tide patterns in Cook Inlet and Tutl'uh, or Turnagain. ",
     "The tides change from low to hide tide at an extreme and can be dangerous. Bore tides, or nudidghul, occur almost everyday in Tutl'uh. ",
     "The Dena'ina understood this and navigaged successfully through Turnagain Arm and Cook Inlet. "],
-    "media": ["img/images/Cook Inlet1.jpg", "img/images/Cook Inlet2.jpg"],
+    "media": 
+    ["img/images/Cook Inlet1.jpg",
+    "img/images/Cook Inlet2.jpg"],
+    "citations": 
+    ["A view of Cook Inlet from Homer, Alaska. Source: myalaskanfishingtrip.com",
+    "Aerial photograph of the tip of Elizabeth Island in Lower Cook Inlet, Alaska. Source: NOAA Photo Library, flickr.com/photos/noaaphotolib/"],
     "audioUrl": "https://www.youtube.com/watch?v=GFNo6EMh-rE",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -194,10 +256,18 @@
     "It has a sister city, Palmer, which is home to a large agricultural hub and is known for the giant vegetables grown in the area. ",
     "Wasilla is located in a region with many well known lakes, such as Big Lake or <i>K'enaka Bena</i> and Finger Lake or <i>Baqay Tuch'elisht Bena</i>. ",
     "With the many lakes, the Wasilla region is popular for fishing and water sports, with many lakehouses in the area."],
-    "culture": ["The modern town of Wasilla was named after Chief Wasilla, a Den'aina leader of the Nulchina clan. ",
+    "culture": ["The modern town of Wasilla was named after Chief Wasilla, a Dena'ina leader of the Nulchina clan. ",
     "In 1917, Wasilla was established and became popular for mining companies since it provided a better supply staging point for the ",
     "Kantishna Gold Mining area. Wasilla prospered from being the \"Gateway to the Willow Creek Mining District\" which was a very active mining area between 1909 and 1950."],
-    "media": ["img/images/Wasilla1.jpg", "img/images/Wasilla2.jpg", "img/images/Wasilla3.jpg"],
+    "media": 
+    ["img/images/Wasilla1.jpg",
+    "img/images/Wasilla2.jpg",
+    "img/images/Wasilla3.jpg"],
+    "citations": 
+    ["Aerial view of Wasilla. Source: Kampgrounds of America, www.koa.com",
+    "View of Wasilla with mountains in the background. Source: City of Wasilla, www.cityofwasilla.gov",
+    "View of Pioneer Peak near Wasilla. Source: Colter Broadwell Photography, shared on Facebook. Photograph taken by Colter Broadwell"
+    ],
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -207,11 +277,18 @@
     "denainaMeaning":"\"Where we pulled up the Alutiiqs' boat\"",
     "coordinates": [61.154071, -150.055228],
     "description": ["Kincaid Park is a 1,500 acre park along the west side of Anchorage. The hilltops in Kincaid Park allow you to see Tikhatnu (Cook Inlet), Nutułiy (Fire Island), and Dghelishla (Mount Susitna). ",
-  "In the summer, the park is populated with people doing a variety of recreational activities. There are runners, bikers, hikers, athletes, photographers, fishers, and families that enjoy the park's many trails, trees, and recreational areas. ",
-  "In the winter, the trails are popular for winter sports such as skiing, sledding, and snowshoeing."],
+    "In the summer, the park is populated with people doing a variety of recreational activities. There are runners, bikers, hikers, athletes, photographers, fishers, and families that enjoy the park's many trails, trees, and recreational areas. ",
+    "In the winter, the trails are popular for winter sports such as skiing, sledding, and snowshoeing."],
     "culture": ["Kincaid Park is named after a battle between the Sugpiaq speaking people of Prince William Sound and the Dena'ina of the upper Knik Arm. ",
     "The Sugpiaq attacked Dena'ina village and on their way home they were attacked."],
-    "media": ["img/images/Kincaid1.jpg", "img/images/Kincaid2.jpg", "img/images/Kincaid3.jpg"],
+    "media": 
+    ["img/images/Kincaid1.jpg",
+    "img/images/Kincaid2.jpg",
+    "img/images/Kincaid3.jpg"],
+    "citations": 
+    ["Photo of Kincaid Park and one of its many trials. Source: Visit Anchorage Alaska, anchorage.net",
+    "A view Fire Island from a Kincaid Park hilltop. Source: UDisc, udisc.com",
+    "The coastline of Kincaid Park in winter. Source: wikipedia.com, Photograph taken by Paxson Woelber."],
     "audioUrl": "https://www.youtube.com/watch?v=mlQhgk9Ph2o",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -221,11 +298,18 @@
     "denainaName":"Tutl'uh",
     "denainaMeaning":"\"Back water, Headwaters\"",
     "coordinates": [61.052222, -150.035844],
-    "description": ["Turnagain Arm is a branch of water at the northern end of Cook Inlet, located south of Anchorage. Its counterpart, Knik Arm, is the northern branch. ",
+    "description": 
+    ["Turnagain Arm is a branch of water at the northern end of Cook Inlet, located south of Anchorage. Its counterpart, Knik Arm, is the northern branch. ",
     "It borders the Seward Highway, and provides a scenic setting for observing wildlife, nature photography, hiking, and fishing."],
-    "culture": ["The Dena'ina considered Tutl'uh as the head of Tikahtnu or Cook Inlet. ",
+    "culture": 
+    ["The Dena'ina considered Tutl'uh as the head of Tikahtnu or Cook Inlet. ",
     "This includes the Hope-Sunrise townsites as well."],
-    "media": ["img/images/Turnagain1.jpg", "img/images/Turnagain2.jpg"],
+    "media": 
+    ["img/images/Turnagain1.jpg",
+    "img/images/Turnagain2.jpg"],
+    "citations": 
+    ["Photo of Turnagain Channel in Anchorage, Alaska. Source: wikipedia.com",
+    "Aerial view of Seward Highway, with the Turnagain Arm shoreline. Source: alaska.org"],
     "audioUrl": "https://www.youtube.com/watch?v=V_Q3hAehS_U",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -235,13 +319,21 @@
     "denainaName":"Dgheyay Kaq'",
     "denainaMeaning":"\"Stickleback Mouth\"",
     "coordinates": [61.076423, -149.544247],
-    "description": ["Dgheyay Kaq' refers to the mouth of the Ship Creek river, which flows from the Chugach Mountains in the east, towards Cook Inlet in the west. ",
+    "description": 
+    ["Dgheyay Kaq' refers to the mouth of the Ship Creek river, which flows from the Chugach Mountains in the east, towards Cook Inlet in the west. ",
     "Today, Creek is a popular area for sport fishing and is considered the only urban king salmon fishery in the world. ",
     "Coho (Silver) and Chinook (King) salmon are known to inhabit the creek."],
-    "culture": ["This was used as a summer fish camp site for people from Eklutna. ",
+    "culture": 
+    ["This was used as a summer fish camp site for people from Eklutna. ",
     "King salmon and needlefish or stickleback fish used to be in abundance. ",
     "After Anchorage was established in 1915, they lost access to this area."],
-    "media": ["img/images/Ship Creek1.jpg", "img/images/Ship Creek2.jpg", "img/images/Ship Creek3.jpg"],
+    "media": 
+    ["img/images/Ship Creek1.jpg",
+    "img/images/Ship Creek2.jpg"],
+    "citations": 
+    ["Fishermen near the Lower Ship Creek area. Source: alaska.org", 
+    "Railway bridge near the Lower Ship Creek area. Source: alaska.org"
+    ],
     "audioUrl": "https://www.youtube.com/watch?v=wElFyMN3Um4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },

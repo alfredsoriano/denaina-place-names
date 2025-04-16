@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
@@ -14,6 +14,7 @@ const FullScreenInfo = ({
   onClose: () => void;
 }) => {
   const { darkTheme } = useContext(ThemeContext);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   if (location === null || isOpen === false) return null;
 
@@ -261,7 +262,6 @@ const FullScreenInfo = ({
             borderRadius: "10px",
             overflow: "hidden",
             boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-            marginBottom: "80px",
           }}
         >
           <Carousel
@@ -274,12 +274,30 @@ const FullScreenInfo = ({
               height: "100%",
             }}
             interval={null}
+            activeIndex={activeIndex}
+            onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
           >
             {location.media.map((item: any, i: any) => (
-              <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
+              <Carousel.Item key={i}>
+                {loadMedia(item)}
+              </Carousel.Item>
             ))}
           </Carousel>
         </div>
+      </div>
+
+      {/* div styling for the citation text */}
+      <div style={{
+        paddingBottom: "30px"
+      }}>
+        <p style=
+        {{ color: darkTheme ? "#DCD7C9" : "#2C3930",
+          justifyContent: "center",
+          fontWeight: "bold"
+        }}
+        >
+          {location.citations?.[activeIndex] || "Source not found."}
+        </p>
       </div>
 
       {/* react-bootstrap button */}
