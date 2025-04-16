@@ -18,6 +18,11 @@ const FullScreenInfo = ({
 
   if (location === null || isOpen === false) return null;
 
+  const handleClose = () => {
+    setActiveIndex(0); // Reset the index to 0
+    onClose(); // Call the original onClose function
+  };
+
   // updated function to load media type: returns image, video, or embedded YouTube video
   const loadMedia = (item: string) => {
     const ext = item.split(".").pop()?.toLowerCase();
@@ -303,7 +308,7 @@ const FullScreenInfo = ({
       {/* react-bootstrap button */}
       <Button
         variant="success"
-        onClick={onClose}
+        onClick={handleClose}
         onMouseEnter={(e) => {
           e.currentTarget.style.backgroundColor = darkTheme
             ? "#AEBD93"
