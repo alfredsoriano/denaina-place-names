@@ -18,6 +18,7 @@ const FullScreenInfo = ({
 
   if (location === null || isOpen === false) return null;
 
+  //function that resets carousel index upon closing a pop-up window
   const handleClose = () => {
     setActiveIndex(0);
     onClose();
