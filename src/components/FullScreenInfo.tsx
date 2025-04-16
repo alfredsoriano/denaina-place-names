@@ -17,11 +17,13 @@ const FullScreenInfo = ({
 
   if (location === null || isOpen === false) return null;
 
-  // function to load media type: returns image, video (mp4/mov), or nothing
+  // updated function to load media type: returns image, video, or embedded YouTube video
   const loadMedia = (item: string) => {
-    const extension = item.split(".").pop()?.toLowerCase();
+    const ext = item.split(".").pop()?.toLowerCase();
+    const isImage = ext === "jpg" || ext === "jpeg" || ext === "png";
+    const isVideo = ext === "mp4" || ext === "mov" || ext === "webm";
 
-    if (["jpg", "jpeg", "png"].includes(extension || "")) {
+    if (isImage) {
       return (
         <img
           style={{
@@ -34,24 +36,62 @@ const FullScreenInfo = ({
           alt="location media"
         />
       );
-    // getting the video
-    } else if (["mp4", "MOV", "webm"].includes(extension || "")) {
+    }
+
+    if (isVideo) {
       return (
         <video
+          controls
           style={{
             width: "100%",
             height: "100%",
-            borderRadius: "10px",
             objectFit: "cover",
+            borderRadius: "10px",
           }}
-          controls
         >
-          <source src={item} type={`video/${extension}`} />
-          ERROR can't play the video on your phone
+          <source src={item} type={`video/${ext}`} />
+          ERROR cant play video
         </video>
       );
     }
 
+    // if there is a youtube video play that instead
+    if (item.includes("youtube.com") || item.includes("youtu.be")) {
+      const getYouTubeEmbedUrl = (url: string) => {
+        const videoId = url.includes("v=")
+          ? url.split("v=")[1].split("&")[0]
+          : url.split("/").pop();
+        return `https://www.youtube.com/embed/${videoId}?autoplay=0&controls=1&showinfo=0&rel=0`;
+      };
+
+      return (
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16 / 9",
+            borderRadius: "10px",
+            overflow: "hidden",
+          }}
+        >
+          <iframe
+            src={getYouTubeEmbedUrl(item)}
+            title="YouTube Video"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              border: "none",
+            }}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      );
+    }
     return null;
   };
 
@@ -196,7 +236,7 @@ const FullScreenInfo = ({
               {location.audioUrlculture && (
                 <audio controls style={{ marginTop: "10px" }}>
                   <source src={location.audioUrlculture} type="audio/mp3" />
-                  ERROR cant play mp3 
+                  ERROR cant play mp3
                 </audio>
               )}
             </div>
@@ -250,17 +290,13 @@ const FullScreenInfo = ({
           e.currentTarget.style.backgroundColor = darkTheme
             ? "#AEBD93"
             : "#8B786D";
-          e.currentTarget.style.borderColor = darkTheme
-            ? "#AEBD93"
-            : "#8B786D";
+          e.currentTarget.style.borderColor = darkTheme ? "#AEBD93" : "#8B786D";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.backgroundColor = darkTheme
             ? "#596F62"
             : "#D2BBA0";
-          e.currentTarget.style.borderColor = darkTheme
-            ? "#596F62"
-            : "#D2BBA0";
+          e.currentTarget.style.borderColor = darkTheme ? "#596F62" : "#D2BBA0";
         }}
         style={{
           position: "fixed",
