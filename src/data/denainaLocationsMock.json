@@ -13,7 +13,8 @@
     "culture":["The Dena'ina name Nuch'ishtunt, meaning \"Place Protected from the Wind\" is due to the steep cliff-like, ",
     "bluffs along the area. Historically, Point Woronzof was one of Anchorage's earliest fish camp. The Ezi Family fish camp had ",
     "occupied the area until 1941."],
-    "media": ["img/images/Woronzof1.jpg", "img/images/Woronzof2.jpg", "img/images/Woronzof3.jpg"],
+    "media": ["img/images/Woronzof1.jpg", "img/images/Woronzof2.jpg", "img/images/Woronzof3.jpg", "img/videos/Woronzof 5.mp4"],
+    "audioUrl": "img/audios/Point Woronzof Story.mp3",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -71,7 +72,7 @@
     "and it was blown off the mountain and landed in Cook Inlet, where it turned into an island.",
     "<br/>&emsp;&emsp;&emsp;And more names: <i>Nuhzhi</i>, the Overlord Clan; and <i>Chixyi</i>, the Ochre Clan, who landed where there was yellow pigment on the beach, so the people who lived there were named <i>Chixyi</i>, the Ochre Clan.",
     "<br/>&emsp;&emsp;&emsp;This is the way they say they named them all."],
-    "media": ["img/images/Susitna1.jpg", "img/images/Susitna2.jpg", "img/images/Susitna3.jpg", "https://www.youtube.com/watch?v=IMRP2r5_14I"],
+    "media": ["img/images/Susitna1.jpg", "img/images/Susitna2.jpg", "img/images/Susitna3.jpg", "img/videos/Mt. Susitna English with raven.mp4"],
     "videoUrl": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
     "audioUrl": "https://www.youtube.com/watch?v=l21cx8RncFI",
     "audioUrlculture": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
@@ -256,3 +257,4 @@
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   }
 ]
+
