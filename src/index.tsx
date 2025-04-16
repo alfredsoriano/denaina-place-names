@@ -20,9 +20,9 @@ export interface DenainaLocation {
   description: string[]; 
   culture: string[];
   media: string[];
+  citations: string[];
   videoUrl?: string;
   audioUrl?: string;
   audioUrlculture?: string;
   backgroundImage?: string;
-  citations: string[];
 }
