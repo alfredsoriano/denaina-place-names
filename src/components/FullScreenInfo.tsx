@@ -19,8 +19,8 @@ const FullScreenInfo = ({
   if (location === null || isOpen === false) return null;
 
   const handleClose = () => {
-    setActiveIndex(0); // Reset the index to 0
-    onClose(); // Call the original onClose function
+    setActiveIndex(0);
+    onClose();
   };
 
   // updated function to load media type: returns image, video, or embedded YouTube video
