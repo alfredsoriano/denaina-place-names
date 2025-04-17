@@ -3,7 +3,7 @@
     "id": "1",
     "title": "Point Woronzof",
     "denainaName":"Nuch'ishtunt",
-    "denainaMeaning":"\"Place protected from the wind",
+    "denainaMeaning":"\"Place protected from the wind\"",
     "coordinates": [61.2026, -150.0214],
     "description": 
     ["Point Woronzof is a spot to the left of Anchorage, along the Cook Inlet coastline. ",
@@ -50,7 +50,8 @@
     "https://www.youtube.com/watch?v=9Pd5jz7EJGg"],
     "citations": 
     ["Chester Creek flowing through the University of Alaska Anchorage campus in the winter. Photograph taken by Maria Williams.",
-    "Chester Creek in the summer. Source: alaska.org \"Chester Creek Trail\""],
+    "Chester Creek in the summer. Source: alaska.org \"Chester Creek Trail\"",
+    "Narration of Chester Creek culture, alongside a video of the Chester Creek river flowing. Narration by Edna Standifer and Zachary Milliman, Photography and Video taken by Maria Williams."],
     "audioUrl": "img/audios/Chester Creek Audio.mp3",
     "backgroundImage": "img/backgrounds/salmon.PNG"
   },
@@ -78,7 +79,8 @@
     "citations": 
     ["Twin Peak Treats near Eklutna. Photograph taken by Alfred Soriano.",
     "The Eklutna Village historic park on a cloudy day. Source: tripadvisor.com \"Eklutna Village Historic Park\"",
-    "The colorful spirit houses of Eklutna. Source: alaska.org \"Eklutna Historical Park\""],
+    "The colorful spirit houses of Eklutna. Source: alaska.org \"Eklutna Historical Park\"",
+    "Eklutna narration alongside the two granite knobs. Narration by Jessica Ross, Photography by Adam Leggett, Eklutna, Inc., Video editing by Maria Williams."],
     "audioUrl": "img/audios/Eklutna audio.mp3",
     "backgroundImage": "img/backgrounds/salmon.PNG"
   },
@@ -111,7 +113,8 @@
     ["View of Mount Susitna in the winter. Photograph taken by Maria Williams.",
     "View of Mount Susitna in the winter. Photograph taken by Maria Williams.",
     "Zoomed out view of Mount Susitna in the winter. Photograph taken by Maria Williams.",
-    "Aerial video view of Mount Susitna in the winter. Video taken by Maria Williams."],
+    "Aerial video view of Mount Susitna in the winter, with raven motif. Video taken by Maria Williams.",
+    "Aerial video view of Mount Susitna in the winter, with credits. Video taken by Maria Williams."],
     "videoUrl": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
     "audioUrl": "img/audios/Mt. Susitna Audio.mp3",
     "audioUrlculture": "img/audios/Mt. S - Place Name Audio E.mp3",
@@ -271,8 +274,7 @@
     "citations": 
     ["Aerial view of Wasilla. Source: Kampgrounds of America, www.koa.com",
     "View of Wasilla with mountains in the background. Source: City of Wasilla, www.cityofwasilla.gov",
-    "View of Pioneer Peak near Wasilla. Source: Colter Broadwell Photography, shared on Facebook. Photograph taken by Colter Broadwell"
-    ],
+    "View of Pioneer Peak near Wasilla. Source: Colter Broadwell Photography, shared on Facebook. Photograph taken by Colter Broadwell"],
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -294,7 +296,8 @@
     "citations": 
     ["Photo of Kincaid Park and one of its many trials. Source: Visit Anchorage Alaska, anchorage.net",
     "A view Fire Island from a Kincaid Park hilltop. Source: UDisc, udisc.com",
-    "The coastline of Kincaid Park in winter. Source: wikipedia.com, Photograph taken by Paxson Woelber."],
+    "The coastline of Kincaid Park in winter. Source: wikipedia.com, Photograph taken by Paxson Woelber.",
+    "Narration of Point Woronzof and its history. Edna Hna'estał Standifer and Zachary Milliman, Video taken by Maria Williams."],
     "audioUrl": "img/audios/Kincaid park Audio.mp3",
     "backgroundImage": "img/backgrounds/salmon.PNG"
   },
@@ -338,8 +341,7 @@
     "img/images/Ship Creek2.jpg"],
     "citations": 
     ["Fishermen near the Lower Ship Creek area. Source: alaska.org", 
-    "Railway bridge near the Lower Ship Creek area. Source: alaska.org"
-    ],
+    "Railway bridge near the Lower Ship Creek area. Source: alaska.org"],
     "audioUrl": "img/audios/Ship Creek Audio.mp3",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
