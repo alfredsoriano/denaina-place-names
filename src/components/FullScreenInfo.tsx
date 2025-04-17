@@ -284,23 +284,24 @@ const FullScreenInfo = ({
             onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
           >
             {location.media.map((item: any, i: any) => (
-              <Carousel.Item key={i}>
-                {loadMedia(item)}
-              </Carousel.Item>
+              <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
             ))}
           </Carousel>
         </div>
       </div>
 
       {/* div styling for the citation text */}
-      <div style={{
-        paddingBottom: "30px"
-      }}>
-        <p style=
-        {{ color: darkTheme ? "#DCD7C9" : "#2C3930",
-          justifyContent: "center",
-          fontWeight: "bold"
+      <div
+        style={{
+          paddingBottom: "30px",
         }}
+      >
+        <p
+          style={{
+            color: darkTheme ? "#DCD7C9" : "#2C3930",
+            justifyContent: "center",
+            fontWeight: "bold",
+          }}
         >
           {location.citations?.[activeIndex] || "Source not found."}
         </p>
