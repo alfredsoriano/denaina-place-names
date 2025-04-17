@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from "react";
+import { useContext, useState, useRef} from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
@@ -181,23 +181,23 @@ const FullScreenInfo = ({
           >
             <div>
             <h2
-  onClick={() => nameAudioRef.current?.play()}
-  style={{
-    margin: 0,
-    fontSize: "1.5rem",
-    cursor: "pointer",
-    textDecoration: "underline dotted",
-  }}
-  title="Click to play audio"
->
-  {location.denainaName ?? "No Dena'ina Name available."}
-</h2>
-<audio ref={nameAudioRef} style={{ display: "none" }}>
-  <source src={location.audioUrl} type="audio/mpeg" />
-  Your browser does not support the audio element.
-</audio>
+              onClick={() => nameAudioRef.current?.play()}
+              style={{
+                margin: 0,
+                fontSize: "1.5rem",
+                cursor: "pointer",
+                textDecoration: "underline",
+              }}
+              title="Click to play audio"
+            >
+              {location.denainaName ?? "No Dena'ina Name available."}
+            </h2>
+            <audio ref={nameAudioRef} style={{ display: "none" }}>
+               <source src={location.audioUrl} type="audio/mp3" />
+                Your browser does not support the audio element.
+              </audio>
               </div>
-          </div>
+            </div>
 
           {/* div for the description box*/}
           <div
