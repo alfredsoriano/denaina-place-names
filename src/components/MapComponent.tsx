@@ -50,8 +50,8 @@ function MapComponent() {
         minZoom={7}
         style={{ height: "100vh", width: "100vw" }}
         maxBounds={[
-          [58.44583, -155.53806],
-          [64.03258, -145.85643],
+          [58.44583, -155.53806], //bottom left coordinate point
+          [64.03258, -145.85643], //top right coordinate point
         ]}
         maxBoundsViscosity={0.5}
       >
