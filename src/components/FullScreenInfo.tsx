@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useRef } from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
@@ -15,6 +15,7 @@ const FullScreenInfo = ({
 }) => {
   const { darkTheme } = useContext(ThemeContext);
   const [activeIndex, setActiveIndex] = useState(0);
+  const nameAudioRef = useRef<HTMLAudioElement>(null);
 
   if (location === null || isOpen === false) return null;
 
@@ -179,20 +180,23 @@ const FullScreenInfo = ({
             }}
           >
             <div>
-              <h2 style={{ margin: 0, fontSize: "1.5rem" }}>
-                {location.denainaName ?? "No Dena'ina Name available."}
-              </h2>
-              <p style={{ margin: 0, fontStyle: "italic" }}>
-                {location.denainaMeaning ?? "No Dena'ina Meaning available."}
-              </p>
-            </div>
-
-            {location.audioUrl && (
-              <audio controls style={{ marginTop: "10px" }}>
-                <source src={location.audioUrl} type="audio/mp3" />
-                ERROR cant play mp3
-              </audio>
-            )}
+            <h2
+  onClick={() => nameAudioRef.current?.play()}
+  style={{
+    margin: 0,
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    textDecoration: "underline dotted",
+  }}
+  title="Click to play audio"
+>
+  {location.denainaName ?? "No Dena'ina Name available."}
+</h2>
+<audio ref={nameAudioRef} style={{ display: "none" }}>
+  <source src={location.audioUrl} type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+              </div>
           </div>
 
           {/* div for the description box*/}
