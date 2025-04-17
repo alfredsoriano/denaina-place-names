@@ -6,7 +6,6 @@ import denainaLocationsMockData from "../data/denainaLocationsMock.json";
 import FullScreenInfo from "./FullScreenInfo";
 import L from "leaflet";
 
-
 function MapComponent() {
   //pin handling
   const defaultPin = L.icon({
@@ -15,7 +14,7 @@ function MapComponent() {
     iconSize: [25, 41],
     iconAnchor: [12.5, 40],
     popupAnchor: [0, -38],
-    shadowAnchor: [12.5, 40]
+    shadowAnchor: [12.5, 40],
   });
   //load default pin using default icon
   L.Marker.prototype.options.icon = defaultPin;
@@ -38,19 +37,18 @@ function MapComponent() {
   }
 
   return (
-    <div 
+    <div
       style={{
         height: "100vh",
-        width: "100vw",        
-        position: 'fixed',
-
+        width: "100vw",
+        position: "fixed",
       }}
     >
       <MapContainer
         center={[61.2176, -149.8997]}
         zoom={9}
         minZoom={7}
-        style={{  height: "100vh", width: "100vw" }}
+        style={{ height: "100vh", width: "100vw" }}
         maxBounds={[
           [58.44583, -155.53806],
           [64.03258, -145.85643],
