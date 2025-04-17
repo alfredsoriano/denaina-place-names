@@ -26,7 +26,7 @@
     "Point Woronzof and Upper Cook Inlet waters at sunset. Source: alaska.org \"Point Woronzof Park\"",
     "Video of a boat travelling along Upper Cook Inlet, seen from Point Woronzof. Video taken by Maria Williams."],
     "audioUrlculture": "img/audios/Point Woronzof Story.mp3",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
     "id": "2",
@@ -52,7 +52,7 @@
     ["Chester Creek flowing through the University of Alaska Anchorage campus in the winter. Photograph taken by Maria Williams.",
     "Chester Creek in the summer. Source: alaska.org \"Chester Creek Trail\""],
     "audioUrl": "img/audios/Chester Creek Audio.mp3",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
     "id": "3",
@@ -80,7 +80,7 @@
     "The Eklutna Village historic park on a cloudy day. Source: tripadvisor.com \"Eklutna Village Historic Park\"",
     "The colorful spirit houses of Eklutna. Source: alaska.org \"Eklutna Historical Park\""],
     "audioUrl": "img/audios/Eklutna audio.mp3",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
     "id": "4",
@@ -115,7 +115,7 @@
     "videoUrl": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
     "audioUrl": "img/audios/Mt. Susitna Audio.mp3",
     "audioUrlculture": "img/audios/Mt. S - Place Name Audio E.mp3",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/raven.png"
   },
   {
     "id": "5",
@@ -296,7 +296,7 @@
     "A view Fire Island from a Kincaid Park hilltop. Source: UDisc, udisc.com",
     "The coastline of Kincaid Park in winter. Source: wikipedia.com, Photograph taken by Paxson Woelber."],
     "audioUrl": "img/audios/Kincaid park Audio.mp3",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
     "id": "14",
