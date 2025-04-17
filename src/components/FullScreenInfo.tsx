@@ -108,7 +108,7 @@ const FullScreenInfo = ({
         position: "absolute",
         top: 0,
         right: 0,
-        height: "100vh",
+        height: "100dvh",
         width: "100vw",
         backgroundColor: darkTheme ? "#2C3930" : "#DCD7C9",
         color: darkTheme ? "#DCD7C9" : "#2C3930",
