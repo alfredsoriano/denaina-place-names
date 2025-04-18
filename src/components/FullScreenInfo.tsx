@@ -16,6 +16,7 @@ const FullScreenInfo = ({
   const { darkTheme } = useContext(ThemeContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const nameAudioRef = useRef<HTMLAudioElement>(null);
+  const storyAudioRef = useRef<HTMLAudioElement>(null);
 
   if (location === null || isOpen === false) return null;
 
@@ -188,13 +189,13 @@ const FullScreenInfo = ({
                 cursor: "pointer",
                 textDecoration: "underline",
               }}
-              title="Click to play audio"
+              //title="Click to play audio"
             >
               {location.denainaName ?? "No Dena'ina Name available."}
             </h2>
             <audio ref={nameAudioRef} style={{ display: "none" }}>
                <source src={location.audioUrl} type="audio/mp3" />
-                Your browser does not support the audio element.
+                No Audio found.
               </audio>
               </div>
             </div>
@@ -242,14 +243,33 @@ const FullScreenInfo = ({
               borderRadius: "8px",
             }}
           >
-            <div style={{ marginBottom: "0.3rem" }}>
-              <h4 style={{ marginBottom: "0.5rem" }}>Place Name Story</h4>
+
+<div style={{ marginBottom: "0.3rem" }}>
+    {/* Place Name Story text that triggers audio */}
+    <h4
+      onClick={() => {
+        if (location.audioUrlculture) {
+          const audio = new Audio(location.audioUrlculture);
+          audio.play();
+        }
+      }}
+      style={{
+        marginBottom: "0.5rem",
+        cursor: "pointer", // Indicating it's clickable
+        textDecoration: "underline", // Optional styling to indicate it's clickable
+      }}
+    >
+      Place Name Story
+    </h4>
+
+
               {location.audioUrlculture && (
-                <audio controls style={{ marginTop: "10px" }}>
+                <audio style={{ display: "none" }}>
                   <source src={location.audioUrlculture} type="audio/mp3" />
-                  ERROR cant play mp3
+                  ERROR: Cannot play mp3
                 </audio>
               )}
+              
             </div>
             <p>
               <span
