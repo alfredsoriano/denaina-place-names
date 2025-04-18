@@ -12,7 +12,6 @@ const FullScreenInfo = ({
   location: DenainaLocation | null;
   isOpen: boolean;
   onClose: () => void;
-  
 }) => {
   const { darkTheme } = useContext(ThemeContext);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -183,7 +182,7 @@ const FullScreenInfo = ({
           >
             <div>
               <h2
-                onClick={() => { 
+                onClick={() => {
                   if (location.audioUrl) {
                     const audio = nameAudioRef.current;
 
@@ -193,16 +192,17 @@ const FullScreenInfo = ({
                       } else {
                         audio.pause();
                         audio.currentTime = 0; //Reset audio to the start
-                      }}
+                      }
                     }
-                  }}
-                  style={{
-                    margin: 0,
-                    fontSize: "1.5rem",
-                    cursor: location.audioUrl ? "pointer" : "default",
-                    textDecoration: location.audioUrl ? "underline" : "none"
-                  }}
-                >
+                  }
+                }}
+                style={{
+                  margin: 0,
+                  fontSize: "1.5rem",
+                  cursor: location.audioUrl ? "pointer" : "default",
+                  textDecoration: location.audioUrl ? "underline" : "none",
+                }}
+              >
                 {location.denainaName ?? "No Dena'ina Name available."}
               </h2>
 
@@ -211,9 +211,9 @@ const FullScreenInfo = ({
                   <source src={location.audioUrl} type="audio/mp3" />
                   No Audio found.
                 </audio>
-                )}
-              </div>
+              )}
             </div>
+          </div>
 
           {/* div for the description box*/}
           <div
@@ -226,13 +226,20 @@ const FullScreenInfo = ({
               justifyContent: "center",
               textAlign: "left",
               backgroundColor: darkTheme ? "#3A4F41" : "#EFEFEF",
-              padding: "10px 20px",
+              padding: "20px 20px",
               borderRadius: "8px",
               marginBottom: "20px",
             }}
           >
             <div style={{ marginBottom: "0.3rem" }}>
-              <h3 style={{ marginBottom: "0.1rem" }}>Local Description</h3>
+              <h3
+                style={{
+                  marginBottom: "0.1rem",
+                  fontSize: "1.5rem",
+                }}
+              >
+                Local Description
+              </h3>
             </div>
             <p>
               <span
@@ -252,11 +259,10 @@ const FullScreenInfo = ({
               flexDirection: "column",
               alignItems: "center",
               flexWrap: "wrap",
-              gap: "10px",
               justifyContent: "center",
               textAlign: "left",
               backgroundColor: darkTheme ? "#4B5842" : "#EFEFEF",
-              padding: "10px 20px",
+              padding: "20px 20px",
               borderRadius: "8px",
             }}
           >
@@ -272,14 +278,16 @@ const FullScreenInfo = ({
                       } else {
                         audio.pause();
                         audio.currentTime = 0; // Optional: Reset audio to the start
-                      }}
+                      }
                     }
-                  }}
-                
+                  }
+                }}
                 style={{
-                  marginBottom: "0.5rem",
                   cursor: location.audioUrlculture ? "pointer" : "default",
-                  textDecoration: location.audioUrlculture ? "underline" : "none",
+                  textDecoration: location.audioUrlculture
+                    ? "underline"
+                    : "none",
+                    fontSize: "1.5rem"
                 }}
               >
                 Place Name Story
@@ -287,18 +295,18 @@ const FullScreenInfo = ({
 
               {location.audioUrlculture && (
                 <audio ref={storyAudioRef} style={{ display: "none" }}>
-                <source src={location.audioUrlculture} type="audio/mp3" />
+                  <source src={location.audioUrlculture} type="audio/mp3" />
                   No Audio Found.
                 </audio>
               )}
             </div>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: location.culture
-                    ? location.culture.join(" ")
-                    : "No cultural description found.",
-                }}
-              />
+            <span
+              dangerouslySetInnerHTML={{
+                __html: location.culture
+                  ? location.culture.join(" ")
+                  : "No cultural description found.",
+              }}
+            />
           </div>
         </div>
 
