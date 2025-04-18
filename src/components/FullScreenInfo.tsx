@@ -112,7 +112,7 @@ const FullScreenInfo = ({
         right: 0,
         height: "100dvh",
         width: "100vw",
-        backgroundColor: darkTheme ? "#2C3930" : "#DCD7C9",
+        backgroundColor: darkTheme ? "#2C3930" : "#E3E4DB",
         color: darkTheme ? "#DCD7C9" : "#2C3930",
         display: "flex",
         flexDirection: "column",
@@ -287,7 +287,7 @@ const FullScreenInfo = ({
                   textDecoration: location.audioUrlculture
                     ? "underline"
                     : "none",
-                    fontSize: "1.5rem"
+                    fontSize: "1.5"
                 }}
               >
                 Place Name Story
