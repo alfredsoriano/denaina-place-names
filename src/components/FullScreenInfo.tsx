@@ -1,4 +1,4 @@
-import { useContext, useState, useRef} from "react";
+import { useContext, useState, useRef } from "react";
 import { Button, Carousel } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
@@ -181,22 +181,28 @@ const FullScreenInfo = ({
             }}
           >
             <div>
-            <h2
-              onClick={() => nameAudioRef.current?.play()}
-              style={{
-                margin: 0,
-                fontSize: "1.5rem",
-                cursor: "pointer",
-                textDecoration: "underline",
-              }}
-              //title="Click to play audio"
-            >
-              {location.denainaName ?? "No Dena'ina Name available."}
-            </h2>
-            <audio ref={nameAudioRef} style={{ display: "none" }}>
-               <source src={location.audioUrl} type="audio/mp3" />
-                No Audio found.
-              </audio>
+              <h2
+                onClick={() => { 
+                  if (location.audioUrl) {
+                    nameAudioRef.current?.play();
+                  }
+                }}
+                style={{
+                  margin: 0,
+                  fontSize: "1.5rem",
+                  cursor: location.audioUrl ? "pointer" : "default",
+                  textDecoration: location.audioUrl ? "underline" : "none"
+                }}
+              >
+                {location.denainaName ?? "No Dena'ina Name available."}
+              </h2>
+
+              {location.audioUrl && (
+                <audio ref={nameAudioRef} style={{ display: "none" }}>
+                  <source src={location.audioUrl} type="audio/mp3" />
+                  No Audio found.
+                </audio>
+                )}
               </div>
             </div>
 
@@ -243,33 +249,30 @@ const FullScreenInfo = ({
               borderRadius: "8px",
             }}
           >
-
-<div style={{ marginBottom: "0.3rem" }}>
-    {/* Place Name Story text that triggers audio */}
-    <h4
-      onClick={() => {
-        if (location.audioUrlculture) {
-          const audio = new Audio(location.audioUrlculture);
-          audio.play();
-        }
-      }}
-      style={{
-        marginBottom: "0.5rem",
-        cursor: "pointer", // Indicating it's clickable
-        textDecoration: "underline", // Optional styling to indicate it's clickable
-      }}
-    >
-      Place Name Story
-    </h4>
-
+            <div style={{ marginBottom: "0.3rem" }}>
+              {/* Place Name Story text that triggers audio */}
+              <h4
+                onClick={() => {
+                  if (location.audioUrlculture) {
+                    const audio = new Audio(location.audioUrlculture);
+                    audio.play();
+                  }
+                }}
+                style={{
+                  marginBottom: "0.5rem",
+                  cursor: "pointer", // Indicating it's clickable
+                  textDecoration: "underline", // Optional styling to indicate it's clickable
+                }}
+              >
+                Place Name Story
+              </h4>
 
               {location.audioUrlculture && (
                 <audio style={{ display: "none" }}>
                   <source src={location.audioUrlculture} type="audio/mp3" />
-                  ERROR: Cannot play mp3
+                  No Audio Found.
                 </audio>
               )}
-              
             </div>
             <p>
               <span
