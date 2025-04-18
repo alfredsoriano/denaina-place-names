@@ -262,10 +262,18 @@ const FullScreenInfo = ({
               <h4
                 onClick={() => {
                   if (location.audioUrlculture) {
-                    const audio = new Audio(location.audioUrlculture);
-                    audio.play();
-                  }
-                }}
+                    const audio = nameAudioRef.current;
+
+                    if (audio) {
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                        audio.currentTime = 0; // Optional: Reset audio to the start
+                      }}
+                    }
+                  }}
+                
                 style={{
                   marginBottom: "0.5rem",
                   cursor: location.audioUrlculture ? "pointer" : "default",
@@ -276,8 +284,8 @@ const FullScreenInfo = ({
               </h4>
 
               {location.audioUrlculture && (
-                <audio style={{ display: "none" }}>
-                  <source src={location.audioUrlculture} type="audio/mp3" />
+                <audio ref={nameAudioRef} style={{ display: "none" }}>
+                <source src={location.audioUrlculture} type="audio/mp3" />
                   No Audio Found.
                 </audio>
               )}
