@@ -12,6 +12,7 @@ const FullScreenInfo = ({
   location: DenainaLocation | null;
   isOpen: boolean;
   onClose: () => void;
+  
 }) => {
   const { darkTheme } = useContext(ThemeContext);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -181,29 +182,40 @@ const FullScreenInfo = ({
             }}
           >
             <div>
-              <h2
-                onClick={() => { 
-                  if (location.audioUrl) {
-                    nameAudioRef.current?.play();
-                  }
-                }}
-                style={{
-                  margin: 0,
-                  fontSize: "1.5rem",
-                  cursor: location.audioUrl ? "pointer" : "default",
-                  textDecoration: location.audioUrl ? "underline" : "none"
-                }}
-              >
-                {location.denainaName ?? "No Dena'ina Name available."}
-              </h2>
+  <h2
+    onClick={() => { 
+      if (location.audioUrl) {
+        const audio = nameAudioRef.current;
 
-              {location.audioUrl && (
-                <audio ref={nameAudioRef} style={{ display: "none" }}>
-                  <source src={location.audioUrl} type="audio/mp3" />
-                  No Audio found.
-                </audio>
-                )}
-              </div>
+        // Check if audio is not null
+        if (audio) {
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+            audio.currentTime = 0; // Optional: Reset audio to the start
+          }
+        }
+      }
+    }}
+    style={{
+      margin: 0,
+      fontSize: "1.5rem",
+      cursor: location.audioUrl ? "pointer" : "default",
+      textDecoration: location.audioUrl ? "underline" : "none"
+    }}
+  >
+    {location.denainaName ?? "No Dena'ina Name available."}
+  </h2>
+
+  {location.audioUrl && (
+    <audio ref={nameAudioRef} style={{ display: "none" }}>
+      <source src={location.audioUrl} type="audio/mp3" />
+      No Audio found.
+    </audio>
+  )}
+</div>
+
             </div>
 
           {/* div for the description box*/}
