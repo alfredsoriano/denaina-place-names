@@ -325,6 +325,7 @@ const FullScreenInfo = ({
             interval={null}
             activeIndex={activeIndex}
             onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
+            controls={location.media.length > 1}
           >
             {location.media.map((item: any, i: any) => (
               <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
