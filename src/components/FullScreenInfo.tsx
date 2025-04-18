@@ -248,6 +248,7 @@ const FullScreenInfo = ({
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               flexWrap: "wrap",
               gap: "10px",
@@ -290,7 +291,6 @@ const FullScreenInfo = ({
                 </audio>
               )}
             </div>
-            <p>
               <span
                 dangerouslySetInnerHTML={{
                   __html: location.culture
@@ -298,7 +298,6 @@ const FullScreenInfo = ({
                     : "No cultural description found.",
                 }}
               />
-            </p>
           </div>
         </div>
 
