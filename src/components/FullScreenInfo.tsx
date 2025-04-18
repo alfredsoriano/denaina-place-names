@@ -219,6 +219,7 @@ const FullScreenInfo = ({
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               flexWrap: "wrap",
               gap: "10px",
