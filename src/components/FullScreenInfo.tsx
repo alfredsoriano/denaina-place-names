@@ -169,6 +169,7 @@ const FullScreenInfo = ({
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
               flexWrap: "wrap",
               gap: "10px",
@@ -180,12 +181,10 @@ const FullScreenInfo = ({
               marginBottom: "20px",
             }}
           >
-            <div>
               <h2
                 onClick={() => {
                   if (location.audioUrl) {
                     const audio = nameAudioRef.current;
-
                     if (audio) {
                       if (audio.paused) {
                         audio.play();
@@ -206,6 +205,16 @@ const FullScreenInfo = ({
                 {location.denainaName ?? "No Dena'ina Name available."}
               </h2>
 
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: "1.0rem",
+                  fontStyle: "italic",
+                }}
+              >
+                {location.denainaMeaning ?? "No meaning available."}
+              </p>
+
               {location.audioUrl && (
                 <audio ref={nameAudioRef} style={{ display: "none" }}>
                   <source src={location.audioUrl} type="audio/mp3" />
@@ -213,7 +222,6 @@ const FullScreenInfo = ({
                 </audio>
               )}
             </div>
-          </div>
 
           {/* div for the description box*/}
           <div
@@ -287,7 +295,7 @@ const FullScreenInfo = ({
                   textDecoration: location.audioUrlculture
                     ? "underline"
                     : "none",
-                    fontSize: "1.5"
+                  fontSize: "1.5",
                 }}
               >
                 Place Name Story
