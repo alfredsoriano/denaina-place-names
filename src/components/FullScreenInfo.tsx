@@ -250,7 +250,6 @@ const FullScreenInfo = ({
             }}
           >
             <div style={{ marginBottom: "0.3rem" }}>
-              {/* Place Name Story text that triggers audio */}
               <h4
                 onClick={() => {
                   if (location.audioUrlculture) {
@@ -260,8 +259,8 @@ const FullScreenInfo = ({
                 }}
                 style={{
                   marginBottom: "0.5rem",
-                  cursor: "pointer", // Indicating it's clickable
-                  textDecoration: "underline", // Optional styling to indicate it's clickable
+                  cursor: location.audioUrlculture ? "pointer" : "default",
+                  textDecoration: location.audioUrlculture ? "underline" : "none",
                 }}
               >
                 Place Name Story
