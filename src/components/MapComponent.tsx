@@ -65,14 +65,26 @@ function MapComponent() {
             key={location.id}
             position={location.coordinates}
             eventHandlers={{
-              mouseover: (event) => event.target.openPopup(),
-              mouseout: (event) => event.target.closePopup(),
-              mousedown: () => onPinClick(location),
+              mouseover: (event) => {
+                if (!('ontouchstart' in window)) {
+                  event.target.openPopup();
+                }
+              },
+              mouseout: (event) => {
+                if (!('ontouchstart' in window)) {
+                  event.target.closePopup();
+                }
+              },
+              click: (event) => {
+                event.target.openPopup();
+                onPinClick(location); 
+              },
             }}
           >
             <Popup>{location.title}</Popup>
           </Marker>
-        ))}
+        ))
+        }
       </MapContainer>
       <FullScreenInfo
         location={currentLocation}
