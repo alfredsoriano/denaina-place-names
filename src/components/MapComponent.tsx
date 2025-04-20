@@ -28,8 +28,6 @@ function MapComponent() {
 
   const [pinnedLocationId, setPinnedLocationId] = useState<string | null>(null);
 
-
-
   function onPinClick(location: DenainaLocation) {
     setCurrentLocation(location);
     setIsMainPopupOpen(true);
@@ -76,10 +74,16 @@ function MapComponent() {
               },
               mouseout: (event) => {
                 if (!("ontouchstart" in window)) {
-                  event.target.closePopup();
+                  setTimeout(() => {
+                    // Still not pinned, so close
+                    if (pinnedLocationId !== location.id) {
+                      event.target.closePopup();
+                    }
+                  }, 200);
                 }
               },
               click: (event) => {
+                setPinnedLocationId(location.id);
                 event.target.openPopup();
                 onPinClick(location);
               },
