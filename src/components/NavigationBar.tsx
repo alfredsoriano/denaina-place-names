@@ -11,6 +11,7 @@ function NavigationBar() {
   const {darkTheme, toggleTheme} = useContext(ThemeContext);
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
 
   useEffect(() => {
     document.body.setAttribute("data-bs-theme", darkTheme ? "dark" : "light");
@@ -18,7 +19,8 @@ function NavigationBar() {
     document.body.style.color = darkTheme ? "white" : "#273B09";
   }, [darkTheme]);
 
-  const handleShowModal = (content: SetStateAction<string>) => {
+  const handleShowModal = (title: string, content: SetStateAction<string>) => {
+    setModalTitle(title)
     setModalContent(content);
     setShowModal(true);
   };
@@ -44,9 +46,7 @@ function NavigationBar() {
             textAlign: "center",
           }}
           onClick={() =>
-            handleShowModal(
-              "Dena'ina Place Names is in development. Stay tuned!"
-            )
+            window.location.reload()
           }
         >
           Dena'ina Place Names
@@ -65,7 +65,17 @@ function NavigationBar() {
           >
             <Nav.Link
               onClick={() =>
-                handleShowModal("About section is in development. Stay tuned!")
+                handleShowModal("About", `This interactive map and web application is aimed to 
+                provide users with historical and cultural information about Dena'ina places within 
+                Anchorage and the greater southcentral area. The goal is to provide a user-friendly 
+                experience to learn about Dena'ina place names and their historical and cultural significance. 
+                It targets the imporantance for the heritage and culture revitalization efforts in Alaska. 
+                This project will focus specifically on the Upper Cook Inlet Dena'ina region, with the target dialect 
+                of the Upper Cook Inlet Dena'ina Dene.  
+                \n
+                This application was made by Alfred Soriano, Chris Yang, and Jiwon Bae from the University of Alaska Anchorage (UAA).
+                Working alongside them are local cultural heritage initiative professors Dr. Maria Williams and Dr. Jessica Ross from UAA,
+                with technical advise from Dr. Pradeeban Kathiravelu.`)
               }
               style={{
                 color: darkTheme ? "white" : "#273B09",
@@ -76,7 +86,7 @@ function NavigationBar() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
-                handleShowModal("FAQ feature is in development. Stay tuned!")
+                handleShowModal("Credits", ``)
               }
               style={{
                 color: darkTheme ? "white" : "#273B09",
@@ -105,14 +115,9 @@ function NavigationBar() {
 
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
-          <Modal.Title>In Development</Modal.Title>
+          <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{modalContent}</Modal.Body>
-        <Modal.Footer>
-          <button className="btn btn-secondary" onClick={handleCloseModal}>
-            Close
-          </button>
-        </Modal.Footer>
       </Modal>
     </>
   );
