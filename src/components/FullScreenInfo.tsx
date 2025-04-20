@@ -365,6 +365,19 @@ const FullScreenInfo = ({
             ))}
           </Carousel>
         </div>
+        <Modal
+          show={showFullscreen}
+          onHide={() => setShowFullscreen(false)}
+          centered
+          size="xl"
+          fullscreen
+        >
+          <Modal.Header closeButton>
+          </Modal.Header>
+          <Modal.Body>
+            {loadMedia(location.media[activeIndex])}
+          </Modal.Body>
+        </Modal>
       </div>
 
       <div
