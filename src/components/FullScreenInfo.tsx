@@ -1,8 +1,7 @@
 import { useContext, useState, useRef } from "react";
-import { Button, Carousel, Modal, Image } from "react-bootstrap";
+import { Button, Carousel, Modal} from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
-import { FaExpand } from "react-icons/fa";
 import "./FullScreenInfo.css";
 
 const FullScreenInfo = ({
@@ -18,7 +17,8 @@ const FullScreenInfo = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const nameAudioRef = useRef<HTMLAudioElement>(null);
   const storyAudioRef = useRef<HTMLAudioElement>(null);
-  const [showModal, setShowModal] = useState(false);
+  const [showFullscreen, setShowFullscreen] = useState(false);
+
 
   if (location === null || isOpen === false) return null;
 
@@ -26,10 +26,6 @@ const FullScreenInfo = ({
   const handleClose = () => {
     setActiveIndex(0);
     onClose();
-  };
-
-  const getMediaSrc = (item: any) => {
-    return typeof item === "string" ? item : item.url || "";
   };
 
   // updated function to load media type: returns image, video, or embedded YouTube video
@@ -324,76 +320,71 @@ const FullScreenInfo = ({
         </div>
 
         {/* react-bootstrap carousel */}
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            aspectRatio: "16 / 9",
-            borderRadius: "10px",
-            overflow: "hidden",
-            boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-          }}
-        >
-          <Carousel
-            className="custom-carousel"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-            interval={null}
-            activeIndex={activeIndex}
-            onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
-            controls={location.media.length > 1}
-          >
-            {location.media.map((item: any, i: any) => (
-              <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
-            ))}
-          </Carousel>
-          </div>
-{/* Expand button */}
-<Button
-  variant="light"
-  onClick={() => setShowModal(true)}
+<div
   style={{
-    position: "fixed",
-    top: "10px",
-    right: "10px",
-    zIndex: 10,
-    opacity: 0.8,
-    borderRadius: "50%",
-    padding: "6px 10px",
+    position: "relative",
+    width: "100%",
+    aspectRatio: "16 / 9",
+    borderRadius: "10px",
+    overflow: "hidden",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
   }}
 >
-  <FaExpand />
-</Button>
-</div>
+  {/* 🔍 Expand Button */}
+  <Button
+    variant="light"
+    size="sm"
+    onClick={() => setShowFullscreen(true)}
+    style={{
+      position: "absolute",
+      top: "10px",
+      right: "10px",
+      zIndex: 10,
+      backgroundColor: "rgba(255,255,255,0.8)",
+      border: "1px solid #ccc",
+      padding: "2px 6px",
+    }}
+  >
+    ⤢
+  </Button>
 
-{/* Modal for full-screen view */}
-<Modal show={showModal} onHide={() => setShowModal(false)} centered size="lg">
-<Modal.Body className="text-center">
-  <Image src={getMediaSrc(location.media[activeIndex])} fluid />
-</Modal.Body>
+  <Carousel
+    className="custom-carousel"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+    interval={null}
+    activeIndex={activeIndex}
+    onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
+    controls={location.media.length > 1}
+  >
+    {location.media.map((item: any, i: any) => (
+      <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
+    ))}
+  </Carousel>
+</div>
+{/* Fullscreen Modal */}
+<Modal
+  show={showFullscreen}
+  onHide={() => setShowFullscreen(false)}
+  centered
+  size="xl"
+  fullscreen
+>
+  <Modal.Header closeButton>
+    <Modal.Title>Full-size Media</Modal.Title>
+  </Modal.Header>
+  <Modal.Body style={{ padding: 0 }}>
+    {loadMedia(location.media[activeIndex])}
+  </Modal.Body>
 </Modal>
 
-{/* Citation and Close button */}
-<div
-style={{
-  paddingBottom: "30px",
-}}
->
-<p
-  style={{
-    color: darkTheme ? "#DCD7C9" : "#2C3930",
-    justifyContent: "center",
-    fontWeight: "bold",
-  }}
->
-  {location.citations?.[activeIndex] || "Source not found."}
-</p>
-</div>
+
+      </div>
 
       {/* react-bootstrap button */}
       <Button
