@@ -28,6 +28,8 @@ function MapComponent() {
 
   const [pinnedLocationId, setPinnedLocationId] = useState<string | null>(null);
 
+
+
   function onPinClick(location: DenainaLocation) {
     setCurrentLocation(location);
     setIsMainPopupOpen(true);
@@ -62,38 +64,30 @@ function MapComponent() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
 
-{denainaLocationsMock.map((location) => (
-  <Marker
-    key={location.id}
-    position={location.coordinates}
-    eventHandlers={{
-      mouseover: (event) => {
-        // Desktop only
-        if (!("ontouchstart" in window)) {
-          event.target.openPopup();
-        }
-      },
-      mouseout: (event) => {
-        if (!("ontouchstart" in window)) {
-          // Delay closing to avoid flickering
-          setTimeout(() => {
-            // Still not pinned, so close
-            if (pinnedLocationId !== location.id) {
-              event.target.closePopup();
-            }
-          }, 200);
-        }
-      },
-      click: (event) => {
-        setPinnedLocationId(location.id);
-        event.target.openPopup();
-        onPinClick(location);
-      },
-    }}
-  >
-    <Popup>{location.title}</Popup>
-  </Marker>
-))}
+        {denainaLocationsMock.map((location) => (
+          <Marker
+            key={location.id}
+            position={location.coordinates}
+            eventHandlers={{
+              mouseover: (event) => {
+                if (!("ontouchstart" in window)) {
+                  event.target.openPopup();
+                }
+              },
+              mouseout: (event) => {
+                if (!("ontouchstart" in window)) {
+                  event.target.closePopup();
+                }
+              },
+              click: (event) => {
+                event.target.openPopup();
+                onPinClick(location);
+              },
+            }}
+          >
+            <Popup>{location.title}</Popup>
+          </Marker>
+        ))}
       </MapContainer>
       <FullScreenInfo
         location={currentLocation}
