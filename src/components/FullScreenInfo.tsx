@@ -1,7 +1,8 @@
 import { useContext, useState, useRef } from "react";
-import { Button, Carousel, Modal} from "react-bootstrap";
+import { Button, Carousel, Modal } from "react-bootstrap";
 import { DenainaLocation } from "../types";
 import { ThemeContext } from "../context/ThemeContext";
+import { HiOutlineArrowsExpand } from "react-icons/hi";
 import "./FullScreenInfo.css";
 
 const FullScreenInfo = ({
@@ -18,7 +19,6 @@ const FullScreenInfo = ({
   const nameAudioRef = useRef<HTMLAudioElement>(null);
   const storyAudioRef = useRef<HTMLAudioElement>(null);
   const [showFullscreen, setShowFullscreen] = useState(false);
-
 
   if (location === null || isOpen === false) return null;
 
@@ -143,7 +143,7 @@ const FullScreenInfo = ({
           padding: "20px",
           backgroundImage: `url(${location.backgroundImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center top"
+          backgroundPosition: "center top",
         }}
       >
         <h1 style={{ marginBottom: "10px" }}>{location.title}</h1>
@@ -182,47 +182,47 @@ const FullScreenInfo = ({
               marginBottom: "20px",
             }}
           >
-              <h2
-                onClick={() => {
-                  if (location.audioUrl) {
-                    const audio = nameAudioRef.current;
-                    if (audio) {
-                      if (audio.paused) {
-                        audio.play();
-                      } else {
-                        audio.pause();
-                        audio.currentTime = 0; //Reset audio to the start
-                      }
+            <h2
+              onClick={() => {
+                if (location.audioUrl) {
+                  const audio = nameAudioRef.current;
+                  if (audio) {
+                    if (audio.paused) {
+                      audio.play();
+                    } else {
+                      audio.pause();
+                      audio.currentTime = 0; //Reset audio to the start
                     }
                   }
-                }}
-                style={{
-                  margin: 0,
-                  fontSize: "1.5rem",
-                  cursor: location.audioUrl ? "pointer" : "default",
-                  textDecoration: location.audioUrl ? "underline" : "none",
-                }}
-              >
-                {location.denainaName ?? "No Dena'ina Name available."}
-              </h2>
+                }
+              }}
+              style={{
+                margin: 0,
+                fontSize: "1.5rem",
+                cursor: location.audioUrl ? "pointer" : "default",
+                textDecoration: location.audioUrl ? "underline" : "none",
+              }}
+            >
+              {location.denainaName ?? "No Dena'ina Name available."}
+            </h2>
 
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: "1.0rem",
-                  fontStyle: "italic",
-                }}
-              >
-                {location.denainaMeaning ?? "No meaning available."}
-              </p>
+            <p
+              style={{
+                margin: 0,
+                fontSize: "1.0rem",
+                fontStyle: "italic",
+              }}
+            >
+              {location.denainaMeaning ?? "No meaning available."}
+            </p>
 
-              {location.audioUrl && (
-                <audio ref={nameAudioRef} style={{ display: "none" }}>
-                  <source src={location.audioUrl} type="audio/mp3" />
-                  No Audio found.
-                </audio>
-              )}
-            </div>
+            {location.audioUrl && (
+              <audio ref={nameAudioRef} style={{ display: "none" }}>
+                <source src={location.audioUrl} type="audio/mp3" />
+                No Audio found.
+              </audio>
+            )}
+          </div>
 
           {/* div for the description box*/}
           <div
@@ -320,70 +320,67 @@ const FullScreenInfo = ({
         </div>
 
         {/* react-bootstrap carousel */}
-<div
-  style={{
-    position: "relative",
-    width: "100%",
-    aspectRatio: "16 / 9",
-    borderRadius: "10px",
-    overflow: "hidden",
-    boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-  }}
->
-  {/* 🔍 Expand Button */}
-  <Button
-    variant="light"
-    size="sm"
-    onClick={() => setShowFullscreen(true)}
-    style={{
-      position: "absolute",
-      top: "10px",
-      right: "10px",
-      zIndex: 10,
-      backgroundColor: "rgba(255,255,255,0.8)",
-      border: "1px solid #ccc",
-      padding: "2px 6px",
-    }}
-  >
-    ⤢
-  </Button>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "14 / 9",
+            borderRadius: "10px",
+            overflow: "hidden",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+          }}
+        >
+          <Button
+            variant="light"
+            onClick={() => setShowFullscreen(true)}
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              zIndex: 10,
+              backgroundColor: "rgba(255,255,255,0.8)",
+              border: "1px solid #ccc",
+              padding: "4px 4px",
+            }}
+          >
+            <HiOutlineArrowsExpand size={25} />
+          </Button>
 
-  <Carousel
-    className="custom-carousel"
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-    }}
-    interval={null}
-    activeIndex={activeIndex}
-    onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
-    controls={location.media.length > 1}
-  >
-    {location.media.map((item: any, i: any) => (
-      <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
-    ))}
-  </Carousel>
-</div>
-{/* Fullscreen Modal */}
-<Modal
-  show={showFullscreen}
-  onHide={() => setShowFullscreen(false)}
-  centered
-  size="xl"
-  fullscreen
->
-  <Modal.Header closeButton>
-    <Modal.Title>Full-size Media</Modal.Title>
-  </Modal.Header>
-  <Modal.Body style={{ padding: 0 }}>
-    {loadMedia(location.media[activeIndex])}
-  </Modal.Body>
-</Modal>
+          <Carousel
+            className="custom-carousel"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            interval={null}
+            activeIndex={activeIndex}
+            onSelect={(selectedIndex) => setActiveIndex(selectedIndex)}
+            controls={location.media.length > 1}
+          >
+            {location.media.map((item: any, i: any) => (
+              <Carousel.Item key={i}>{loadMedia(item)}</Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+      </div>
 
-
+      <div
+        style={{
+          paddingBottom: "30px",
+        }}
+      >
+        <p
+          style={{
+            color: darkTheme ? "#DCD7C9" : "#2C3930",
+            justifyContent: "center",
+            fontWeight: "bold",
+          }}
+        >
+          {location.citations?.[activeIndex] || "Source not found."}
+        </p>
       </div>
 
       {/* react-bootstrap button */}
