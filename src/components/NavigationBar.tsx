@@ -108,7 +108,7 @@ function NavigationBar() {
                 Eklutna, Inc. 
                 <br/><br/>
                 Futhermore,
-                Thank you to all our friends and family for their valuable feedback.`)
+                thank you to all our friends and family for their valuable feedback.`)
               }
               style={{
                 color: darkTheme ? "white" : "#273B09",
