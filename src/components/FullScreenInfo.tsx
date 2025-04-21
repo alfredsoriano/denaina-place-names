@@ -19,7 +19,7 @@ const FullScreenInfo = ({
   const nameAudioRef = useRef<HTMLAudioElement>(null);
   const storyAudioRef = useRef<HTMLAudioElement>(null);
   const [showFullscreen, setShowFullscreen] = useState(false);
-  const textShadow = darkTheme ? "1px 2px 4px rgba(0,0,0,0.8)" : "1.5px 1px 1px rgba(227,228,219,0.3)";
+  const textShadow = darkTheme ? "1px 2px 4px rgba(0,0,0,0.8)" : "1.5px 1px 0px rgba(227,228,219,0.2)";
 
   if (location === null || isOpen === false) return null;
 
@@ -107,6 +107,7 @@ const FullScreenInfo = ({
     return null;
   };
 
+  // main code block for fullscreeninfo
   return (
     <div
       style={{
