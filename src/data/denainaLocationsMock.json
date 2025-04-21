@@ -26,7 +26,7 @@
     "Point Woronzof and Upper Cook Inlet waters at sunset. Source: alaska.org \"Point Woronzof Park\"",
     "Video of a boat travelling along Upper Cook Inlet, seen from Point Woronzof. Video taken by Maria Williams."],
     "audioUrlculture": "img/audios/Point Woronzof Story.mp3",
-    "audioUrl": "img/audios/PtWoronzof - DName.mp3",
+    "audioUrl": "img/audios/PtWoronzof - DName.mp4",
     "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
@@ -53,8 +53,8 @@
     ["Chester Creek flowing through the University of Alaska Anchorage campus in the winter. Photograph taken by Maria Williams.",
     "Chester Creek in the summer. Source: alaska.org \"Chester Creek Trail\"",
     "Narration of Chester Creek culture, alongside a video of the Chester Creek river flowing. Narration by Edna Standifer and Zachary Milliman, Photography and Video taken by Maria Williams."],
-    "audioUrl": "img/audios/Chantsnu - DName.mp3",
-    "audioUrlculture": "img/audios/Chester creek - PL.mp3",
+    "audioUrl": "img/audios/Chantsnu - DName.mp4",
+    "audioUrlculture": "img/audios/Chester creek - PL.mp4",
     "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
@@ -83,8 +83,8 @@
     "The Eklutna Village historic park on a cloudy day. Source: tripadvisor.com \"Eklutna Village Historic Park\"",
     "The colorful spirit houses of Eklutna. Source: alaska.org \"Eklutna Historical Park\"",
     "Eklutna narration alongside the two granite knobs. Narration by Jessica Ross, Photography by Adam Leggett, Eklutna, Inc., Video editing by Maria Williams."],
-    "audioUrl": "img/audios/Eklutna audio 1.21.10 PM.mp3",
-    "audioUrlculture": "img/audios/Eklutna audio - PL.mp3",
+    "audioUrl": "img/audios/Eklutna audio DN.mp3",
+    "audioUrlculture": "img/audios/Eklutna audio - PL.mp4",
     "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
@@ -119,7 +119,7 @@
     "Aerial video view of Mount Susitna in the winter, with raven motif. Video taken by Maria Williams.",
     "Aerial video view of Mount Susitna in the winter, with credits. Video taken by Maria Williams."],
     "videoUrl": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
-    "audioUrl": "img/audios/MtSusitna - DName.mp3",
+    "audioUrl": "img/audios/MtSusitna - DName.mp4",
     "audioUrlculture": "img/audios/Mt. Susitna - Place Name Audio E.mp3",
     "backgroundImage": "img/backgrounds/raven.png"
   },
@@ -132,7 +132,7 @@
     "description": ["We are currently working on this location!"],
     "culture": ["Want to contribute towards the Dena'ina Place Names project? Visit the FAQ to find out more information on how you can help!"],
     "media": [],
-    "audioUrl": "img/audios/KenaiPeninsula - DName",
+    "audioUrl": "img/audios/KenaiPeninsula - DName.mp4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -172,8 +172,8 @@
     "citations": 
     ["Aerial photo of the CIRI wind turbines on Fire Island. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz.",
     "Greater aerial view of Fire Island, including the cliffs. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz."],
-    "audioUrl": "img/audios/FireIsland - DName.mp3",
-    "audioUrlculture": "img/audios/Fire Island - PL.mp3",
+    "audioUrl": "img/audios/FireIsland - DName.mp4",
+    "audioUrlculture": "img/audios/Fire Island - PL.mp4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -200,7 +200,7 @@
     ["Photo of Talkeetna Main Street in the summer. Source: The MILEPOST, Photograph taken by Serine Reeves.",
     "Aerial photo of Talkeetna. Source: Talkeetna Chamber of Commerce, talkeetnachamber.org",
     "Photo of Talkeetna Main Street in the winter. Source: OttsWorld"],
-    "audioUrl": "img/audios/Talkeetna - DName.mp3",
+    "audioUrl": "img/audios/Talkeetna - DName.mp4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -218,7 +218,7 @@
     "The Dena'ina people from Tyonek are called <i>Tebughna</i>, or 'the Beach People'. ",
     "Tyonek and its people have a long-held tradition of song, dance, and storytelling."],
     "media": ["img/images/Tyonek1.jpg"],
-    "audioUrl": "img/audios/Tyonek- DName.mp3",
+    "audioUrl": "img/audios/Tyonek- DName.mp4",
     "citations": ["Aerial photo of Tyonek. Source: Tyonek.com"],
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
@@ -243,7 +243,7 @@
     "citations": 
     ["A view of Cook Inlet from Homer, Alaska. Source: myalaskanfishingtrip.com",
     "Aerial photograph of the tip of Elizabeth Island in Lower Cook Inlet, Alaska. Source: NOAA Photo Library, flickr.com/photos/noaaphotolib/"],
-    "audioUrl": "img/audios/Tikhatnu - DName.mp3",
+    "audioUrl": "img/audios/Tikhatnu - DName.mp4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -263,8 +263,8 @@
     ["img/images/Wasilla1.jpg",
     "img/images/Wasilla2.jpg",
     "img/images/Wasilla3.jpg"],
-    "audioUrl": "img/audios/Wasilla - DName.mp3",
-    "audioUrlculture": "img/audios/Wasilla audio - PL.mp3",
+    "audioUrl": "img/audios/Wasilla - DName.mp4",
+    "audioUrlculture": "img/audios/Wasilla audio - PL.mp4",
     "citations": 
     ["Aerial view of Wasilla. Source: Kampgrounds of America, www.koa.com",
     "View of Wasilla with mountains in the background. Source: City of Wasilla, www.cityofwasilla.gov",
@@ -292,8 +292,8 @@
     "A view Fire Island from a Kincaid Park hilltop. Source: UDisc, udisc.com",
     "The coastline of Kincaid Park in winter. Source: wikipedia.com, Photograph taken by Paxson Woelber.",
     "Narration of Point Woronzof and its history. Edna Hna'estał Standifer and Zachary Milliman, Video taken by Maria Williams."],
-    "audioUrl": "img/audios/Kincaidpark - DName.mp3",
-    "audioUrlculture": "img/audios/Kincaid Park - PL.mp3",
+    "audioUrl": "img/audios/Kincaidpark - DName.mp4",
+    "audioUrlculture": "img/audios/Kincaid Park - PL.mp4",
     "backgroundImage": "img/backgrounds/salmon.PNG"
   },
   {
@@ -314,7 +314,7 @@
     "citations": 
     ["Photo of Turnagain Channel in Anchorage, Alaska. Source: wikipedia.com",
     "Aerial view of Seward Highway, with the Turnagain Arm shoreline. Source: alaska.org"],
-    "audioUrl": "img/audios/TurnagainArm - DName.mp3",
+    "audioUrl": "img/audios/TurnagainArm - DName.mp4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
@@ -337,8 +337,8 @@
     "citations": 
     ["Fishermen near the Lower Ship Creek area. Source: alaska.org", 
     "Railway bridge near the Lower Ship Creek area. Source: alaska.org"],
-    "audioUrl": "img/audios/Sticklebackcreek - DName.mp3",
-    "audioUrlculture": "img/audios/Ship Creek audio - PL.mp3",
+    "audioUrl": "img/audios/Sticklebackcreek - DName.mp4",
+    "audioUrlculture": "img/audios/Ship Creek audio - PL.mp4",
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {

@@ -221,6 +221,7 @@ const FullScreenInfo = ({
             {location.audioUrl && (
               <audio ref={nameAudioRef} style={{ display: "none" }}>
                 <source src={location.audioUrl} type="audio/mp3" />
+                <source src={location.audioUrl} type="audio/mp4" />
                 No Audio found.
               </audio>
             )}
@@ -307,6 +308,7 @@ const FullScreenInfo = ({
               {location.audioUrlculture && (
                 <audio ref={storyAudioRef} style={{ display: "none" }}>
                   <source src={location.audioUrlculture} type="audio/mp3" />
+                  <source src={location.audioUrlculture} type="audio/mp4" />
                   No Audio Found.
                 </audio>
               )}
