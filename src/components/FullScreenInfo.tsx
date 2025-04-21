@@ -19,6 +19,7 @@ const FullScreenInfo = ({
   const nameAudioRef = useRef<HTMLAudioElement>(null);
   const storyAudioRef = useRef<HTMLAudioElement>(null);
   const [showFullscreen, setShowFullscreen] = useState(false);
+  const textShadow = darkTheme ? "1px 2px 4px rgba(0,0,0,0.8)" : "1.5px 1px 1px rgba(227,228,219,0.3)";
 
   if (location === null || isOpen === false) return null;
 
@@ -146,7 +147,7 @@ const FullScreenInfo = ({
           backgroundPosition: "center top",
         }}
       >
-        <h1 style={{ marginBottom: "10px" }}>{location.title}</h1>
+        <h1 style={{ fontWeight: "bold", textShadow: `${textShadow}` }}>{location.title}</h1>
       </div>
 
       <div>
