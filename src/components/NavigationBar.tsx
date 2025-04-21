@@ -134,10 +134,23 @@ function NavigationBar() {
       </Navbar>
 
       <Modal show={showModal} onHide={handleCloseModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>{modalTitle}</Modal.Title>
+        <Modal.Header closeButton
+        style={{
+          backgroundColor: darkTheme ? "#273B09" : "#DCD7C9",
+          color: darkTheme ? "white" : "#2C3930"
+        }}>
+          <Modal.Title
+          style={{
+            fontWeight: "bold"
+          }}>{modalTitle}</Modal.Title>
         </Modal.Header>
-        <Modal.Body><div dangerouslySetInnerHTML={{ __html: modalContent }} /></Modal.Body>
+        <Modal.Body style={{
+          backgroundColor: darkTheme ? "#2C3930" : "#E3E4DB",
+          color: darkTheme ? "#DCD7C9" : "#2C3930",
+          borderBottomLeftRadius: "10px",
+          borderBottomRightRadius: "10px"
+        }}
+        ><div dangerouslySetInnerHTML={{ __html: modalContent }} /></Modal.Body>
       </Modal>
     </>
   );
