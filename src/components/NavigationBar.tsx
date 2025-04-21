@@ -17,6 +17,7 @@ function NavigationBar() {
     document.body.setAttribute("data-bs-theme", darkTheme ? "dark" : "light");
     document.body.style.backgroundColor = darkTheme ? "#273B09" : "#DCD7C9";
     document.body.style.color = darkTheme ? "white" : "#273B09";
+    document.body.style.overflow = "hidden";
   }, [darkTheme]);
 
   const handleShowModal = (title: string, content: SetStateAction<string>) => {
@@ -35,7 +36,7 @@ function NavigationBar() {
           fontWeight: "900",
           padding: "5px 40px",
           paddingRight: "calc(50px - 40px)",
-          width: "100vw",
+          width: "100vw"
         }}
       >
         <Navbar.Brand
