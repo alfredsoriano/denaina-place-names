@@ -69,16 +69,16 @@ function NavigationBar() {
                 handleShowModal("About", 
                 `This interactive map and web application is aimed to 
                 provide users with historical and cultural information about Dena'ina places within 
-                Anchorage and the greater southcentral area. The goal is to provide a user-friendly 
+                Anchorage and the greater southcentral area. Our goal is to provide a user-friendly 
                 experience to learn about Dena'ina place names and their historical and cultural significance. 
-                It targets the imporantance for the heritage and culture revitalization efforts in Alaska. 
+                We hope that this supports the heritage and culture revitalization efforts in Alaska. 
                 This project will focus specifically on the Upper Cook Inlet Dena'ina region, with the target dialect 
                 of the Upper Cook Inlet Dena'ina Dene.  
 
                 <br/><br/>
 
                 This application was made by Alfred Soriano, Chris Yang, and Jiwon Bae from the University of Alaska Anchorage (UAA).
-                Working alongside us are local cultural heritage initiative professors Dr. Maria Williams and Dr. Jessica Ross from UAA,
+                Working alongside them are local cultural heritage initiative professors Dr. Maria Williams and Dr. Jessica Ross from UAA,
                 with technical mentorship from Dr. Pradeeban Kathiravelu.`)
               }
               style={{
@@ -91,7 +91,7 @@ function NavigationBar() {
             <Nav.Link
               onClick={() =>
                 handleShowModal("Credits", 
-                `For the audios recordings we would like to give special thanks to:
+                `For the audio recordings, we would like to give special thanks to:
                 <br/><br/>
                 Angeleen Waskey <br/>
                 Donita Slawson <br/>
@@ -99,7 +99,7 @@ function NavigationBar() {
                 Jessica Ross <br/>
                 Zachary Milliman
                 <br/><br/>
-                For the photos and videos taken by our friends and contributors, we give thanks to:
+                For the photos and videos, many thanks to:
                 <br/><br/>
                 Maria Williams <br/>
                 Zachary Lane <br/>
@@ -107,6 +107,7 @@ function NavigationBar() {
                 Adam Leggett <br/>
                 Eklutna, Inc. 
                 <br/><br/>
+                Futhermore,
                 Thank you to all our friends and family for their valuable feedback.`)
               }
               style={{
