@@ -140,17 +140,21 @@ function NavigationBar() {
           color: darkTheme ? "white" : "#2C3930"
         }}>
           <Modal.Title
-          style={{
+            style={{
             fontWeight: "bold"
-          }}>{modalTitle}</Modal.Title>
+          }}>
+            {modalTitle}
+          </Modal.Title>
         </Modal.Header>
+
         <Modal.Body style={{
           backgroundColor: darkTheme ? "#2C3930" : "#E3E4DB",
           color: darkTheme ? "#DCD7C9" : "#2C3930",
           borderBottomLeftRadius: "10px",
           borderBottomRightRadius: "10px"
-        }}
-        ><div dangerouslySetInnerHTML={{ __html: modalContent }} /></Modal.Body>
+        }}>
+          <div dangerouslySetInnerHTML={{ __html: modalContent }} />
+        </Modal.Body>
       </Modal>
     </>
   );
