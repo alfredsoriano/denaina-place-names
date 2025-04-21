@@ -14,7 +14,7 @@ function MapComponent() {
     iconSize: [25, 41],
     iconAnchor: [12.5, 40],
     popupAnchor: [0, -38],
-    shadowAnchor: [10, 45],
+    shadowAnchor: [12.5, 40],
   });
   //load default pin using default icon
   L.Marker.prototype.options.icon = defaultPin;
