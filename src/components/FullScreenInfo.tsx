@@ -324,7 +324,7 @@ const FullScreenInfo = ({
           style={{
             position: "relative",
             width: "100%",
-            aspectRatio: "14 / 9",
+            aspectRatio: "16 / 9",
             borderRadius: "10px",
             overflow: "hidden",
             boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
