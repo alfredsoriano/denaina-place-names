@@ -170,7 +170,7 @@
     ["img/images/Fire Island1.png",
     "img/images/Fire Island2.jpg"],
     "citations": 
-    ["Aerial photo of the CIRI wind turbines on Fire Island. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz",
+    ["Aerial photo of the CIRI wind turbines on Fire Island. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz.",
     "Greater aerial view of Fire Island, including the cliffs. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz."],
     "audioUrl": "img/audios/FireIsland - DName.mp3",
     "audioUrlculture": "img/audios/Fire Island - PL.mp3",
@@ -197,7 +197,7 @@
     "img/images/Talkeetna2.jpg",
     "img/images/Talkeetna3.jpg"],
     "citations": 
-    ["Photo of Talkeetna Main Street in the summer. View ofSource: The MILEPOST, Photograph taken by Serine Reeves.",
+    ["Photo of Talkeetna Main Street in the summer. Source: The MILEPOST, Photograph taken by Serine Reeves.",
     "Aerial photo of Talkeetna. Source: Talkeetna Chamber of Commerce, talkeetnachamber.org",
     "Photo of Talkeetna Main Street in the winter. Source: OttsWorld"],
     "audioUrl": "img/audios/Talkeetna - DName.mp3",
@@ -268,7 +268,7 @@
     "citations": 
     ["Aerial view of Wasilla. Source: Kampgrounds of America, www.koa.com",
     "View of Wasilla with mountains in the background. Source: City of Wasilla, www.cityofwasilla.gov",
-    "View of Pioneer Peak near Wasilla. Source: Colter Broadwell Photography, shared on Facebook. Photograph taken by Colter Broadwell"],
+    "View of Pioneer Peak near Wasilla. Source: Colter Broadwell Photography, shared on Facebook. Photograph taken by Colter Broadwell."],
     "backgroundImage": "img/backgrounds/Moose_Background.png"
   },
   {
