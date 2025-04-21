@@ -65,17 +65,20 @@ function NavigationBar() {
           >
             <Nav.Link
               onClick={() =>
-                handleShowModal("About", `This interactive map and web application is aimed to 
+                handleShowModal("About", 
+                `This interactive map and web application is aimed to 
                 provide users with historical and cultural information about Dena'ina places within 
                 Anchorage and the greater southcentral area. The goal is to provide a user-friendly 
                 experience to learn about Dena'ina place names and their historical and cultural significance. 
                 It targets the imporantance for the heritage and culture revitalization efforts in Alaska. 
                 This project will focus specifically on the Upper Cook Inlet Dena'ina region, with the target dialect 
                 of the Upper Cook Inlet Dena'ina Dene.  
-                \n
+
+                <br/><br/>
+
                 This application was made by Alfred Soriano, Chris Yang, and Jiwon Bae from the University of Alaska Anchorage (UAA).
-                Working alongside them are local cultural heritage initiative professors Dr. Maria Williams and Dr. Jessica Ross from UAA,
-                with technical advise from Dr. Pradeeban Kathiravelu.`)
+                Working alongside us are local cultural heritage initiative professors Dr. Maria Williams and Dr. Jessica Ross from UAA,
+                with technical mentorship from Dr. Pradeeban Kathiravelu.`)
               }
               style={{
                 color: darkTheme ? "white" : "#273B09",
@@ -86,14 +89,31 @@ function NavigationBar() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
-                handleShowModal("Credits", ``)
+                handleShowModal("Credits", 
+                `For the audios recordings we would like to give special thanks to:
+                <br/><br/>
+                Angeleen Waskey <br/>
+                Donita Slawson <br/>
+                Hna'estał Edna Standifer <br/>
+                Jessica Ross <br/>
+                Zachary Milliman
+                <br/><br/>
+                For the photos and videos taken by our friends and contributors, we give thanks to:
+                <br/><br/>
+                Maria Williams <br/>
+                Zachary Lane <br/>
+                Mee Xiong <br/>
+                Adam Leggett <br/>
+                Eklutna, Inc. 
+                <br/><br/>
+                Thank you to all our friends and family for their valuable feedback.`)
               }
               style={{
                 color: darkTheme ? "white" : "#273B09",
                 cursor: "pointer",
               }}
             >
-              FAQ
+              Credits
             </Nav.Link>
             <div className="flex-grow-1" style={{ textAlign: "right" }}>
               <Button
@@ -117,7 +137,7 @@ function NavigationBar() {
         <Modal.Header closeButton>
           <Modal.Title>{modalTitle}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{modalContent}</Modal.Body>
+        <Modal.Body><div dangerouslySetInnerHTML={{ __html: modalContent }} /></Modal.Body>
       </Modal>
     </>
   );
