@@ -27,14 +27,13 @@ function MapComponent() {
   });
 
   const devPin = L.icon({
-    iconUrl: "img/pins/dev_marker.png", 
+    iconUrl: "img/pins/dev_marker.png",
     shadowUrl: "img/pins/marker-shadow.png",
     iconSize: [25, 41],
     iconAnchor: [12.5, 40],
     popupAnchor: [0, -38],
     shadowAnchor: [12.5, 40],
   });
-  
 
   //load default pin using default icon
   L.Marker.prototype.options.icon = defaultPin;
@@ -82,52 +81,49 @@ function MapComponent() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
 
-{denainaLocationsMock.map((location) => {
-  const isDev = location.isInDevelopment;
-  const icon = isDev
-    ? devPin
-    : pinnedLocationId === location.id
-    ? activePin
-    : defaultPin;
+        {denainaLocationsMock.map((location) => {
+          const isDev = location.isInDevelopment;
+          const icon = isDev
+            ? devPin
+            : pinnedLocationId === location.id
+            ? activePin
+            : defaultPin;
 
-  return (
-    <Marker
-      key={location.id}
-      position={location.coordinates}
-      icon={icon}
-      eventHandlers={
-        isDev
-          ? {} // No interaction
-          : {
-              mouseover: (event) => {
-                if (!("ontouchstart" in window)) {
-                  event.target.openPopup();
-                }
-              },
-              mouseout: (event) => {
-                if (!("ontouchstart" in window)) {
-                  setTimeout(() => {
-                    if (pinnedLocationId !== location.id) {
-                      event.target.closePopup();
+          return (
+            <Marker
+              key={location.id}
+              position={location.coordinates}
+              icon={icon}
+              eventHandlers={
+                isDev
+                  ? {} // No interaction
+                  : {
+                      mouseover: (event) => {
+                        if (!("ontouchstart" in window)) {
+                          event.target.openPopup();
+                        }
+                      },
+                      mouseout: (event) => {
+                        if (!("ontouchstart" in window)) {
+                          setTimeout(() => {
+                            if (pinnedLocationId !== location.id) {
+                              event.target.closePopup();
+                            }
+                          }, 200);
+                        }
+                      },
+                      click: (event) => {
+                        setPinnedLocationId(location.id);
+                        event.target.openPopup();
+                        onPinClick(location);
+                      },
                     }
-                  }, 200);
-                }
-              },
-              click: (event) => {
-                setPinnedLocationId(location.id);
-                event.target.openPopup();
-                onPinClick(location);
-              },
-            }
-      }
-    >
-      <Popup>
-        {isDev ? "Coming Soon!" : location.title}
-      </Popup>
-    </Marker>
-  );
-})}
-
+              }
+            >
+              <Popup>{isDev ? "Coming Soon!" : location.title}</Popup>
+            </Marker>
+          );
+        })}
       </MapContainer>
       <FullScreenInfo
         location={currentLocation}
