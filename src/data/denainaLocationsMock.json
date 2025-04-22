@@ -27,7 +27,8 @@
     "Video of a boat travelling along Upper Cook Inlet, seen from Point Woronzof. Video taken by Maria Williams."],
     "audioUrlculture": "img/audios/Point Woronzof Story.mp3",
     "audioUrl": "img/audios/PtWoronzof - DName.mp4",
-    "backgroundImage": "img/backgrounds/salmon.PNG"
+    "backgroundImage": "img/backgrounds/salmon.PNG",
+    "isInDevelopment": false
   },
   {
     "id": "2",
@@ -55,7 +56,8 @@
     "Narration of Chester Creek culture, alongside a video of the Chester Creek river flowing. Narration by Edna Standifer and Zachary Milliman, Photography and Video taken by Maria Williams."],
     "audioUrl": "img/audios/Chantsnu - DName.mp4",
     "audioUrlculture": "img/audios/Chester creek - PL.mp4",
-    "backgroundImage": "img/backgrounds/salmon.PNG"
+    "backgroundImage": "img/backgrounds/salmon.PNG",
+    "isInDevelopment": false
   },
   {
     "id": "3",
@@ -85,7 +87,8 @@
     "Eklutna narration alongside the two granite knobs. Narration by Jessica Ross, Photography by Adam Leggett, Eklutna, Inc., Video editing by Maria Williams."],
     "audioUrl": "img/audios/Eklutna audio DN.mp3",
     "audioUrlculture": "img/audios/Eklutna audio - PL.mp4",
-    "backgroundImage": "img/backgrounds/salmon.PNG"
+    "backgroundImage": "img/backgrounds/salmon.PNG",
+    "isInDevelopment": false
   },
   {
     "id": "4",
@@ -121,7 +124,8 @@
     "videoUrl": "https://www.youtube.com/watch?v=_8HT5vCNfyI",
     "audioUrl": "img/audios/MtSusitna - DName.mp4",
     "audioUrlculture": "img/audios/Mt. Susitna - Place Name Audio E.mp3",
-    "backgroundImage": "img/backgrounds/raven.png"
+    "backgroundImage": "img/backgrounds/raven.png",
+    "isInDevelopment": false
   },
   {
     "id": "5",
@@ -133,7 +137,8 @@
     "culture": ["Want to contribute towards the Dena'ina Place Names project? Visit the FAQ to find out more information on how you can help!"],
     "media": [],
     "audioUrl": "img/audios/KenaiPeninsula - DName.mp4",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": true
   },
   {
     "id": "6",
@@ -144,7 +149,8 @@
     "description": ["We are currently working on this location!"],
     "culture": ["Want to contribute towards the Dena'ina Place Names project? Visit the FAQ to find out more information on how you can help!"],
     "media": [],
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": true
   },
   {
     "id": "7",
@@ -174,7 +180,8 @@
     "Greater aerial view of Fire Island, including the cliffs. Source: Anchorage Daily News, www.adn.com, courtesy of CIRI, Photograph taken by Oscar Avellaneda-Cruz."],
     "audioUrl": "img/audios/FireIsland - DName.mp4",
     "audioUrlculture": "img/audios/Fire Island - PL.mp4",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": false
   },
   {
     "id": "8",
@@ -201,7 +208,8 @@
     "Aerial photo of Talkeetna. Source: Talkeetna Chamber of Commerce, talkeetnachamber.org",
     "Photo of Talkeetna Main Street in the winter. Source: OttsWorld"],
     "audioUrl": "img/audios/Talkeetna - DName.mp4",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": false
   },
   {
     "id": "9",
@@ -220,7 +228,8 @@
     "media": ["img/images/Tyonek1.jpg"],
     "audioUrl": "img/audios/Tyonek- DName.mp4",
     "citations": ["Aerial photo of Tyonek. Source: Tyonek.com"],
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": false
   },
   {
     "id": "10",
@@ -244,7 +253,8 @@
     ["A view of Cook Inlet from Homer, Alaska. Source: myalaskanfishingtrip.com",
     "Aerial photograph of the tip of Elizabeth Island in Lower Cook Inlet, Alaska. Source: NOAA Photo Library, flickr.com/photos/noaaphotolib/"],
     "audioUrl": "img/audios/Tikhatnu - DName.mp4",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": false
   },
   {
     "id": "11",
@@ -269,7 +279,8 @@
     ["Aerial view of Wasilla. Source: Kampgrounds of America, www.koa.com",
     "View of Wasilla with mountains in the background. Source: City of Wasilla, www.cityofwasilla.gov",
     "View of Pioneer Peak near Wasilla. Source: Colter Broadwell Photography, shared on Facebook. Photograph taken by Colter Broadwell."],
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": false
   },
   {
     "id": "12",
@@ -294,7 +305,8 @@
     "Narration of Point Woronzof and its history. Edna Hna'estał Standifer and Zachary Milliman, Video taken by Maria Williams."],
     "audioUrl": "img/audios/Kincaidpark - DName.mp4",
     "audioUrlculture": "img/audios/Kincaid Park - PL.mp4",
-    "backgroundImage": "img/backgrounds/salmon.PNG"
+    "backgroundImage": "img/backgrounds/salmon.PNG",
+    "isInDevelopment": false
   },
   {
     "id": "13",
@@ -315,7 +327,8 @@
     ["Photo of Turnagain Channel in Anchorage, Alaska. Source: wikipedia.com",
     "Aerial view of Seward Highway, with the Turnagain Arm shoreline. Source: alaska.org"],
     "audioUrl": "img/audios/TurnagainArm - DName.mp4",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": false
   },
   {
     "id": "14",
@@ -339,7 +352,8 @@
     "Railway bridge near the Lower Ship Creek area. Source: alaska.org"],
     "audioUrl": "img/audios/Sticklebackcreek - DName.mp4",
     "audioUrlculture": "img/audios/Ship Creek audio - PL.mp4",
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": false
   },
   {
     "id": "15",
@@ -350,7 +364,8 @@
     "description": ["We are currently working on this location!"],
     "culture": ["Want to contribute towards the Dena'ina Place Names project? Visit the FAQ to find out more information on how you can help!"],
     "media": [],
-    "backgroundImage": "img/backgrounds/Moose_Background.png"
+    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "isInDevelopment": true
   }
 ]
 

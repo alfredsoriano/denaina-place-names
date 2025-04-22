@@ -25,4 +25,5 @@ export interface DenainaLocation {
   audioUrl?: string;
   audioUrlculture?: string;
   backgroundImage?: string;
+  isInDevelopment: boolean;
 }

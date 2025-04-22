@@ -26,6 +26,16 @@ function MapComponent() {
     shadowAnchor: [12.5, 40],
   });
 
+  const devPin = L.icon({
+    iconUrl: "img/pins/dev_marker.png", 
+    shadowUrl: "img/pins/marker-shadow.png",
+    iconSize: [25, 41],
+    iconAnchor: [12.5, 40],
+    popupAnchor: [0, -38],
+    shadowAnchor: [12.5, 40],
+  });
+  
+
   //load default pin using default icon
   L.Marker.prototype.options.icon = defaultPin;
 
@@ -72,12 +82,23 @@ function MapComponent() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
 
-        {denainaLocationsMock.map((location) => (
-          <Marker
-            key={location.id}
-            position={location.coordinates}
-            icon={pinnedLocationId === location.id ? activePin : defaultPin}
-            eventHandlers={{
+{denainaLocationsMock.map((location) => {
+  const isDev = location.isInDevelopment;
+  const icon = isDev
+    ? devPin
+    : pinnedLocationId === location.id
+    ? activePin
+    : defaultPin;
+
+  return (
+    <Marker
+      key={location.id}
+      position={location.coordinates}
+      icon={icon}
+      eventHandlers={
+        isDev
+          ? {} // No interaction
+          : {
               mouseover: (event) => {
                 if (!("ontouchstart" in window)) {
                   event.target.openPopup();
@@ -97,11 +118,16 @@ function MapComponent() {
                 event.target.openPopup();
                 onPinClick(location);
               },
-            }}
-          >
-            <Popup>{location.title}</Popup>
-          </Marker>
-        ))}
+            }
+      }
+    >
+      <Popup>
+        {isDev ? "Coming Soon!" : location.title}
+      </Popup>
+    </Marker>
+  );
+})}
+
       </MapContainer>
       <FullScreenInfo
         location={currentLocation}
