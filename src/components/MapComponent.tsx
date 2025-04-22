@@ -16,6 +16,16 @@ function MapComponent() {
     popupAnchor: [0, -38],
     shadowAnchor: [12.5, 40],
   });
+
+  const activePin = L.icon({
+    iconUrl: "img/pins/Active_Marker.png",
+    shadowUrl: "img/pins/marker-shadow.png",
+    iconSize: [25, 41],
+    iconAnchor: [12.5, 40],
+    popupAnchor: [0, -38],
+    shadowAnchor: [12.5, 40],
+  });
+
   //load default pin using default icon
   L.Marker.prototype.options.icon = defaultPin;
 
@@ -66,6 +76,7 @@ function MapComponent() {
           <Marker
             key={location.id}
             position={location.coordinates}
+            icon={pinnedLocationId === location.id ? activePin : defaultPin}
             eventHandlers={{
               mouseover: (event) => {
                 if (!("ontouchstart" in window)) {
@@ -75,7 +86,6 @@ function MapComponent() {
               mouseout: (event) => {
                 if (!("ontouchstart" in window)) {
                   setTimeout(() => {
-                    // Still not pinned, so close
                     if (pinnedLocationId !== location.id) {
                       event.target.closePopup();
                     }
