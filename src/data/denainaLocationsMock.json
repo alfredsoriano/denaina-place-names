@@ -3,7 +3,7 @@
     "id": "1",
     "title": "Point Woronzof",
     "denainaName":"Nuch'ishtunt👂",
-    "denainaMeaning":"\"Place protected from the wind\"",
+    "denainaMeaning":"\"Place Protected by Wind\"",
     "coordinates": [61.2026, -150.0214],
     "description": 
     ["Point Woronzof is a spot to the left of Anchorage, along the Cook Inlet coastline. ",
@@ -33,7 +33,7 @@
     "id": "2",
     "title": "Chester Creek",
     "denainaName":"Chanshtnu",
-    "denainaMeaning":"\"Grass creek\"",
+    "denainaMeaning":"\"Grass Creek\"",
     "coordinates": [61.1872, -149.8228],
     "description": 
     ["Chester Creek is a stream of water that runs from the Chugach Mountains from the east, draining at Cook Inlet to the west. ",
@@ -61,7 +61,7 @@
     "id": "3",
     "title": "Eklutna",
     "denainaName":"Idlughet",
-    "denainaMeaning":"\"Objects by a river\"",
+    "denainaMeaning":"\"By the Objects\"",
     "coordinates": [61.4581, -149.3622],
     "description": 
     ["Eklutna refers to the Dena'ina Village of Eklutna, that houses about 70 residents. Near Eklutna is scenic Eklutna Lake and Thunderbird Falls; both are iconic and beautiful bodies of water. ",
@@ -91,7 +91,7 @@
     "id": "4",
     "title": "Mount Susitna",
     "denainaName":"Dghelishla",
-    "denainaMeaning":"\"Little mountain\"",
+    "denainaMeaning":"\"Little Mountain\"",
     "coordinates": [61.4742, -150.7353],
     "description": ["Mount Susitna sits northwest of Anchorage, and can be seen from the west, across Cook Inlet within Anchorage. ",
     "It has an elevation of 4,396ft and was named after the Susitna River in English. Today, Mount Susitna is a popular natural landmark for photography. "],
@@ -139,7 +139,7 @@
     "id": "6",
     "title": "Ninilchik (WIP)",
     "denainaName":"Niqnalchint",
-    "denainaMeaning":"\"A place where a lodge is build\"",
+    "denainaMeaning":"\"A Place where a Lodge is Built\"",
     "coordinates": [60.024121, -151.595044],
     "description": ["We are currently working on this location!"],
     "culture": ["Want to contribute towards the Dena'ina Place Names project? Visit the FAQ to find out more information on how you can help!"],
@@ -150,7 +150,7 @@
     "id": "7",
     "title": "Fire Island",
     "denainaName":"Nutułiy",
-    "denainaMeaning":"\"Object that stands in the water\"",
+    "denainaMeaning":"\"Object Standing in Water\"",
     "coordinates": [61.147686, -150.215759],
     "description": 
     ["Fire Island is a 5.5 mile long island located 3.5 miles west of Anchorage, situated in Cook Inlet waters. It is the only island in the Municipality of Anchorage. ",
@@ -180,7 +180,7 @@
     "id": "8",
     "title": "Talkeetna",
     "denainaName":"K'dalkitnu",
-    "denainaMeaning":"\"He is Keeping Something (food)\"",
+    "denainaMeaning":"\"Food is stored, River\"",
     "coordinates": [62.323181, -150.111898],
     "description": 
     ["Talkeetna is a small town 115 miles north of Anchorage, and is located in the Matanuska-Susitna (Mat-Su) Valley. ",
@@ -207,7 +207,7 @@
     "id": "9",
     "title": "Tyonek",
     "denainaName":"Tubughnenq'",
-    "denainaMeaning":"\"Beach land\"",
+    "denainaMeaning":"\"The Beach Land\"",
     "coordinates": [61.066041, -151.139550],
     "description": 
     ["The Native Village of Tyonek is located 40 miles south of Anchorage, on the west side of Cook Inlet. ",
@@ -225,8 +225,8 @@
   {
     "id": "10",
     "title": "Cook Inlet",
-    "denainaName":"Tikhatnu or Nuti",
-    "denainaMeaning":"\"Ocean river\" or \"Saltwater\"",
+    "denainaName":"Tikhatnu",
+    "denainaMeaning":"\"Big River\"",
     "coordinates": [59.550512, -152.489717],
     "description": 
     ["Cook inlet is a 180 mile body of water that stretches from the Gulf of Alaska in the south, to Anchorage in the north. ",
@@ -250,7 +250,7 @@
     "id": "11",
     "title": "Wasilla",
     "denainaName":"Benteh",
-    "denainaMeaning":"\"Among the lakes\" or \"Lake country\"",
+    "denainaMeaning":"\"Among the Lakes\"",
     "coordinates": [61.580884, -149.441462],
     "description": ["Wasilla is the fourth-largest city in Alaska. It is 40 miles north of Anchorage, and is located in the Matanuska-Susitna (Mat-Su) Valley. ",
     "It has a sister city, Palmer, which is home to a large agricultural hub and is known for the giant vegetables grown in the area. ",
@@ -275,7 +275,7 @@
     "id": "12",
     "title": "Kincaid Park",
     "denainaName":"Ułchena Bada Huch'ilyut",
-    "denainaMeaning":"\"Where we pulled up the Alutiiqs' boat\"",
+    "denainaMeaning":"\"Place we pulled up their Boats\"",
     "coordinates": [61.154071, -150.055228],
     "description": ["Kincaid Park is a 1,500 acre park along the west side of Anchorage. The hilltops in Kincaid Park allow you to see Tikhatnu (Cook Inlet), Nutułiy (Fire Island), and Dghelishla (Mount Susitna). ",
     "In the summer, the park is populated with people doing a variety of recreational activities. There are runners, bikers, hikers, athletes, photographers, fishers, and families that enjoy the park's many trails, trees, and recreational areas. ",
@@ -300,7 +300,7 @@
     "id": "13",
     "title": "Turnagain Arm",
     "denainaName":"Tutl'uh",
-    "denainaMeaning":"\"Back water, Headwaters\"",
+    "denainaMeaning":"\"Headwaters\"",
     "coordinates": [61.052222, -150.035844],
     "description": 
     ["Turnagain Arm is a branch of water at the northern end of Cook Inlet, located south of Anchorage. Its counterpart, Knik Arm, is the northern branch. ",
@@ -321,7 +321,7 @@
     "id": "14",
     "title": "Ship Creek",
     "denainaName":"Dgheyay Kaq'",
-    "denainaMeaning":"\"Stickleback Mouth\"",
+    "denainaMeaning":"\"Stickleback Creek\"",
     "coordinates": [61.076423, -149.544247],
     "description": 
     ["Dgheyay Kaq' refers to the mouth of the Ship Creek river, which flows from the Chugach Mountains in the east, towards Cook Inlet in the west. ",
