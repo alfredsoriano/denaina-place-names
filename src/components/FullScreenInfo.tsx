@@ -19,7 +19,6 @@ const FullScreenInfo = ({
   const nameAudioRef = useRef<HTMLAudioElement>(null);
   const storyAudioRef = useRef<HTMLAudioElement>(null);
   const [showFullscreen, setShowFullscreen] = useState(false);
-  const textShadow = darkTheme ? "1px 2px 4px rgba(0,0,0,0.8)" : "1.5px 1px 0px rgba(227,228,219,0.2)";
 
   if (location === null || isOpen === false) return null;
 
@@ -148,7 +147,15 @@ const FullScreenInfo = ({
           backgroundPosition: "center top",
         }}
       >
-        <h1 style={{ fontWeight: "bold", textShadow: `${textShadow}` }}>{location.title}</h1>
+        <h1
+          style={{
+            fontWeight: "bold",
+            color: "#DCD7C9",
+            textShadow: "1px 2px 4px rgba(0, 0, 0, 0.8)",
+          }}
+        >
+          {location.title}
+        </h1>
       </div>
 
       <div>
@@ -376,11 +383,8 @@ const FullScreenInfo = ({
           size="xl"
           fullscreen
         >
-          <Modal.Header closeButton>
-          </Modal.Header>
-          <Modal.Body>
-            {loadMedia(location.media[activeIndex])}
-          </Modal.Body>
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>{loadMedia(location.media[activeIndex])}</Modal.Body>
         </Modal>
       </div>
 
