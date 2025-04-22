@@ -228,7 +228,7 @@
     "media": ["img/images/Tyonek1.jpg"],
     "audioUrl": "img/audios/Tyonek- DName.mp4",
     "citations": ["Aerial photo of Tyonek. Source: Tyonek.com"],
-    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "backgroundImage": "img/backgrounds/BBears.png",
     "isInDevelopment": false
   },
   {
@@ -279,7 +279,7 @@
     ["Aerial view of Wasilla. Source: Kampgrounds of America, www.koa.com",
     "View of Wasilla with mountains in the background. Source: City of Wasilla, www.cityofwasilla.gov",
     "View of Pioneer Peak near Wasilla. Source: Colter Broadwell Photography, shared on Facebook. Photograph taken by Colter Broadwell."],
-    "backgroundImage": "img/backgrounds/Moose_Background.png",
+    "backgroundImage": "img/backgrounds/BBears.png",
     "isInDevelopment": false
   },
   {
@@ -305,7 +305,7 @@
     "Narration of Point Woronzof and its history. Edna Hna'estał Standifer and Zachary Milliman, Video taken by Maria Williams."],
     "audioUrl": "img/audios/Kincaidpark - DName.mp4",
     "audioUrlculture": "img/audios/Kincaid Park - PL.mp4",
-    "backgroundImage": "img/backgrounds/salmon.PNG",
+    "backgroundImage": "img/backgrounds/BBears.png",
     "isInDevelopment": false
   },
   {
