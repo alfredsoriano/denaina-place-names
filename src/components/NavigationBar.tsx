@@ -103,6 +103,7 @@ function NavigationBar() {
                 <br/><br/>
                 Maria Williams <br/>
                 Zachary Lane <br/>
+                Chris Yang <br/>
                 Mee Xiong <br/>
                 Adam Leggett <br/>
                 Eklutna, Inc. 
