@@ -39,9 +39,10 @@ const FullScreenInfo = ({
         <img
           style={{
             width: "100%",
-            height: "100%",
+            height: "auto",
             objectFit: "cover",
             borderRadius: "10px",
+          
           }}
           src={item}
           alt="location media"
@@ -213,6 +214,7 @@ const FullScreenInfo = ({
               }}
             >
               {location.denainaName ?? "No Dena'ina Name available."}
+              {!!nameAudioRef.current ? '' : null}
             </h2>
 
             <p
@@ -383,8 +385,8 @@ const FullScreenInfo = ({
           size="xl"
           fullscreen
         >
-          <Modal.Header closeButton></Modal.Header>
-          <Modal.Body>{loadMedia(location.media[activeIndex])}</Modal.Body>
+          <Modal.Header closeButton style={{ backgroundColor: darkTheme ? "#2C3930" : "#E3E4DB"}}></Modal.Header>
+          <Modal.Body style={{ backgroundColor: darkTheme ? "#2C3930" : "#E3E4DB"}}>{loadMedia(location.media[activeIndex])}</Modal.Body>
         </Modal>
       </div>
 
