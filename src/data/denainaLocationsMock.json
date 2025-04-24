@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Point Woronzof",
-    "denainaName":"Nuch'ishtunt",
+    "denainaName":"Nuch'ishtunt👂",
     "denainaMeaning":"\"Place Protected by Wind\"",
     "coordinates": [61.2026, -150.0214],
     "description": 
@@ -33,7 +33,7 @@
   {
     "id": "2",
     "title": "Chester Creek",
-    "denainaName":"Chanshtnu",
+    "denainaName":"Chanshtnu👂",
     "denainaMeaning":"\"Grass Creek\"",
     "coordinates": [61.1872, -149.8228],
     "description": 
@@ -62,7 +62,7 @@
   {
     "id": "3",
     "title": "Eklutna",
-    "denainaName":"Idlughet",
+    "denainaName":"Idlughet👂",
     "denainaMeaning":"\"By the Objects\"",
     "coordinates": [61.4581, -149.3622],
     "description": 
@@ -95,7 +95,7 @@
   {
     "id": "4",
     "title": "Mount Susitna",
-    "denainaName":"Dghelishla",
+    "denainaName":"Dghelishla👂",
     "denainaMeaning":"\"Little Mountain\"",
     "coordinates": [61.4742, -150.7353],
     "description": ["Mount Susitna sits northwest of Anchorage, and can be seen from the west, across Cook Inlet within Anchorage. ",
@@ -132,7 +132,7 @@
   {
     "id": "5",
     "title": "Kenai River (WIP)",
-    "denainaName":"Kahtnu",
+    "denainaName":"Kahtnu👂",
     "denainaMeaning":"\"Kenai River\"",
     "coordinates": [60.483152, -150.034194],
     "description": ["We are currently working on this location!"],
@@ -145,7 +145,7 @@
   {
     "id": "6",
     "title": "Ninilchik (WIP)",
-    "denainaName":"Niqnalchint",
+    "denainaName":"Niqnalchint👂",
     "denainaMeaning":"\"A Place where a Lodge is Built\"",
     "coordinates": [60.024121, -151.595044],
     "description": ["We are currently working on this location!"],
@@ -157,7 +157,7 @@
   {
     "id": "7",
     "title": "Fire Island",
-    "denainaName":"Nutułiy",
+    "denainaName":"Nutułiy👂",
     "denainaMeaning":"\"Object Standing in Water\"",
     "coordinates": [61.147686, -150.215759],
     "description": 
@@ -188,7 +188,7 @@
   {
     "id": "8",
     "title": "Talkeetna",
-    "denainaName":"K'dalkitnu",
+    "denainaName":"K'dalkitnu👂",
     "denainaMeaning":"\"Food is stored, River\"",
     "coordinates": [62.323181, -150.111898],
     "description": 
@@ -216,7 +216,7 @@
   {
     "id": "9",
     "title": "Tyonek",
-    "denainaName":"Tubughnenq'",
+    "denainaName":"Tubughnenq'👂",
     "denainaMeaning":"\"The Beach Land\"",
     "coordinates": [61.066041, -151.139550],
     "description": 
@@ -236,7 +236,7 @@
   {
     "id": "10",
     "title": "Cook Inlet",
-    "denainaName":"Tikhatnu",
+    "denainaName":"Tikhatnu👂",
     "denainaMeaning":"\"Big River\"",
     "coordinates": [59.550512, -152.489717],
     "description": 
@@ -261,7 +261,7 @@
   {
     "id": "11",
     "title": "Wasilla",
-    "denainaName":"Benteh",
+    "denainaName":"Benteh👂",
     "denainaMeaning":"\"Among the Lakes\"",
     "coordinates": [61.580884, -149.441462],
     "description": ["Wasilla is the fourth-largest city in Alaska. It is 40 miles north of Anchorage, and is located in the Matanuska-Susitna (Mat-Su) Valley. ",
@@ -287,7 +287,7 @@
   {
     "id": "12",
     "title": "Kincaid Park",
-    "denainaName":"Ułchena Bada Huch'ilyut",
+    "denainaName":"Ułchena Bada Huch'ilyut👂",
     "denainaMeaning":"\"Place we pulled up their Boats\"",
     "coordinates": [61.154071, -150.055228],
     "description": ["Kincaid Park is a 1,500 acre park along the west side of Anchorage. The hilltops in Kincaid Park allow you to see Tikhatnu (Cook Inlet), Nutułiy (Fire Island), and Dghelishla (Mount Susitna). ",
@@ -313,7 +313,7 @@
   {
     "id": "13",
     "title": "Turnagain Arm",
-    "denainaName":"Tutl'uh",
+    "denainaName":"Tutl'uh👂",
     "denainaMeaning":"\"Headwaters\"",
     "coordinates": [61.052222, -150.035844],
     "description": 
@@ -335,7 +335,7 @@
   {
     "id": "14",
     "title": "Ship Creek",
-    "denainaName":"Dgheyay Kaq'",
+    "denainaName":"Dgheyay Kaq'👂",
     "denainaMeaning":"\"Stickleback Creek\"",
     "coordinates": [61.076423, -149.544247],
     "description": 
@@ -360,7 +360,7 @@
   {
     "id": "15",
     "title": "Denali (WIP)",
-    "denainaName":"Dghelay Ka'a",
+    "denainaName":"Dghelay Ka'a👂",
     "denainaMeaning":"\"Big Mountain\"",
     "coordinates": [63.0692, -151.0070],
     "description": ["We are currently working on this location!"],

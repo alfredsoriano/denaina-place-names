@@ -214,7 +214,6 @@ const FullScreenInfo = ({
               }}
             >
               {location.denainaName ?? "No Dena'ina Name available."}
-              {!!nameAudioRef.current ? '' : null}
             </h2>
 
             <p
